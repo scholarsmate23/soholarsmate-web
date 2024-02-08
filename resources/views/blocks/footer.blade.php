@@ -22,7 +22,7 @@
       <div class="row">
         <div class="col-lg-4 col-sm-8 mb-5 mb-lg-0">
           <!-- logo -->
-          <a class="logo-footer" href="{{route('home')}}"><img class="img-fluid mb-4" src="{{asset('assets/source/images/logo-1.jpeg')}}" alt="logo"></a>
+          <a class="logo-footer" href="{{route('home')}}"><img class="img-fluid mb-4" src="{{asset('assets/source/images/about/LOGO.jpg')}}" alt="logo"></a>
           <ul class="list-unstyled">
             <li class="mb-2 text-white">Near Saraswati Vidya Mandir, BudhaNath Road, Khalifabagh Chowk, Bhagalpur</li>
             <li class="mb-2 text-white">+91 9102282333</li>

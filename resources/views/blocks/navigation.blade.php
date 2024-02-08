@@ -29,7 +29,7 @@
   <div class="navigation w-100">
     <div class="container">
       <nav class="navbar navbar-expand-lg navbar-dark p-0">
-        <a class="navbar-brand" href="{{route('home')}}"><img class="img-fluid" src="{{asset('assets/source/images/logo-n.jpg')}}" alt="logo"></a>
+        <a class="navbar-brand" href="{{route('home')}}"><img class="img-fluid" src="{{asset('assets/source/images/about/LOGO.jpg')}}" alt="logo"></a>
         <button class="navbar-toggler rounded-0" type="button" data-toggle="collapse" data-target="#navigation"
           aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
