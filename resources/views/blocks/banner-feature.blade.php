@@ -3,7 +3,8 @@
   <div class="container-fluid p-0">
     <div class="row no-gutters">
       <div class="col-xl-8 col-lg-7 ">
-      <div class="accordion accordion-flush" id="accordionFlushExample">
+      <h2 class="section-title" style="margin: 0 40px;">Latest News and Events</h2>
+      <div class="accordion accordion-flush" style="margin: 10px 60px;" id="accordionFlushExample">
   <div class="accordion-item">
     <h2 class="accordion-header" id="flush-headingOne">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
