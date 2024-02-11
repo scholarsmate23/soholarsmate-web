@@ -56,6 +56,7 @@
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <li><a class="dropdown-item" href="{{route('home')}}">Online-Mode</a></li>
                 <li><a class="dropdown-item" href="{{route('home')}}">Offline-Mode</a></li>
+                <li><a class="dropdown-item" href="{{route('home')}}">AAKALAN- 2024</a></li>
               </ul>
             </li>
             <li class="nav-item @blog">
