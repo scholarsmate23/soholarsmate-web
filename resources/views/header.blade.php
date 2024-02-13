@@ -10,7 +10,7 @@
   <!-- Mobile Specific Metas
 	================================================== -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="description" content="Best IIT-JEE and NEET institute in Bhagalpur">
+  <meta name="description" content="Scholarsmate - Unlock your potential with our premier institute in Bhagalpur, specializing in expert coaching for JEE and NEET exams. Our tailored curriculum, experienced faculty, and personalized guidance empower students to excel in their academic journey. Join us and embark on the path to success in the competitive world of engineering and medical entrance exams.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
   <meta name="author" content="Themefisher">
   <meta name="generator" content="Themefisher Educenter HTML Template v1.0">

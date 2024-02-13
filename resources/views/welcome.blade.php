@@ -82,7 +82,6 @@
 			<input name="email" placeholder="hello@barrel.im" type="email" value=""><br>
 			<input class="logo-ani" name="submit" type="submit"> <input name="uri" type="hidden" value="barreldotim">
 		</form>
-		<div class="img ba-logo logo-ani"></div>
 	</div>
 	<div class="ba-we-love-subscribers-fab">
 		<div class="wrap">

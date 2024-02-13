@@ -35,5 +35,6 @@ Route::controller(UserController::class)->group(function(){
     Route::get('/scholarships', 'viewScholarship')->name('scholarships');
     Route::get('/events', 'viewEvents')->name('events');
     Route::get('/result', 'viewResult')->name('result');
+    Route::get('/career', 'viewCareer')->name('career');
 });
 

@@ -546,13 +546,13 @@ textarea.form-control {
 
 @media (max-width: 991px) {
     .navigation {
-        background: #1a1a37;
+        background: #0f3969;
     }
 }
 
 @media (max-width: 991px) {
     .navbar-collapse {
-        background: #1a1a37;
+        background: #0f3969;
         max-height: calc(100vh - 80px);
     }
     .navbar-collapse.show {
@@ -568,12 +568,12 @@ textarea.form-control {
 @media (max-width: 991px) {
     .navbar-nav {
         padding-left: 0;
-        background: #1a1a37;
+        background: #0f3969;
     }
 }
 
 .nav-bg {
-    background-color: #062150;
+    background-color: #0f3969;
 }
 
 .nav-item {
@@ -756,7 +756,7 @@ link:focus,
 }
 
 .hero-section {
-    padding: 170px 0 50px;
+    padding: 145px 0 50px;
 }
 
 @media (max-width: 991px) {

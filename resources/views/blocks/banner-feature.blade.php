@@ -22,7 +22,10 @@
       </button>
     </h2>
     <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-      <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
+      <div class="accordion-body">
+        <li>Aakalan is an aptitudes lest of Scholar's Matee Career Institute -Bhagalpur for encouragement and Assessment of the student's, it is a specially designed initiative to encourage young talent with cash prizes, Scholarships and monitoring by Scholar's Mate career institute - BHAGALPUR.</li>
+        <a href="">Know More</a>
+      </div>
     </div>
   </div>
   <div class="accordion-item">
@@ -32,7 +35,10 @@
       </button>
     </h2>
     <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-      <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+      <div class="accordion-body">
+        <li>TAD - CBSE(2024) <a href="">Know More</a></li>
+        <li>TAD - ICSE(2024) <a href="">Know More</a></li>
+      </div>
     </div>
   </div>
   <div class="accordion-item">
@@ -42,7 +48,10 @@
       </button>
     </h2>
     <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
-      <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+      <div class="accordion-body">
+        <li>JEE test series planner 2023-24 <a href="">Know More</a></li>
+        <li>neet test planner 2023-24 <a href="">Know More</a></li>
+      </div>
     </div>
   </div>
   <div class="accordion-item">
@@ -52,7 +61,13 @@
       </button>
     </h2>
     <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
-      <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+      <div class="accordion-body">
+        <li>IIT-JEE (Main/Advance) <a href="">Know More</a></li>
+        <li>NEET- Medical <a href="">Know More</a></li>
+        <li>PRE-Foundation Program <a href="">Know More</a></li>
+        <li>हिन्दी भाषा  <a href="">Know More</a></li>
+
+      </div>
     </div>
   </div>
 </div>
