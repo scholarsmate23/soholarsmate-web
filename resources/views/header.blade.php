@@ -5,12 +5,12 @@
   <!-- Basic Page Needs
 	================================================== -->
   <meta charset="utf-8">
-  <title>Scholar's Mate</title>
+  <title>Scholar's Mate - Bhagalpur</title>
 
   <!-- Mobile Specific Metas
 	================================================== -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="description" content="Scholarsmate - Unlock your potential with our premier institute in Bhagalpur, specializing in expert coaching for JEE and NEET exams. Our tailored curriculum, experienced faculty, and personalized guidance empower students to excel in their academic journey. Join us and embark on the path to success in the competitive world of engineering and medical entrance exams.">
+  <meta name="description" content="Scholar's Mate - Unlock your potential with our premier institute in Bhagalpur, specializing in expert coaching for JEE and NEET exams. Our tailored curriculum, experienced faculty, and personalized guidance empower students to excel in their academic journey.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
   <meta name="author" content="Themefisher">
   <meta name="generator" content="Themefisher Educenter HTML Template v1.0">
