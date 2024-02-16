@@ -12,7 +12,12 @@
       </button>
     </h2>
     <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-      <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
+      <div class="accordion-body">
+        <li class="list-style">
+          Scholarships will be provided to candidate who meet the folloeing Criteria.
+          <a data-toggle="openModal" data-target="#scholarshipsDetailModal">Click to know More</a>
+        </li>
+      </div>
     </div>
   </div>
   <div class="accordion-item">

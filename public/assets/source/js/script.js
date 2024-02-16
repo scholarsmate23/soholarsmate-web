@@ -131,3 +131,27 @@ if (tables) {
         });
     });
 }
+
+
+
+$(document).ready(function() {
+    // Function to open the modal
+    function openModal() {
+        $('#scholarshipsDetailModal').modal('show');
+    }
+
+    // Function to close the modal
+    function closeModal() {
+        $('#scholarshipsDetailModal').modal('hide');
+    }
+
+    // Listen for click event on a specific element with data attribute to open modal
+    $('[data-toggle="openModal"]').click(function() {
+        openModal();
+    });
+
+    // Listen for click event on the "Close" button inside the modal to close it
+    $('#scholarshipsDetailModal').on('click', '[data-dismiss="modal"]', function() {
+        closeModal();
+    });
+});

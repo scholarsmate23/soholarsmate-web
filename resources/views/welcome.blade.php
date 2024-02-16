@@ -4,7 +4,7 @@
 @include('blocks/slider') 
 @include('blocks/banner-feature') 
 @include('blocks/about')
-
+@include('blocks/scholarship-detail')
 <!-- courses -->
 <section class="section-sm">
     <div class="container">
