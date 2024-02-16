@@ -43,8 +43,8 @@
     <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
       <div class="accordion-body">
         <ul>
-        <li class="list-style">TAD - CBSE(2024) <a href="">Know More</a></li>
-        <li class="list-style">TAD - ICSE(2024) <a href="">Know More</a></li>
+        <li class="list-style">TAD - CBSE(2024) <a href="{{route('tad.cbse')}}">Know More</a></li>
+        <li class="list-style">TAD - ICSE(2024) <a href="{{route('tad.icse')}}">Know More</a></li>
         </ul>
       </div>
     </div>
