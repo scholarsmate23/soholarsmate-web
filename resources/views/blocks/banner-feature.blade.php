@@ -68,11 +68,11 @@
     <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
       <div class="accordion-body">
         <ul class="list-design">
-        <li class="list-style">उद्घोष-JEE(Foundation) <a href="">Know More</a></li>
+        <li class="list-style"> उद्घोष-JEE(Foundation) <a href="">Know More</a></li>
         <li class="list-style">सफल -JEE(Target) <a href="">Know More</a></li>
         <li class="list-style">उद्घोष-NEET(Foundation) <a href="">Know More</a></li>
         <li class="list-style">उद्घोष-NEET(Target) <a href="">Know More</a></li>
-        <li class="list-style">>एकलव्य -Tenth <a href="">Know More</a></li>
+        <li class="list-style">एकलव्य -Tenth <a href="">Know More</a></li>
         <li class="list-style">एकलव्य - Ninth <a href="">Know More</a></li>
         <li class="list-style">एकलव्य - Eighth <a href="">Know More</a></li>
         <li class="list-style">तरूण - Maths <a href="">Know More</a></li>
