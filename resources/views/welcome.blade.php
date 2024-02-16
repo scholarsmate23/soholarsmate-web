@@ -68,7 +68,6 @@
                 <h2 class="section-title">Latest News</h2>
             </div>
         </div>
-        @include('blocks/blog')
     </div>
 </section> -->
 
