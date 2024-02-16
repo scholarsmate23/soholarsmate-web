@@ -41,5 +41,9 @@ class UserController extends Controller
         return view('career', compact('title'));
     }
 
+    public function viewGallery(){
+        $title= "Gallery";
+        return view('gallery', compact('title'));
+    }
     
 }

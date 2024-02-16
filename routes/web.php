@@ -2,6 +2,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\LoginRegisterController;
 use App\Http\Controllers\UserController;
+use  App\Http\Controllers\CourseContrpoller;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,5 +37,12 @@ Route::controller(UserController::class)->group(function(){
     Route::get('/events', 'viewEvents')->name('events');
     Route::get('/result', 'viewResult')->name('result');
     Route::get('/career', 'viewCareer')->name('career');
+    Route::get('/gallery', 'viewGallery')->name('gallery');
 });
 
+Route::controller(CourseContrpoller::class)->group(function(){
+    Route::get('/pre-foundation', 'viewFoundation')->name('foundation');
+    Route::get('/akalan', 'viewAaklan')->name('akalan');
+    Route::get('/tad-cbse', 'viewTadCbse')->name('tad.cbse');
+    Route::get('/tad-icse', 'viewTadIcse')->name('tad.icse');
+});

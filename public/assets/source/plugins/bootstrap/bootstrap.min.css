@@ -3596,9 +3596,9 @@ input[type=submit].btn-block {
 
 .dropdown-item:focus,
 .dropdown-item:hover {
-    color: #16181b;
+    color: #677386;
     text-decoration: none;
-    background-color: #f8f9fa
+    background-color: #0f3969
 }
 
 .dropdown-item.active,

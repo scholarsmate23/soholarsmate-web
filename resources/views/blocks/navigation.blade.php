@@ -17,7 +17,7 @@
           <ul class="list-inline">
             <li class="list-inline-item"><a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block" href="{{route('career')}}">Career</a></li>
             <li class="list-inline-item"><a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block" href="{{route('result')}}">Result</a></li>
-            <li class="list-inline-item"><a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block" href="{{route('home')}}">Gallery</a></li>
+            <li class="list-inline-item"><a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block" href="{{route('gallery')}}">Gallery</a></li>
             <li class="list-inline-item"><a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block" href="{{route('events')}}">News/Events</a></li>
             <li class="list-inline-item"><a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block" href="scholarship.html">Student Zone</a></li>
             <li class="list-inline-item"><a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block" href="#loginModal" data-toggle="modal" data-target="#loginModal">login</a></li>
@@ -47,17 +47,26 @@
             <li class="nav-item @courses">
               <a class="nav-link" href="{{route('course')}}">COURSES</a>
             </li>
-            <li class="nav-item @events">
-              <a class="nav-link" href="{{route('scholarships')}}">Academics</a>
+            <li class="nav-item dropdown view">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              ACADEMICS
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="{{route('tad.icse')}}">ENGINEERING</a></li>
+                <li><a class="dropdown-item" href="{{route('tad.cbse')}}">MEDICAL</a></li>
+                <li><a class="dropdown-item" href="{{route('akalan')}}">PRE-FOUNDATION</a></li>
+                <li><a class="dropdown-item" href="{{route('akalan')}}">SYLLABUS</a></li>
+
+              </ul>
             </li>
             <li class="nav-item dropdown view">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Test-Series
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="{{route('home')}}">Online-Mode</a></li>
-                <li><a class="dropdown-item" href="{{route('home')}}">Offline-Mode</a></li>
-                <li><a class="dropdown-item" href="{{route('home')}}">AAKALAN- 2024</a></li>
+                <li><a class="dropdown-item" href="{{route('tad.icse')}}">TAD-ICSE</a></li>
+                <li><a class="dropdown-item" href="{{route('tad.cbse')}}">TAD-CBSE</a></li>
+                <li><a class="dropdown-item" href="{{route('akalan')}}">AAKALAN- 2024</a></li>
               </ul>
             </li>
             <li class="nav-item @blog">
@@ -68,11 +77,18 @@
               COURSES
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="{{route('home')}}">Pre-Foundation</a></li>
-                <li><a class="dropdown-item" href="{{route('home')}}">Foundation</a></li>
-                <li><a class="dropdown-item" href="{{route('home')}}">IIT-JEE</a></li>
-                <li><a class="dropdown-item" href="{{route('home')}}">NEET</a></li>
-                <li><a class="dropdown-item" href="{{route('home')}}">Boards</a></li>                
+                <li><a class="dropdown-item" href="{{route('home')}}">उद्घोष-JEE(Foundation)</a></li>
+                <li><a class="dropdown-item" href="{{route('home')}}">सफल -JEE(Target)</a></li>
+                <li><a class="dropdown-item" href="{{route('home')}}">उद्घोष-NEET(Foundation)</a></li>
+                <li><a class="dropdown-item" href="{{route('home')}}">उद्घोष-NEET(Target)</a></li>
+                <li><a class="dropdown-item" href="{{route('home')}}">एकलव्य -Tenth</a></li>
+                <li><a class="dropdown-item" href="{{route('home')}}">एकलव्य - Ninth</a></li>
+                <li><a class="dropdown-item" href="{{route('home')}}">एकलव्य - Eighth</a></li>
+                <li><a class="dropdown-item" href="{{route('home')}}">तरूण - Maths</a></li>                
+                <li><a class="dropdown-item" href="{{route('home')}}">तरूण - Biology</a></li>                
+
+           
+                
                 <!-- <li class="dropdown-item dropdown dropleft">
                   <a class="dropdown-toggle" href="#" id="navbarDropdownSubmenu" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Sub Menu

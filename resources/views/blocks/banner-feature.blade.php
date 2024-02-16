@@ -23,8 +23,9 @@
     </h2>
     <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
       <div class="accordion-body">
-        <li>Aakalan is an aptitudes lest of Scholar's Matee Career Institute -Bhagalpur for encouragement and Assessment of the student's, it is a specially designed initiative to encourage young talent with cash prizes, Scholarships and monitoring by Scholar's Mate career institute - BHAGALPUR.</li>
-        <a href="">Know More</a>
+        <li class="list-style">Aakalan is an aptitudes lest of Scholar's Matee Career Institute -Bhagalpur for encouragement and Assessment of the student's, it is a specially designed initiative to encourage young talent with cash prizes, Scholarships and monitoring by Scholar's Mate career institute - BHAGALPUR.
+        <a href="{{route('akalan')}}">Know More</a>
+        </li>
       </div>
     </div>
   </div>
@@ -36,8 +37,10 @@
     </h2>
     <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
       <div class="accordion-body">
-        <li>TAD - CBSE(2024) <a href="">Know More</a></li>
-        <li>TAD - ICSE(2024) <a href="">Know More</a></li>
+        <ul>
+        <li class="list-style">TAD - CBSE(2024) <a href="">Know More</a></li>
+        <li class="list-style">TAD - ICSE(2024) <a href="">Know More</a></li>
+        </ul>
       </div>
     </div>
   </div>
@@ -49,8 +52,10 @@
     </h2>
     <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
       <div class="accordion-body">
-        <li>JEE test series planner 2023-24 <a href="">Know More</a></li>
-        <li>neet test planner 2023-24 <a href="">Know More</a></li>
+        <ul>
+        <li class="list-style">JEE test series planner 2023-24 <a href="">Know More</a></li>
+        <li class="list-style">neet test planner 2023-24 <a href="">Know More</a></li>
+        </ul>
       </div>
     </div>
   </div>
@@ -62,10 +67,18 @@
     </h2>
     <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
       <div class="accordion-body">
-        <li>IIT-JEE (Main/Advance) <a href="">Know More</a></li>
-        <li>NEET- Medical <a href="">Know More</a></li>
-        <li>PRE-Foundation Program <a href="">Know More</a></li>
-        <li>हिन्दी भाषा  <a href="">Know More</a></li>
+        <ul class="list-design">
+        <li class="list-style">उद्घोष-JEE(Foundation) <a href="">Know More</a></li>
+        <li class="list-style">सफल -JEE(Target) <a href="">Know More</a></li>
+        <li class="list-style">उद्घोष-NEET(Foundation) <a href="">Know More</a></li>
+        <li class="list-style">उद्घोष-NEET(Target) <a href="">Know More</a></li>
+        <li class="list-style">>एकलव्य -Tenth <a href="">Know More</a></li>
+        <li class="list-style">एकलव्य - Ninth <a href="">Know More</a></li>
+        <li class="list-style">एकलव्य - Eighth <a href="">Know More</a></li>
+        <li class="list-style">तरूण - Maths <a href="">Know More</a></li>
+        <li class="list-style">तरूण - Biology <a href="">Know More</a></li>
+
+        </ul>
 
       </div>
     </div>

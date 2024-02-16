@@ -108,3 +108,26 @@ $(".ba-we-love-subscribers-fab").click(function() {
     $('.ba-we-love-subscribers').toggleClass("open");
     $('.img-fab.img').toggleClass("close");
 });
+
+//** tables **/
+const tables = document.querySelectorAll("table");
+if (tables) {
+    tables.forEach((table) => {
+        const headerRow = table.querySelector("thead tr");
+        const thElements = headerRow.querySelectorAll("th");
+        const tdElements = table.querySelectorAll("tbody tr td");
+        const tr = table.querySelectorAll("tbody tr");
+
+        let mainIndex = 0;
+        tdElements.forEach((td) => {
+            let index = mainIndex / tdElements.length;
+            td.setAttribute("data-label", thElements[mainIndex].innerHTML);
+
+            if (mainIndex == thElements.length - 1) {
+                mainIndex = 0;
+            } else {
+                mainIndex += 1;
+            }
+        });
+    });
+}
