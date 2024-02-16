@@ -1343,7 +1343,7 @@ table tr td {
     background-color: rgb(155, 226, 155);
 }
 
-.slider-span {
+.span-style {
     position: absolute;
     top: 50%;
     z-index: 5;

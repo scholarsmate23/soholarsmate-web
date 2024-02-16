@@ -30,11 +30,11 @@
 
     <!-- Left and right controls -->
     <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-      <span class="slider-span"><i class="fa fa-chevron-left" style="font-size:24px"></i></span>
+      <span class="span-style"><i class="fa fa-chevron-left" style="font-size:24px"></i></span>
       <span class="sr-only">Previous</span>
     </a>
     <a class="right carousel-control" href="#myCarousel" data-slide="next">
-      <span class="slider-span"><i class="fa fa-chevron-right" style="font-size:24px"></i></span>
+      <span class="span-style"><i class="fa fa-chevron-right" style="font-size:24px"></i></span>
       <span class="sr-only">Next</span>
     </a>
   </div>
