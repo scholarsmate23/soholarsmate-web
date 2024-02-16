@@ -33,17 +33,22 @@ class UserController extends Controller
 
     public function viewResult(){
         $title = "RESULTS";
-        return view('result', compact('title'));
+        return view('pages/result', compact('title'));
     }
 
     public function viewCareer(){
         $title= "CAREER";
-        return view('career', compact('title'));
+        return view('pages/career', compact('title'));
     }
 
     public function viewGallery(){
         $title= "Gallery";
-        return view('gallery', compact('title'));
+        return view('pages/gallery', compact('title'));
+    }
+
+    public function viewStudentZone(){
+        $title= "STUDENT-ZONE";
+        return view('pages/student-zone', compact('title'));
     }
     
 }

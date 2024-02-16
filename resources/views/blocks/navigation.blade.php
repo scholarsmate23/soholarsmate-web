@@ -19,7 +19,7 @@
             <li class="list-inline-item"><a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block" href="{{route('result')}}">Result</a></li>
             <li class="list-inline-item"><a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block" href="{{route('gallery')}}">Gallery</a></li>
             <li class="list-inline-item"><a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block" href="{{route('events')}}">News/Events</a></li>
-            <li class="list-inline-item"><a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block" href="scholarship.html">Student Zone</a></li>
+            <li class="list-inline-item"><a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block" href="{{route('student.zone')}}">Student Zone</a></li>
             <li class="list-inline-item"><a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block" href="#loginModal" data-toggle="modal" data-target="#loginModal">login</a></li>
           </ul>
         </div>
@@ -77,15 +77,15 @@
               COURSES
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="{{route('home')}}">उद्घोष-JEE(Foundation)</a></li>
-                <li><a class="dropdown-item" href="{{route('home')}}">सफल -JEE(Target)</a></li>
-                <li><a class="dropdown-item" href="{{route('home')}}">उद्घोष-NEET(Foundation)</a></li>
-                <li><a class="dropdown-item" href="{{route('home')}}">उद्घोष-NEET(Target)</a></li>
-                <li><a class="dropdown-item" href="{{route('home')}}">एकलव्य -Tenth</a></li>
-                <li><a class="dropdown-item" href="{{route('home')}}">एकलव्य - Ninth</a></li>
-                <li><a class="dropdown-item" href="{{route('home')}}">एकलव्य - Eighth</a></li>
-                <li><a class="dropdown-item" href="{{route('home')}}">तरूण - Maths</a></li>                
-                <li><a class="dropdown-item" href="{{route('home')}}">तरूण - Biology</a></li>                
+                <li><a class="dropdown-item" href="{{route('udgosh.jee')}}">उद्घोष-JEE(Foundation)</a></li>
+                <li><a class="dropdown-item" href="{{route('safal.jee')}}">सफल -JEE(Target)</a></li>
+                <li><a class="dropdown-item" href="{{route('udgosh.neet')}}">उद्घोष-NEET(Foundation)</a></li>
+                <li><a class="dropdown-item" href="{{route('safal.neet')}}">सफल-NEET(Target)</a></li>
+                <li><a class="dropdown-item" href="{{route('eklavya.tenth')}}">एकलव्य -Tenth</a></li>
+                <li><a class="dropdown-item" href="{{route('eklavya.ninth')}}">एकलव्य - Ninth</a></li>
+                <li><a class="dropdown-item" href="{{route('eklavya.eighth')}}">एकलव्य - Eighth</a></li>
+                <li><a class="dropdown-item" href="{{route('tarun.math')}}">तरूण - Maths</a></li>                
+                <li><a class="dropdown-item" href="{{route('tarun.bio')}}">तरूण - Biology</a></li>                
 
            
                 

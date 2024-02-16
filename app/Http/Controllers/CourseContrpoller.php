@@ -25,4 +25,58 @@ class CourseContrpoller extends Controller
         $title = "TAD ICSE-2024";
         return view('test-series/tad-icse', compact('title'));
     }
+    public function viewPrayashJee(){
+        $title = "PRAYASH JEE-2024";
+        return view('test-series/prayash-jee', compact('title'));
+    }
+    public function viewPrayashNeet(){
+        $title = "PRAYASH NEET-2024";
+        return view('test-series/prayash-neet', compact('title'));
+    }
+
+    public function viewUdgoshJee(){
+        $title = "उद्घोष-JEE(Foundation)";
+        return view('courses/udgosh-jee', compact('title'));
+    }
+
+    public function viewSafalJee(){
+        $title = "सफल -JEE(Target)";
+        return view('courses/safal-jee', compact('title'));
+    }
+
+    public function viewUdgoshNeet(){
+        $title = "उद्घोष-NEET(Foundation)";
+        return view('courses/udgosh-jee', compact('title'));
+    }
+
+    public function viewSafalNeet(){
+        $title = "सफल-NEET(Target)";
+        return view('courses/safal-jee', compact('title'));
+    }
+
+    public function viewEklavyaTenth(){
+        $title = "एकलव्य -Tenth";
+        return view('courses/eklavya-tenth', compact('title'));
+    }
+
+    public function viewEklavyaNinth(){
+        $title = "एकलव्य - Ninth";
+        return view('courses/eklavya-ninth', compact('title'));
+    }
+
+    public function viewEklavyaEight(){
+        $title = "एकलव्य - Eighth";
+        return view('courses/eklavya-eight', compact('title'));
+    }
+
+    public function viewTarunMath(){
+        $title = "तरूण - Maths";
+        return view('courses/tarun-math', compact('title'));
+    }
+
+    public function viewTarunBio(){
+        $title = "तरूण - Biology";
+        return view('courses/tarun-biology', compact('title'));
+    }
+    
 }

@@ -8,9 +8,7 @@
         <div class="row">
   <p>
     <h3> Current-Opening</h3>
-    This responsive web page ensures optimal viewing on various devices, adapting its layout for smaller screens
-    to enhance the user experience. Its key features include a seamlessly responsive design, clear data labeling
-    on smaller screens, and a simple yet elegant styling suitable for a variety of applications.
+    Here's to many more. Our Current Openings. Explore the opportunities currently available across our departments and locations and send in your application ...
     <br /> <br />
   </p>
 
@@ -20,22 +18,30 @@
     <thead>
       <tr>
         <th> Position</th>
+        <th>Location</th>
         <th> Description</th>
         <th> Apply Now</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td>Alfreds Futterkiste</td>
+        <td>Marketing executive</td>
+        <td>Bhagalpur, Bihar</td>
         <td><a href="">Know More ..</a></td>
         <td><button class="btn btn-primary btn-sm">Apply Now</button></td>
       </tr>
       <tr>
-        <td>Centro comercial Moctezuma</td>
+        <td>Tele caller</td>
+        <td>Bhagalpur, Bihar</td>
         <td><a href="">Know More ..</a></td>
         <td><button class="btn btn-primary btn-sm">Apply Now</button></td>
       </tr>
-      
+      <tr>
+        <td>Receptionist cum counsellor</td>
+        <td>Bhagalpur, Bihar</td>
+        <td><a href="">Know More ..</a></td>
+        <td><button class="btn btn-primary btn-sm">Apply Now</button></td>
+      </tr>
     </tbody>
   </table>
   </p>

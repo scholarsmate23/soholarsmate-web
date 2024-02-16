@@ -12,8 +12,7 @@
         <a href="course-single.html">
           <h4 class="card-title">IIT-JEE</h4>
         </a>
-        <p class="card-text mb-4"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-          incididunt ut labore et dolore magna.</p>
+        <p class="card-text mb-4">JEE (Joint Entrance Exam) is a national level exam which is conducted to get into engineering colleges. JEE occurs in two phases - JEE Main and JEE Advanced. Mode of the exam is online/computer based.</p>
         <a href="course-single.html" class="btn btn-primary btn-sm">Apply now</a>
       </div>
     </div>
@@ -30,8 +29,7 @@
         <a href="course-single.html">
           <h4 class="card-title">NEET</h4>
         </a>
-        <p class="card-text mb-4"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-          incididunt ut labore et dolore magna.</p>
+        <p class="card-text mb-4"> The National Eligibility cum Entrance Test (NEET) is conducted by the National Testing Agency (NTA). NEET is held for admission to MBBS and BDS courses in India. The test comprises three sections – physics, chemistry and biology.</p>
         <a href="course-single.html" class="btn btn-primary btn-sm">Apply now</a>
       </div>
     </div>
@@ -48,8 +46,7 @@
         <a href="course-single.html">
           <h4 class="card-title">Pre - Foundation</h4>
         </a>
-        <p class="card-text mb-4"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-          incididunt ut labore et dolore magna.</p>
+        <p class="card-text mb-4"> A foundation course is a one or two-year preparatory course for school-leavers who want to qualify for a place on a bachelor's degree course in art, design or architecture</p>
         <a href="course-single.html" class="btn btn-primary btn-sm">Apply now</a>
       </div>
     </div>
@@ -65,8 +62,7 @@
         <a href="course-single.html">
           <h4 class="card-title">Boards</h4>
         </a>
-        <p class="card-text mb-4"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-          incididunt ut labore et dolore magna.</p>
+        <p class="card-text mb-4"> Class 12 Board Exams in common language, is the final examination conducted every year for high school students by the Central Board of Secondary Education on behalf of the Government of India.</p>
         <a href="course-single.html" class="btn btn-primary btn-sm">Apply now</a>
       </div>
     </div>

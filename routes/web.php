@@ -38,6 +38,8 @@ Route::controller(UserController::class)->group(function(){
     Route::get('/result', 'viewResult')->name('result');
     Route::get('/career', 'viewCareer')->name('career');
     Route::get('/gallery', 'viewGallery')->name('gallery');
+    Route::get('/student-zone', 'viewStudentZone')->name('student.zone');
+
 });
 
 Route::controller(CourseContrpoller::class)->group(function(){
@@ -45,4 +47,15 @@ Route::controller(CourseContrpoller::class)->group(function(){
     Route::get('/akalan', 'viewAaklan')->name('akalan');
     Route::get('/tad-cbse', 'viewTadCbse')->name('tad.cbse');
     Route::get('/tad-icse', 'viewTadIcse')->name('tad.icse');
+    Route::get('/prayash-jee', 'viewPrayashJee')->name('prayash.jee');
+    Route::get('/prayash-neet', 'viewPrayashNeet')->name('prayash.neet');
+    Route::get('/udgosh-jee', 'viewUdgoshJee')->name('udgosh.jee');
+    Route::get('/safal-jee', 'viewSafalJee')->name('safal.jee');
+    Route::get('/udgosh-neet', 'viewUdgoshNeet')->name('udgosh.neet');
+    Route::get('/safal-neet', 'viewSafalNeet')->name('safal.neet');
+    Route::get('/eklavya-tenth', 'viewEklavyaTenth')->name('eklavya.tenth');
+    Route::get('/eklavya-ninth', 'viewEklavyaNinth')->name('eklavya.ninth');
+    Route::get('/eklavya-eighth', 'viewEklavyaEight')->name('eklavya.eighth');
+    Route::get('/tarun-math', 'viewTarunMath')->name('tarun.math');
+    Route::get('/tarun-bio', 'viewTarunBio')->name('tarun.bio');
 });

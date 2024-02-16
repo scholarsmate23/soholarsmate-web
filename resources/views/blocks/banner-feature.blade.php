@@ -53,8 +53,8 @@
     <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
       <div class="accordion-body">
         <ul>
-        <li class="list-style">JEE test series planner 2023-24 <a href="">Know More</a></li>
-        <li class="list-style">neet test planner 2023-24 <a href="">Know More</a></li>
+        <li class="list-style">JEE Test Series Planner 2023-24 <a href="{{route('prayash.jee')}}">Know More</a></li>
+        <li class="list-style">NEET Test Series Planner 2023-24 <a href="{{route('prayash.neet')}}">Know More</a></li>
         </ul>
       </div>
     </div>
@@ -68,15 +68,15 @@
     <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
       <div class="accordion-body">
         <ul class="list-design">
-        <li class="list-style"> उद्घोष-JEE(Foundation) <a href="">Know More</a></li>
-        <li class="list-style">सफल -JEE(Target) <a href="">Know More</a></li>
-        <li class="list-style">उद्घोष-NEET(Foundation) <a href="">Know More</a></li>
-        <li class="list-style">उद्घोष-NEET(Target) <a href="">Know More</a></li>
-        <li class="list-style">एकलव्य -Tenth <a href="">Know More</a></li>
-        <li class="list-style">एकलव्य - Ninth <a href="">Know More</a></li>
-        <li class="list-style">एकलव्य - Eighth <a href="">Know More</a></li>
-        <li class="list-style">तरूण - Maths <a href="">Know More</a></li>
-        <li class="list-style">तरूण - Biology <a href="">Know More</a></li>
+        <li class="list-style"> उद्घोष-JEE(Foundation) <a href="{{route('udgosh.jee')}}">Know More</a></li>
+        <li class="list-style">सफल -JEE(Target) <a href="{{route('safal.jee')}}">Know More</a></li>
+        <li class="list-style">उद्घोष-NEET(Foundation) <a href="{{route('udgosh.neet')}}">Know More</a></li>
+        <li class="list-style">सफल-NEET(Target) <a href="{{route('safal.neet')}}">Know More</a></li>
+        <li class="list-style">एकलव्य -Tenth <a href="{{route('home')}}">Know More</a></li>
+        <li class="list-style">एकलव्य - Ninth <a href="{{route('home')}}">Know More</a></li>
+        <li class="list-style">एकलव्य - Eighth <a href="{{route('home')}}">Know More</a></li>
+        <li class="list-style">तरूण - Maths <a href="{{route('home')}}">Know More</a></li>
+        <li class="list-style">तरूण - Biology <a href="{{route('home')}}">Know More</a></li>
 
         </ul>
 
