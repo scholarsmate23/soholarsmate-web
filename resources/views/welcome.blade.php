@@ -30,7 +30,8 @@
 </section>
 <!-- /courses -->
 
-@include('blocks/cta')
+@include('blocks/cta') 
+@include('blocks/success-story')
 
 <!-- events -->
 <section class="section bg-gray">
@@ -60,7 +61,7 @@
 @include('blocks/teachers')
 
 <!-- blog -->
-<section class="section pt-0">
+<!-- <section class="section pt-0">
     <div class="container">
         <div class="row">
             <div class="col-12">
@@ -69,7 +70,7 @@
         </div>
         @include('blocks/blog')
     </div>
-</section>
+</section> -->
 
 <!-- popup-botton -->
 <div class="ba-we-love-subscribers-wrap">
