@@ -38,10 +38,12 @@
                 </ul>
         </div>
 
-        <div class="col-12">
+        <div class="col-12" style="margin-top: 20px;">
             <h2>Note:</h2>
-            <p>Non-Attending Student may also study here.</p>
-            <p>Seprate Hostel Facility Available for both Boys and Girls</p>
+            <ul class="list-style">
+                <li class="list-style">Non-Attending Student may also study here.</li>
+                <li class="list-style">Seprate Hostel Facility Available for both Boys and Girls</li>
+            </ul>
         </div>
     </div>
 </section>

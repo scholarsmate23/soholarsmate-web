@@ -50,5 +50,10 @@ class UserController extends Controller
         $title= "STUDENT-ZONE";
         return view('pages/student-zone', compact('title'));
     }
+
+    public function viewEngineering(){
+        $title= "Engineering Division (IITJEE-Main/Adv)";
+        return view('pages/student-zone', compact('title'));
+    }
     
 }

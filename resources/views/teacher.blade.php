@@ -1,7 +1,6 @@
-@include('header.htm') 
+@include('header') 
 @include('blocks/navigation') 
-@include('blocks/page-title', {"page-link": "index.html", "page-title" : "Home" , "nasted" : "nasted" , "description" : "Our courses offer a good compromise between the continuous assessment
-favoured by some universities and the emphasis placed on final exams by others.", "single-page-title": "Our teacher" })
+@include('blocks/page-title')
 
 <!-- teachers -->
 <section class="section">

@@ -20,9 +20,9 @@
 <section class="section">
     <div class="container">
         <div class="row">
-            <div class="col-12">
+            <div class="col-12" style="margin-bottom: 20px;">
                 <h3 class="section-title">Features</h3>
-                <ul>
+                <ul class="list-style">
                 <li class="list-style">Prepare NCERT Only (CBSE, ICSE and  Bihar Board)</li>
                 <li class="list-style">Regular Classes</li>
                 <li class="list-style">Study Material of All Subject will provided</li>
@@ -36,7 +36,7 @@
                 <li class="list-style">Crash Course (Revision cum Test Planner) <a href="{{route('prayash.jee')}}">Know More</a></li>
                 </ul>
         </div>
-        <div class="col-12">
+        <div class="col-12" style="margin-bottom: 20px;">
             <h4>Syllabus:</h4>
             <table class="table-reset" cellspacing=0 cellpadding=0>
                     <tr>
@@ -59,8 +59,10 @@
         </div>
         <div class="col-12">
             <h4>Note:</h4>
-            <p>Non-Attending Student may also study here.</p>
-            <p>Seprate Hostel Facility Available for both Boys and Girls</p>
+            <ul class="list-style">
+                <li class="list-style">Non-Attending Student may also study here.</li>
+                <li class="list-style">Seprate Hostel Facility Available for both Boys and Girls</li>
+            </ul>
         </div>
     </div>
 </section>
@@ -93,7 +95,7 @@
 
                     <tr>
                     <td>1st Installment</td>
-                    <<td>7000</td>
+                    <td>7000</td>
                     <td>1260</td>
                     <td>8260.00</td>
                     </tr>

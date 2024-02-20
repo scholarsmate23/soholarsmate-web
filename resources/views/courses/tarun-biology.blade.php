@@ -56,11 +56,13 @@
                     <td><a href="">Click to View</a></td>
                     </tr>
             </table>
-        </div>
-        <div class="col-12">
+        </div> 
+        <div class="col-12" style="margin-top: 20px;">
             <h4>Note:</h4>
-            <p>Non-Attending Student may also study here.</p>
-            <p>Seprate Hostel Facility Available for both Boys and Girls</p>
+            <ul class="list-style">
+                <li class="list-style">Non-Attending Student may also study here.</li>
+                <li class="list-style">Seprate Hostel Facility Available for both Boys and Girls</li>
+            </ul>
         </div>
     </div>
 </section>

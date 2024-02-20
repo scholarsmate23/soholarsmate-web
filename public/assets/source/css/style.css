@@ -1358,8 +1358,13 @@ table tr td {
 }
 
 .list-style {
+    list-style-type: square !important;
+    margin: 0px;
+}
+
+.list-style li {
     padding: 10px;
-    list-style: none;
+    /* list-style: none; */
     cursor: pointer;
     transition: 0.3s;
     background-color: #f8f8f8;

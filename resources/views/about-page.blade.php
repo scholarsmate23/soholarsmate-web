@@ -41,6 +41,25 @@
         </div>
     </div>
 </section>
+<section class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="section-title">Academic Highlights</h2>
+                <img class="img-fluid w-100 mb-4 mt-10" src="{{asset('assets/source/images/about/academic-highlight.jpg')}}" alt="">
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="section-title">Teaching - Methodology</h2>
+                <img class="img-fluid w-100 mb-4 mt-10" src="{{asset('assets/source/images/about/teaching-methodology.jpg')}}" alt="">
+        </div>
+    </div>
+</section>
 <!-- funfacts -->
 <!-- <section class="section-sm bg-primary">
     <div class="container">

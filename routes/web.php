@@ -39,6 +39,7 @@ Route::controller(UserController::class)->group(function(){
     Route::get('/career', 'viewCareer')->name('career');
     Route::get('/gallery', 'viewGallery')->name('gallery');
     Route::get('/student-zone', 'viewStudentZone')->name('student.zone');
+    Route::get('/engineering', 'viewEngineering')->name('engineering');
 
 });
 

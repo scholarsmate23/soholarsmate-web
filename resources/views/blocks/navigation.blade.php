@@ -44,18 +44,19 @@
             <li class="nav-item @about">
               <a class="nav-link" href="{{route('about')}}">About</a>
             </li>
-            <li class="nav-item @courses">
+            <!-- <li class="nav-item @courses">
               <a class="nav-link" href="{{route('course')}}">COURSES</a>
-            </li>
+            </li> -->
             <li class="nav-item dropdown view">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               ACADEMICS
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="{{route('tad.icse')}}">ENGINEERING</a></li>
-                <li><a class="dropdown-item" href="{{route('tad.cbse')}}">MEDICAL</a></li>
-                <li><a class="dropdown-item" href="{{route('akalan')}}">PRE-FOUNDATION</a></li>
-                <li><a class="dropdown-item" href="{{route('akalan')}}">SYLLABUS</a></li>
+                <li><a class="dropdown-item" href="{{route('engineering')}}">ENGINEERING</a></li>
+                <li><a class="dropdown-item" href="{{route('home')}}">MEDICAL</a></li>
+                <li><a class="dropdown-item" href="{{route('home')}}">PRE-FOUNDATION</a></li>
+                <li><a class="dropdown-item" href="{{route('home')}}">BOARDS</a></li>
+                <li><a class="dropdown-item" href="{{route('home')}}">SYLLABUS</a></li>
 
               </ul>
             </li>
