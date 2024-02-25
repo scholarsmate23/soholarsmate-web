@@ -32,22 +32,22 @@
         </div>
         <!-- company -->
         <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-5 mb-md-0">
-          <h4 class="text-white mb-5">COMPANY</h4>
+          <h4 class="text-white mb-5">PAGES</h4>
           <ul class="list-unstyled">
-            <li class="mb-3" ><a class="text-white" href="about.html">About Us</a></li>
-            <li class="mb-3"><a class="text-white" href="teacher.html">Our Teacher</a></li>
-            <li class="mb-3"><a class="text-white" href="contact.html">Contact</a></li>
-            <li class="mb-3"><a class="text-white" href="blog.html">Blog</a></li>
+            <li class="mb-3" ><a class="text-white" href="{{route('about')}}">About Us</a></li>
+            <!-- <li class="mb-3"><a class="text-white" href="teacher.html">Our Teacher</a></li> -->
+            <li class="mb-3"><a class="text-white" href="{{route('contact')}}">Contact</a></li>
+            <li class="mb-3"><a class="text-white" href="{{route('home')}}">ADMISSION</a></li>
           </ul>
         </div>
         <!-- links -->
         <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-5 mb-md-0">
           <h4 class="text-white mb-5">LINKS</h4>
           <ul class="list-unstyled">
-            <li class="mb-3 "><a class="text-white" href="courses.html">Courses</a></li>
-            <li class="mb-3"><a class="text-white" href="events.html">Events</a></li>
-            <li class="mb-3"><a class="text-white" href="notice.html">Notice</a></li>
-            <li class="mb-3"><a class="text-white" href="scholarship.html">Scholarship</a></li>
+            <li class="mb-3 "><a class="text-white" href="{{route('career')}}">Career</a></li>
+            <li class="mb-3"><a class="text-white" href="{{route('result')}}">Result</a></li>
+            <li class="mb-3"><a class="text-white" href="{{route('gallery')}}">Gallery</a></li>
+            <li class="mb-3"><a class="text-white" href="{{route('student.zone')}}">Student Zone</a></li>
           </ul>
         </div>
         <!-- support -->
