@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Response;
+use App\Models\Pdf; // Assuming you have a model for PDFs
 
 class UserController extends Controller
 {
@@ -53,7 +55,37 @@ class UserController extends Controller
 
     public function viewEngineering(){
         $title= "Engineering Division (IITJEE-Main/Adv)";
-        return view('pages/student-zone', compact('title'));
+        return view('pages/engineering', compact('title'));
     }
     
+    public function viewSyllabus(){
+        $title= "SYLLABUS";
+        return view('pages/syllabus', compact('title'));
+    }
+
+    public function viewFoundation(){
+        $title= "PRE - FOUNDATION";
+        return view('pages/pre-foundation', compact('title'));
+    }
+
+    public function viewMedical(){
+        $title= "Medical Division (NEET)";
+        return view('pages/medical', compact('title'));
+    }
+
+    public function viewBoards(){
+        $title= "BOARDS";
+        return view('pages/boards', compact('title'));
+    }
+
+    public function downloadPdf($id)
+    {
+        $pdf = Pdf::findOrFail($id);
+
+        // Path to the PDF file (assuming it's stored in the public folder)
+        $filePath = public_path('assets/storage/pdfs/' . $pdf->filename . '.pdf');
+
+        // Return the file as a download response
+        return Response::download($filePath);
+    }
 }

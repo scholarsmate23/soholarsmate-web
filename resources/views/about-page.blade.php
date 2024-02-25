@@ -7,7 +7,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <img class="img-fluid w-100 mb-4 mt-10" src="{{asset('assets/source/images/about/about-page.jpg')}}" alt="about image">
+                <img class="img-fluid w-100 mb-4 mt-10" src="{{asset('assets/source/images/about/BUILDING.jpg')}}" alt="about image">
                 <h2 class="section-title">ABOUT OUR JOURNEY</h2>
                 <p>Scholar's Mate Career Institute is a fast-growing coaching institute in Eastern India for the preparation of IIT JEE, NEET (Medical), KVPY, NTSE, OLYMPIADS, Academic, Board and other Exams like that. We have experts & experienced faculties (IITians/NITians, Doctor & NET Qualified teachers).</p>
                 <p>We offer foundation courses for the students moving in class VI, VII, VIII, IX, X & XI for initial phase of        preparation and aims at building story foundation for IIT JEE, NEET (Medical), KVPY, Board, NTSE, OLYMPAIDS.9th & 10th

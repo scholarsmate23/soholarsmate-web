@@ -6,20 +6,26 @@
       <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
       <li data-target="#myCarousel" data-slide-to="1"></li>
       <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="3"></li>
+
     </ol>
 
     <!-- Wrapper for slides -->
     <div class="carousel-inner">
       <div class="item active">
-        <img src="{{asset('assets/source/images/slider/S1.jpg')}}" alt="Los Angeles" style="width:100%;">
+        <img src="{{asset('assets/source/images/slider/S1.jpg')}}" alt="Slider-1" style="width:100%;">
       </div>
 
       <div class="item">
-        <img src="{{asset('assets/source/images/slider/S2.jpg')}}" alt="Chicago" style="width:100%;">
+        <img src="{{asset('assets/source/images/slider/S2.jpg')}}" alt="Slider-2" style="width:100%;">
       </div>
     
       <div class="item">
-        <img src="{{asset('assets/source/images/slider/S3.jpg')}}" alt="New york" style="width:100%;">
+        <img src="{{asset('assets/source/images/slider/S3.jpg')}}" alt="Slider-3" style="width:100%;">
+      </div>
+
+      <div class="item">
+        <img src="{{asset('assets/source/images/slider/S4.jpg')}}" alt="Slider-3" style="width:100%;">
       </div>
     </div>
 

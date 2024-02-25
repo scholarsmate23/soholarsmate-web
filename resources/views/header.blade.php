@@ -10,8 +10,9 @@
   <!-- Mobile Specific Metas
 	================================================== -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="description" content="Scholar's Mate - Scholar's Mate Career Institute is a fast-growing coaching institute in BHAGALPUR for the preparation of IIT JEE, NEET(Medical), KVPY, NTSE, OLYMPIADS, Academic, BOARD, and another Exams like that.">
-  <meta name="keywords" content="Scholarsmate, Scholarsmate Bhagalpur, IIT Institute in Bhagalpur, Neet Institute in Bhagalpur">
+  <meta name="description" content="Scholar's Mate Career Institute is a fast-growing coaching institute in BHAGALPUR for the preparation of IIT JEE, NEET(Medical), KVPY, NTSE, OLYMPIADS, Academic, BOARD, and another Exams like that.">
+  <meta name="keywords" content="Scholarsmate, Scholarsmate Bhagalpur, IIT Institute in Bhagalpur, Neet Institute in Bhagalpur, Institute in Bhgalpur">
+  <meta property="og:image" content="{{asset('assets/source/images/about/icon.png')}}">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
   <meta name="author" content="Themefisher">
   <meta name="generator" content="Themefisher Educenter HTML Template v1.0">

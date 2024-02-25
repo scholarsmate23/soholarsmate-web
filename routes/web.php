@@ -40,11 +40,16 @@ Route::controller(UserController::class)->group(function(){
     Route::get('/gallery', 'viewGallery')->name('gallery');
     Route::get('/student-zone', 'viewStudentZone')->name('student.zone');
     Route::get('/engineering', 'viewEngineering')->name('engineering');
+    Route::get('/syllabus', 'viewSyllabus')->name('syllabus');
+    Route::get('/medical', 'viewMedical')->name('medical');
+    Route::get('/pre-foundation', 'viewFoundation')->name('pre.foundation');
+    Route::get('/boards', 'viewBoards')->name('boards');
+    Route::get('/download/pdf/{id}', 'downloadPdf')->name('pdf.download');
+
 
 });
 
 Route::controller(CourseContrpoller::class)->group(function(){
-    Route::get('/pre-foundation', 'viewFoundation')->name('foundation');
     Route::get('/akalan', 'viewAaklan')->name('akalan');
     Route::get('/tad-cbse', 'viewTadCbse')->name('tad.cbse');
     Route::get('/tad-icse', 'viewTadIcse')->name('tad.icse');

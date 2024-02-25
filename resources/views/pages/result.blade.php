@@ -5,7 +5,20 @@
 <section  class="section">
     <div class="container">
         <div class="row">
-            <!-- Main Content -->
+        <table class="table-reset" cellspacing=0 cellpadding=0>
+                    <tr>
+                    <th class="table-head">Results</th>
+                    <th class="table-head">View</th>
+
+                    </tr>
+                    <tr>
+                    <td>AAKALAN Result (Topper Result)</td>
+                    <td><a href="">Click to view</a></td>
+                    </tr>
+
+
+
+                </table>
         </div>
     </div>
 </section>

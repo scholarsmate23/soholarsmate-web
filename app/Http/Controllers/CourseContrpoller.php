@@ -6,11 +6,6 @@ use Illuminate\Http\Request;
 
 class CourseContrpoller extends Controller
 {
-    public function viewFoundation(){
-        $title = "ABOUT";
-        return view('courses/pre-foundation', compact('title'));
-    }
-
     public function viewAaklan(){
         $title = "AAKALAN TEST SERIES";
         return view('test-series/aakalan', compact('title'));
@@ -35,22 +30,22 @@ class CourseContrpoller extends Controller
     }
 
     public function viewUdgoshJee(){
-        $title = "उद्घोष-JEE(Foundation)";
+        $title = "उद्घोष-JEE (Foundation Course)";
         return view('courses/udgosh-jee', compact('title'));
     }
 
     public function viewSafalJee(){
-        $title = "सफल -JEE(Target)";
+        $title = "सफल -JEE (Target Course)";
         return view('courses/safal-jee', compact('title'));
     }
 
     public function viewUdgoshNeet(){
-        $title = "उद्घोष-NEET(Foundation)";
+        $title = "उद्घोष-NEET (Foundation Course)";
         return view('courses/udgosh-jee', compact('title'));
     }
 
     public function viewSafalNeet(){
-        $title = "सफल-NEET(Target)";
+        $title = "सफल-NEET (Target Course)";
         return view('courses/safal-jee', compact('title'));
     }
 

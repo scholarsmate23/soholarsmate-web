@@ -53,10 +53,12 @@
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <li><a class="dropdown-item" href="{{route('engineering')}}">ENGINEERING</a></li>
-                <li><a class="dropdown-item" href="{{route('home')}}">MEDICAL</a></li>
-                <li><a class="dropdown-item" href="{{route('home')}}">PRE-FOUNDATION</a></li>
-                <li><a class="dropdown-item" href="{{route('home')}}">BOARDS</a></li>
-                <li><a class="dropdown-item" href="{{route('home')}}">SYLLABUS</a></li>
+                <li><a class="dropdown-item" href="{{route('medical')}}">MEDICAL</a></li>
+                <li><a class="dropdown-item" href="{{route('pre.foundation')}}">PRE-FOUNDATION</a></li>
+                <li><a class="dropdown-item" href="{{route('boards')}}">BOARDS</a></li>
+                <li><a class="dropdown-item" href="{{route('syllabus')}}">SYLLABUS</a></li>
+                <li><a class="dropdown-item" href="{{route('home')}}">ACADEMIC CALENDER</a></li>
+
 
               </ul>
             </li>
@@ -68,6 +70,10 @@
                 <li><a class="dropdown-item" href="{{route('tad.icse')}}">TAD-ICSE</a></li>
                 <li><a class="dropdown-item" href="{{route('tad.cbse')}}">TAD-CBSE</a></li>
                 <li><a class="dropdown-item" href="{{route('akalan')}}">AAKALAN- 2024</a></li>
+                <li><a class="dropdown-item" href="{{route('prayash.jee')}}">PRAYASH JEE- 2024</a></li>
+                <li><a class="dropdown-item" href="{{route('prayash.neet')}}">PRAYASH NEET- 2024</a></li>
+
+
               </ul>
             </li>
             <li class="nav-item @blog">
@@ -78,10 +84,10 @@
               COURSES
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="{{route('udgosh.jee')}}">उद्घोष-JEE(Foundation)</a></li>
-                <li><a class="dropdown-item" href="{{route('safal.jee')}}">सफल -JEE(Target)</a></li>
-                <li><a class="dropdown-item" href="{{route('udgosh.neet')}}">उद्घोष-NEET(Foundation)</a></li>
-                <li><a class="dropdown-item" href="{{route('safal.neet')}}">सफल-NEET(Target)</a></li>
+                <li><a class="dropdown-item" href="{{route('udgosh.jee')}}">उद्घोष-JEE (Foundation Course)</a></li>
+                <li><a class="dropdown-item" href="{{route('safal.jee')}}">सफल -JEE (Target Course)</a></li>
+                <li><a class="dropdown-item" href="{{route('udgosh.neet')}}">उद्घोष-NEET (Foundation Course)</a></li>
+                <li><a class="dropdown-item" href="{{route('safal.neet')}}">सफल-NEET (Target Course)</a></li>
                 <li><a class="dropdown-item" href="{{route('eklavya.tenth')}}">एकलव्य -Tenth</a></li>
                 <li><a class="dropdown-item" href="{{route('eklavya.ninth')}}">एकलव्य - Ninth</a></li>
                 <li><a class="dropdown-item" href="{{route('eklavya.eighth')}}">एकलव्य - Eighth</a></li>

@@ -8,7 +8,7 @@
 
 /*  typography */
 
-@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700");
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
 @font-face {
     font-family: "futura-bold";
     src: url("../fonts/Futura-Bold.woff") format("woff");
@@ -18,19 +18,23 @@
 
 body {
     line-height: 1.2;
-    font-family: "Poppins", sans-serif;
+    font-family: "Lora", serif;
     -webkit-font-smoothing: antialiased;
     font-size: 15px;
     color: #5c5c77;
 }
 
+a {
+    color: #0f3969;
+}
+
 p,
 .paragraph {
     font-weight: 400;
-    color: #5c5c77;
+    color: #070707;
     font-size: 15px;
     line-height: 1.9;
-    font-family: "Poppins", sans-serif;
+    font-family: "Lora", serif;
 }
 
 h1,
@@ -40,7 +44,7 @@ h4,
 h5,
 h6 {
     color: #1e1e4b;
-    font-family: "futura-bold";
+    font-family: "Lora", serif;
     font-weight: 700;
     line-height: 1.2;
 }
@@ -739,7 +743,7 @@ link:focus,
     color: #1e1e4b;
     transition: 0.2s ease;
     text-transform: capitalize;
-    font-family: "Poppins", sans-serif;
+    font-family: "Lora", serif;
 }
 
 @media (max-width: 991px) {
@@ -1355,6 +1359,7 @@ table tr td {
     margin: 20px 0;
     padding: 0;
     list-style: none;
+    font-family: "Lora", serif;
 }
 
 .list-style {
@@ -1413,4 +1418,18 @@ table tr td {
     text-align: left;
     padding: 10px;
     border: 1px solid #0f3969;
+    font-family: "Lora", serif;
+}
+
+td {
+    font-family: "Lora", serif;
+}
+
+.card-list {
+    display: block;
+    width: 100%;
+    color: #212529;
+    background-color: transparent;
+    border: 0;
+    font-family: "Lora", serif;
 }

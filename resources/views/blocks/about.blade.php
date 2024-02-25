@@ -11,7 +11,7 @@
         <a href="{{route('about')}}" class="btn btn-outline-primary">Learn more</a>
       </div>
       <div class="col-md-6 order-1 order-md-2 mb-4 mb-md-0">
-        <img class="img-fluid w-100" src="{{asset('assets/source/images/about/about-us.jpg')}}" alt="about image">
+        <img class="img-fluid w-100" src="{{asset('assets/source/images/banner/BUILDING.jpg')}}" alt="about image">
       </div>
     </div>
   </div>
