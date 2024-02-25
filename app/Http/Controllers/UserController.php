@@ -4,7 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Response;
-use App\Models\Pdf; // Assuming you have a model for PDFs
+use App\Models\Pdf;
+use App\Models\Results;
 
 class UserController extends Controller
 {
@@ -87,5 +88,25 @@ class UserController extends Controller
 
         // Return the file as a download response
         return Response::download($filePath);
+    }
+
+    public function showViewer($id)
+    {   
+
+        // Fetch the PDF record from the database based on the ID
+        $pdf = Results::findOrFail($id);
+
+        // Construct the path to the PDF file
+        $path = public_path('assets/storage/results/' . $pdf->file_name . '.pdf');
+
+        // Check if the file exists
+        if (!file_exists($path)) {
+            return view('pdf-viewer', ['pdfPath' => $path, 'data' => $pdf]);
+        }else{
+            return view('pages/pdf-viewer', ['pdfPath' => $path, 'data' => $pdf]);
+
+        }
+
+        // Pass the PDF path to the view along with the PDF filename
     }
 }

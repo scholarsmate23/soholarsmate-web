@@ -12,8 +12,8 @@
 
                     </tr>
                     <tr>
-                    <td>AAKALAN Result (Topper Result)</td>
-                    <td><a href="">Click to view</a></td>
+                    <td>AAKALAN Result (Topper Result)</td> 
+                    <td><a href="{{ route('pdf.viewer', ['id' => 1]) }}" target="_blank">Click to view</a></td>
                     </tr>
 
 
