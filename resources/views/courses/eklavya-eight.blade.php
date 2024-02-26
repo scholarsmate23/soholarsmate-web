@@ -9,8 +9,8 @@
             <div class="col-12">
                 <h2 class="section-title"></h2>
                 <ul>
-                    <li class="list-style">2 Years Program</li>
-                    <li class="list-style">Entry Level : 10th Pass</li>
+                    <li class="list-style">1 Years Program</li>
+                    <li class="list-style">Entry Level : 7th Pass</li>
                     <li class="list-style">Entry Criteria : Entrance Test</li>
                 </ul>
         </div>
@@ -25,7 +25,7 @@
                 <ul>
                 <li class="list-style">Prepare NCERT Only (CBSE, ICSE and  Bihar Board)</li>
                 <li class="list-style">Regular Classes</li>
-                <li class="list-style">Study Material of All Subject will provided</li>
+                <li class="list-style">Study Material will be provided</li>
                 <li class="list-style">DPP/Assignments</li>
                 <li class="list-style">Doubt Session</li>
                 <li class="list-style">Testing Process<ul>
@@ -45,15 +45,15 @@
                     </tr>
                     <tr>
                     <td>CBSE</td>
-                    <td><a href="">Click to View</a></td>
+                    <td><a href="{{route('syllabus')}}">Click to View</a></td>
                     </tr>
                     <tr>
                     <td>ICSE</td>
-                    <td><a href="">Click to View</a></td>
+                    <td><a href="{{route('syllabus')}}">Click to View</a></td>
                     </tr>
                     <tr>
                     <td>Bihar Boards</td>
-                    <td><a href="">Click to View</a></td>
+                    <td><a href="{{route('syllabus')}}">Click to View</a></td>
                     </tr>
             </table>
         </div>
@@ -72,8 +72,9 @@
         <div class="row">
             <div class="col-12">
                 <h3 class="section-title">Fee Structure</h3>
-                
-                <table class="table-reset" cellspacing=0 cellpadding=0>
+                <p>Contact Account Section for Fee Details and Payments.</p>
+
+                <!-- <table class="table-reset" cellspacing=0 cellpadding=0>
                     <tr>
                     <th class="table-head">Fixed Charges and Tution Fee</th>
                     <th class="table-head">Fee</th>
@@ -127,7 +128,7 @@
                     <td>5400</td>
                     <td>35400.00</td>
                     </tr>
-                </table>
+                </table> -->
 
   
         </div>

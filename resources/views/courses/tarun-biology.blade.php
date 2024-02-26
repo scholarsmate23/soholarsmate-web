@@ -33,6 +33,7 @@
                     <li class="list-style">Year Planner Available</li>
                     <li class="list-style">Feedbacks</li>
                 </ul></li>
+                <li class="list-style">Syllabus <a href="{{route('syllabus')}}">Download From here</a></li>
                 <li class="list-style">Crash Course (Revision cum Test Planner) <a href="{{route('prayash.jee')}}">Know More</a></li>
                 </ul>
         </div>
@@ -72,8 +73,9 @@
         <div class="row">
             <div class="col-12">
                 <h3 class="section-title">Fee Structure</h3>
-                
-                <table class="table-reset" cellspacing=0 cellpadding=0>
+                <p>Contact Account Section for Fee Details and Payments.</p>
+
+                <!-- <table class="table-reset" cellspacing=0 cellpadding=0>
                     <tr>
                     <th class="table-head">Fixed Charges and Tution Fee</th>
                     <th class="table-head">Fee</th>
@@ -134,7 +136,7 @@
                     <td>18000</td>
                     <td>118000.00</td>
                     </tr>
-                </table>
+                </table> -->
 
   
         </div>
