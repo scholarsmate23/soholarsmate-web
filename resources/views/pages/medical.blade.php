@@ -14,7 +14,8 @@
                         <ul class="list-inline">
                             <li class="card-list">Biology Faculty-NEET</li>
                             <li class="card-list">Experience: 12 year</li>
-                            <li class="card-list">Ex-Faculty: Akash Institute, Delhi</li>
+                            <li class="card-list">Ex-Faculty: Akash Institute(Delhi), Baluni classes (uttrakhand) , Abhyas Foundation (Gujrat),B.Shaper's (Himachal)
+ </li>
                         </ul>
                     </ul>
             </div>
