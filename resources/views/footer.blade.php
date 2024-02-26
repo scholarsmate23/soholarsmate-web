@@ -1,3 +1,4 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js"></script>
 <!-- jQuery -->
 <script src="{{asset('assets/source/plugins/jQuery/jquery.min.js')}}"></script>
 <!-- Bootstrap JS -->

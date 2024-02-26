@@ -54,7 +54,7 @@
                         <p>Guest Chemistry Faculty</p>
                         <ul class="list-inline">
                             <li class="card-list">Experience: 5 Year</li>
-                            <li class="card-list">Expert -Math's Olympiad</li>
+                            <li class="card-list">Expert -Science Olympiad</li>
                         </ul>
                     </div>
                 </div>

@@ -68,8 +68,8 @@
                     <div class="col-lg-4 col-sm-6 mb-5 mb-lg-0">
                         <div class="card border-0 rounded-0 hover-shadow">
                             <div class="card-body">
-                                <h4 class="card-title"><a href="{{route('eklavya.tenth')}}">एकलव्य -Tenth</a></h4>
-                                <p>Director Scholar's Mate</p>
+                                <h4 class="card-title">एकलव्य -Tenth</h4>
+                                <p><a href="{{route('eklavya.tenth')}}">Know More</a></p>
                                 <ul class="list-inline">
                                     <!-- <li class="card-list">Experience: 8 year</li>
                                     <li class="card-list">Faculty: Akash Institute,Pune</li> -->
@@ -81,8 +81,8 @@
                     <div class="col-lg-4 col-sm-6 mb-5 mb-lg-0">
                         <div class="card border-0 rounded-0 hover-shadow">
                             <div class="card-body">
-                                <h4 class="card-title"><a href="{{route('eklavya.ninth')}}">एकलव्य - Ninth</a></h4>
-                                <p>Biology Faculty-NEET</p>
+                                <h4 class="card-title">एकलव्य - Ninth</h4>
+                                <p><a href="{{route('eklavya.ninth')}}">Know More</a></p>
                                 <ul class="list-inline">
                                     <!-- <li class="card-list">Experience: 12 year</li>
                                     <li class="card-list">Ex-Faculty: Akash Institute, Delhi</li> -->
@@ -94,8 +94,8 @@
                     <div class="col-lg-4 col-sm-6 mb-5 mb-lg-0">
                         <div class="card border-0 rounded-0 hover-shadow">
                             <div class="card-body">
-                                <h4 class="card-title"><a href="{{route('eklavya.eighth')}}">एकलव्य - Eighth</a></h4>
-                                <p>Biology Faculty-NEET</p>
+                                <h4 class="card-title">एकलव्य - Eighth</h4>
+                                <p><a href="{{route('eklavya.eighth')}}">Know More</a></p>
                                 <ul class="list-inline">
                                     <!-- <li class="card-list">Experience: 12 year</li>
                                     <li class="card-list">Ex-Faculty: Akash Institute, Delhi</li> -->

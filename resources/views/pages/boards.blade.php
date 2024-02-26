@@ -12,8 +12,8 @@
                     <div class="col-lg-6 col-sm-6 mb-5 mb-lg-0">
                         <div class="card border-0 rounded-0 hover-shadow">
                             <div class="card-body">
-                                <h4 class="card-title"><a href="{{route('tarun.math')}}">तरूण - Maths</a></h4>
-                                <p>Board Course for PCM</p>
+                                <h4 class="card-title">तरूण - Maths</h4>
+                                <p><a href="{{route('tarun.math')}}">Know More</a></p>
                                 <ul class="list-inline">
                                     <!-- <li class="card-list">Experience: 8 year</li>
                                     <li class="card-list">Faculty: Akash Institute,Pune</li> -->
@@ -25,8 +25,8 @@
                     <div class="col-lg-6 col-sm-6 mb-5 mb-lg-0">
                         <div class="card border-0 rounded-0 hover-shadow">
                             <div class="card-body">
-                                <h4 class="card-title"><a href="{{route('tarun.bio')}}">तरूण - Biology</a></h4>
-                                <p>Board Course for PCB</p>
+                                <h4 class="card-title">तरूण - Biology</h4>
+                                <p><a href="{{route('tarun.bio')}}">Know More</a></p>
                                 <ul class="list-inline">
                                     <!-- <li class="card-list">Experience: 12 year</li>
                                     <li class="card-list">Ex-Faculty: Akash Institute, Delhi</li> -->

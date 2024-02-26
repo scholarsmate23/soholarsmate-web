@@ -82,8 +82,8 @@
                     <div class="col-lg-6 col-sm-6 mb-5 mb-lg-0">
                         <div class="card border-0 rounded-0 hover-shadow">
                             <div class="card-body">
-                                <h4 class="card-title"><a href="{{route('udgosh.jee')}}">उद्घोष-JEE (Foundation Course)</a></h4>
-                                <p>Director Scholar's Mate</p>
+                                <h4 class="card-title">उद्घोष-JEE (Foundation Course)</h4>
+                                <p><a href="{{route('udgosh.jee')}}">Know More</a></p>
                                 <ul class="list-inline">
                                     <!-- <li class="card-list">Experience: 8 year</li>
                                     <li class="card-list">Faculty: Akash Institute,Pune</li> -->
@@ -95,8 +95,8 @@
                     <div class="col-lg-6 col-sm-6 mb-5 mb-lg-0">
                         <div class="card border-0 rounded-0 hover-shadow">
                             <div class="card-body">
-                                <h4 class="card-title"><a href="{{route('safal.jee')}}">सफल -JEE (Target Course )</a></h4>
-                                <p>Biology Faculty-NEET</p>
+                                <h4 class="card-title">सफल -JEE (Target Course )</a></h4>
+                                <p><a href="{{route('safal.jee')}}">Know More</a></p>
                                 <ul class="list-inline">
                                     <!-- <li class="card-list">Experience: 12 year</li>
                                     <li class="card-list">Ex-Faculty: Akash Institute, Delhi</li> -->
