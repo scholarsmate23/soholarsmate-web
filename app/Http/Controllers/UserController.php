@@ -109,4 +109,10 @@ class UserController extends Controller
 
         // Pass the PDF path to the view along with the PDF filename
     }
+
+    public function viewCalender(){
+        $title= "ACADEMIC CALENDER";
+        return view('pages/calender', compact('title'));
+    }
+    
 }

@@ -46,7 +46,7 @@ Route::controller(UserController::class)->group(function(){
     Route::get('/boards', 'viewBoards')->name('boards');
     Route::get('/download/pdf/{id}', 'downloadPdf')->name('pdf.download');
     Route::get('/pdf-viewer/{id}', 'showViewer')->name('pdf.viewer');
-
+    Route::get('/calender', 'viewCalender')->name('calender');
 
 });
 

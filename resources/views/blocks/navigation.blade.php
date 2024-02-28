@@ -57,7 +57,7 @@
                 <li><a class="dropdown-item" href="{{route('pre.foundation')}}">PRE-FOUNDATION</a></li>
                 <li><a class="dropdown-item" href="{{route('boards')}}">BOARDS</a></li>
                 <li><a class="dropdown-item" href="{{route('syllabus')}}">SYLLABUS</a></li>
-                <li><a class="dropdown-item" href="{{route('home')}}">ACADEMIC CALENDER</a></li>
+                <li><a class="dropdown-item" href="{{route('calender')}}">ACADEMIC CALENDER</a></li>
 
 
               </ul>

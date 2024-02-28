@@ -8,7 +8,7 @@
       <div class="accordion-item">
     <h2 class="accordion-header" id="flush-headingOne">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-        UDDAM Career Counselling
+      <strong>उद्दाम - Career Counselling</strong>
       </button>
     </h2>
     <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
@@ -23,7 +23,7 @@
     <div class="accordion-item">
     <h2 class="accordion-header" id="flush-headingTwo">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-        Scholarships
+        <strong>Scholarships</strong>
       </button>
     </h2>
     <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
@@ -38,7 +38,7 @@
   <div class="accordion-item">
     <h2 class="accordion-header" id="flush-headingThree">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-        AAKALAN-2024
+      <strong>आकलन-2024</strong>
       </button>
     </h2>
     <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
@@ -52,7 +52,7 @@
   <div class="accordion-item">
     <h2 class="accordion-header" id="flush-headingFour">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
-        TAD-2024 (ICSE/CBSE)
+        <strong>TAD-2024 (ICSE/CBSE)</strong> 
       </button>
     </h2>
     <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
@@ -67,7 +67,7 @@
   <div class="accordion-item">
     <h2 class="accordion-header" id="flush-headingFive">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
-        PRAYASH Test Series(JEE/NEET)
+      <strong>प्रयास - Test Series(JEE/NEET)</strong>
       </button>
     </h2>
     <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
@@ -82,7 +82,7 @@
   <div class="accordion-item">
     <h2 class="accordion-header" id="flush-headingSix">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
-        Admission Open for the Courses
+       <strong>Admission Open for the Courses</strong> 
       </button>
     </h2>
     <div id="flush-collapseSix" class="accordion-collapse collapse" aria-labelledby="flush-headingSix" data-bs-parent="#accordionFlushExample">
