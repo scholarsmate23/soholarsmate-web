@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Response;
 use App\Models\Pdf;
 use App\Models\Results;
+use App\Models\GalleryImage;
+
 
 class UserController extends Controller
 {
@@ -44,9 +46,11 @@ class UserController extends Controller
         return view('pages/career', compact('title'));
     }
 
-    public function viewGallery(){
+    public function viewGallery()
+    {
         $title= "Gallery";
-        return view('pages/gallery', compact('title'));
+        $images = GalleryImage::all();
+        return view('pages/gallery', compact('images', 'title'));
     }
 
     public function viewStudentZone(){
