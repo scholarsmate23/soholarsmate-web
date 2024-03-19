@@ -13,7 +13,7 @@
                         <p></p>
                         <ul class="list-inline">
                             <li class="card-list">Math Faculty-JEE MAIN/ADV</li>
-                            <li class="card-list">Experience: 8 year</li>
+                            <li class="card-list">Experience: 8 year(IIT Kanpur)</li>
                             <li class="card-list">Ex-Faculty: CP(KOTA), VMC (Delhi), Doubtnut (Delhi)</li>
                         </ul>
                     </ul>
@@ -50,11 +50,11 @@
                     <div class="col-lg-3 col-sm-6 mb-5 mb-lg-0">
                         <div class="card border-0 rounded-0 hover-shadow">
                             <div class="card-body">
-                                <h4 class="card-title">Mr. Vikas Kumar</h4>
+                                <h4 class="card-title">Er. Vijay Kumar</h4>
                                 <p>Physics Faculty</p>
                                 <ul class="list-inline">
-                                    <li class="card-list">Experience: 5 Year</li>
-                                    <li class="card-list">Expert - Science's Olympiad</li>
+                                    <li class="card-list">Experience: 5 Year(NIT Bhopal)</li>
+                                    <li class="card-list">Ex-Faculty: Motion, Kota</li>
                                 </ul>
                             </div>
                         </div>
