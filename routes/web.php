@@ -3,6 +3,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\LoginRegisterController;
 use App\Http\Controllers\UserController;
 use  App\Http\Controllers\CourseContrpoller;
+use App\Http\Controllers\MailController;
 
 /*
 |--------------------------------------------------------------------------
@@ -47,7 +48,8 @@ Route::controller(UserController::class)->group(function(){
     Route::get('/download/pdf/{id}', 'downloadPdf')->name('pdf.download');
     Route::get('/pdf-viewer/{id}', 'showViewer')->name('pdf.viewer');
     Route::get('/calender', 'viewCalender')->name('calender');
-
+    Route::get('/apply-form', 'viewApplication')->name('apply.form');
+    Route::POST('/submitData', 'submitData')->name('submitData');
 });
 
 Route::controller(CourseContrpoller::class)->group(function(){
@@ -66,3 +68,5 @@ Route::controller(CourseContrpoller::class)->group(function(){
     Route::get('/tarun-math', 'viewTarunMath')->name('tarun.math');
     Route::get('/tarun-bio', 'viewTarunBio')->name('tarun.bio');
 });
+
+Route::post('/sent-mail', [MailController::class, 'sentMail']);

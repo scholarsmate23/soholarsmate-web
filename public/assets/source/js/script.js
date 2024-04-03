@@ -171,3 +171,57 @@ $(document).ready(function() {
         closeModal();
     });
 });
+
+
+$(document).ready(function() {
+    $('#applicantForm').submit(function(event) {
+        event.preventDefault(); // Prevent default form submission
+
+        var isValid = true;
+
+        // Remove previous error styles
+        $('input').removeClass('error');
+
+        // Validate each input field
+        $('#applicantForm input').each(function() {
+            if ($(this).val() === '') {
+                $(this).addClass('error');
+                isValid = false;
+
+                // Remove error styling after 5 seconds
+                setTimeout(function() {
+                    $('input').removeClass('error');
+                }, 5000);
+            }
+        });
+
+        // If all fields are valid, submit the form
+        if (isValid) {
+            submitFormData();
+        }
+    });
+
+    function submitFormData() {
+        // Collect form data
+        var formData = $('#applicantForm').serialize();
+
+        // AJAX request to submit data
+        $.ajax({
+            url: '/submitData', // Change the URL to your Laravel route
+            type: 'POST',
+            data: formData,
+            success: function(response) {
+                // Show success modal
+                $('#successModal').modal('show');
+            },
+            error: function(xhr, status, error) {
+                console.error(xhr.responseText); // Log error message
+                alert('An error occurred while submitting the data. Please try again.'); // Show error message
+            }
+        });
+    }
+
+    $('#closeModalBtn').click(function() {
+        window.location.href = '/'; // Change the URL to your home page
+    });
+});

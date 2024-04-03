@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Response;
 use App\Models\Pdf;
 use App\Models\Results;
 use App\Models\GalleryImage;
-
+use App\Models\NewApplicants;
 
 class UserController extends Controller
 {
@@ -118,5 +118,37 @@ class UserController extends Controller
         $title= "ACADEMIC CALENDER";
         return view('pages/calender', compact('title'));
     }
+
+    public function viewApplication(){
+        $title= "Apply for Admission";
+        return view('pages/apply-form', compact('title'));
+    }
     
+    public function submitData(Request $request)
+    {
+        $applicant = new NewApplicants();
+
+        // Fill the model with data from the request
+        $applicant->name = $request->name;
+        $applicant->email = $request->email;
+        $applicant->phone = $request->phone;
+        $applicant->father_name = $request->father_name;
+        $applicant->father_occupation = $request->father_occupation;
+        $applicant->mother_name = $request->mother_name;
+        $applicant->mother_occupation = $request->mother_occupation;
+        $applicant->dob = $request->dob;
+        $applicant->blood_group = $request->blood_group;
+        $applicant->category = $request->category;
+        $applicant->nationality = $request->nationality;
+        $applicant->address = $request->area . ', ' . $request->city . ', ' . $request->state;
+        $applicant->school_name = $request->school_name;
+        $applicant->school_address = $request->school_address;
+        $applicant->boards = $request->boards;
+        $applicant->grade = $request->grade;
+        $applicant->course = $request->course;
+        $applicant->save();
+
+        return response()->json(['status' => true,  'message' => 'Data submitted successfully'], 200);
+    }
+
 }

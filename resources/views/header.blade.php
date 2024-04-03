@@ -46,6 +46,15 @@
   <link rel="icon" href="images/favicon.png" type="image/x-icon">
 
 </head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GMK8H5WF6T"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-GMK8H5WF6T');
+</script>
 
 <body>
   <!-- preloader start -->

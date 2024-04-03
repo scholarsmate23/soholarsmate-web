@@ -13,7 +13,7 @@
           <h4 class="card-title">IIT-JEE</h4>
         </a>
         <p class="card-text mb-4">JEE (Joint Entrance Exam) is a national level exam which is conducted to get into engineering colleges. JEE occurs in two phases - JEE Main and JEE Advanced.</p>
-        <a href="{{route('home')}}" class="btn btn-primary btn-sm">Apply now</a>
+        <a href="{{route('apply.form')}}" class="btn btn-primary btn-sm">Apply now</a>
       </div>
     </div>
   </div>
@@ -30,7 +30,7 @@
           <h4 class="card-title">NEET</h4>
         </a>
         <p class="card-text mb-4"> The National Eligibility cum Entrance Test (NEET) is conducted by the National Testing Agency (NTA). NEET is held for admission to MBBS and BDS courses in India.</p>
-        <a href="{{route('home')}}" class="btn btn-primary btn-sm">Apply now</a>
+        <a href="{{route('apply.form')}}" class="btn btn-primary btn-sm">Apply now</a>
       </div>
     </div>
   </div>
@@ -47,7 +47,7 @@
           <h4 class="card-title">Pre - Foundation</h4>
         </a>
         <p class="card-text mb-4"> A foundation course is a one or two-year preparatory course for school-leavers who want to qualify for a place on a bachelor's degree course in art, design or architecture</p>
-        <a href="{{route('home')}}" class="btn btn-primary btn-sm">Apply now</a>
+        <a href="{{route('apply.form')}}" class="btn btn-primary btn-sm">Apply now</a>
       </div>
     </div>
   </div>
@@ -63,7 +63,7 @@
           <h4 class="card-title">Boards</h4>
         </a>
         <p class="card-text mb-4"> Class 12 Board Exams in common language, is the final examination conducted every year for high school students by the CBSE on behalf of the GOI.</p>
-        <a href="{{route('home')}}" class="btn btn-primary btn-sm">Apply now</a>
+        <a href="{{route('apply.form')}}" class="btn btn-primary btn-sm">Apply now</a>
       </div>
     </div>
   </div>
