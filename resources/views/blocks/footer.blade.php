@@ -26,7 +26,7 @@
           <ul class="list-unstyled">
             <li class="mb-2 text-white">Near Saraswati Vidya Mandir, BudhaNath Road, Khalifabagh Chowk, Bhagalpur</li>
             <li class="mb-2 text-white">+91 9102282333</li>
-            <li class="mb-2 text-white">+91 9939282333</li>
+            <li class="mb-2 text-white">+91 9102428333</li>
             <li class="mb-2 text-white">contact@scholarsmate.co.in</li>
           </ul>
         </div>
