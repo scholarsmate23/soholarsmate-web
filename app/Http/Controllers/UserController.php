@@ -101,11 +101,11 @@ class UserController extends Controller
         $pdf = Results::findOrFail($id);
 
         // Construct the path to the PDF file
-        $path = public_path('assets/storage/results/' . $pdf->file_name . '.pdf');
+        $path = asset('assets/storage/results/' . $pdf->file_name . '.pdf');
 
         // Check if the file exists
         if (!file_exists($path)) {
-            return view('pdf-viewer', ['pdfPath' => $path, 'data' => $pdf]);
+            return view('pages/pdf-viewer', ['pdfPath' => $path, 'data' => $pdf]);
         }else{
             return view('pages/pdf-viewer', ['pdfPath' => $path, 'data' => $pdf]);
 

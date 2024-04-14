@@ -73,64 +73,20 @@
             <div class="col-12">
                 <h3 class="section-title">Fee Structure</h3>
                 <p>Contact Account Section for Fee Details and Payments.</p>
+        </div>
+    </div>
+</section>
 
-                <!-- <table class="table-reset" cellspacing=0 cellpadding=0>
-                    <tr>
-                    <th class="table-head">Fixed Charges and Tution Fee</th>
-                    <th class="table-head">Fee</th>
-                    <th class="table-head">GST</th>
-                    <th class="table-head">Total Fee</th>  
-                    </tr>
-                    <tr>
-                    <td>Registration Fee</td>
-                    <td>5000</td>
-                    <td>900</td>
-                    <td>5900.00</td>
-                    </tr>
-                    <tr>
-                    <td>Uniform/Bag/DPP/Test-Series/Maintance Charges</td>
-                    <td>7000</td>
-                    <td>1260</td>
-                    <td>8260.00</td>
-                    </tr>
 
-                    <tr>
-                    <td>1st Installment</td>
-                    <td>6000</td>
-                    <td>1080</td>
-                    <td>16520.00</td>
-                    </tr>
-
-                    <tr>
-                    <td>2nd Installment</td>
-                    <td>6000</td>
-                    <td>1080</td>
-                    <td>7080.00</td>
-                    </tr>
-
-                    <tr>
-                    <td>2nd Installment</td>
-                    <td>6000</td>
-                    <td>1080</td>
-                    <td>7080.00</td>
-                    </tr>
-
-                    <tr>
-                    <td>3rd Installment</td>
-                    <td>6000</td>
-                    <td>1080</td>
-                    <td>7080.00</td>
-                    </tr>
-
-                    <tr>
-                    <td>Total Fee</td>
-                    <td>30000</td>
-                    <td>5400</td>
-                    <td>35400.00</td>
-                    </tr>
-                </table> -->
-
-  
+<section class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h3 class="section-title">Apply for  Admission</h3>
+                <ul>
+                <li><a href="{{route('apply.form')}}" class="btn btn-primary btn-sm">Apply now</a></li>
+            </ul>
+                
         </div>
     </div>
 </section>

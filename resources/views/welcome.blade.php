@@ -73,20 +73,7 @@
 
 <!-- popup-botton -->
 <div class="ba-we-love-subscribers-wrap">
-	<div class="ba-we-love-subscribers popup-ani">
-		<header>
-			<h1>We<i class="img love"></i>subscribers</h1>
-		</header>
-		<form  method="post" target="popupwindow">
-			<input name="email" placeholder="hello@barrel.im" type="email" value=""><br>
-			<input class="logo-ani" name="submit" type="submit"> <input name="uri" type="hidden" value="barreldotim">
-		</form>
-	</div>
-	<div class="ba-we-love-subscribers-fab">
-		<div class="wrap">
-			<div class="img-fab img"></div>
-		</div>
-	</div>
+<a aria-label="Chat on WhatsApp" href="https://wa.me/9939282333" target="_blank"> <img alt="Chat on WhatsApp" src="{{ asset('assets/source/images/icons/WhatsAppButtons.png') }}" />
 </div>
 <!-- /blog -->
 

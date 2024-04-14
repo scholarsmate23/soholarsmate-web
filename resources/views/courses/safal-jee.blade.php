@@ -122,6 +122,20 @@
         </div>
     </div>
 </section>
+
+
+<section class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h3 class="section-title">Apply for  Admission</h3>
+                <ul>
+                <li><a href="{{route('apply.form')}}" class="btn btn-primary btn-sm">Apply now</a></li>
+            </ul>
+                
+        </div>
+    </div>
+</section>
 <!-- /courses -->
 
 @include('blocks/footer') 

@@ -110,6 +110,21 @@
         </div>
 </section>
 
+<section class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h3 class="section-title">Apply for  Admission</h3>
+                <ul>
+                <li><a href="{{route('apply.form')}}" class="btn btn-primary btn-sm">Apply now</a></li>
+            </ul>
+                
+        </div>
+    </div>
+</section>
 
+<div class="ba-we-love-subscribers-wrap">
+<a aria-label="Chat on WhatsApp" href="https://wa.me/9939282333" target="_blank"> <img alt="Chat on WhatsApp" src="{{ asset('assets/source/images/icons/WhatsAppButtons.png') }}" />
+</div>
 @include('blocks/footer')
 @include('footer')

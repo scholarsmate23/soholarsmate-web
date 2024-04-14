@@ -11052,3 +11052,7 @@ a.text-dark:hover {
 .accordion-flush .accordion-item .accordion-button.collapsed {
     border-radius: 0
 }
+
+.mt-7 {
+    margin-top: 7rem!important
+}

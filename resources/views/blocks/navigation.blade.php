@@ -17,10 +17,10 @@
           <ul class="list-inline">
             <li class="list-inline-item"><a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block" href="{{route('career')}}">Career</a></li>
             <li class="list-inline-item"><a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block" href="{{route('result')}}">Result</a></li>
-            <li class="list-inline-item"><a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block" href="{{route('gallery')}}">Gallery</a></li>
+            <!-- <li class="list-inline-item"><a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block" href="{{route('gallery')}}">Gallery</a></li> -->
             <li class="list-inline-item"><a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block" href="{{route('events')}}">News/Events</a></li>
             <li class="list-inline-item"><a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block" href="{{route('student.zone')}}">Student Zone</a></li>
-            <li class="list-inline-item"><a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block" href="#loginModal" data-toggle="modal" data-target="#loginModal">login</a></li>
+            <li class="list-inline-item"><a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block" href="{{route('login')}}">login</a></li>
           </ul>
         </div>
       </div>
@@ -110,6 +110,10 @@
             </li>
             <li class="nav-item @contact">
               <a class="nav-link" href="{{route('contact')}}">CONTACT</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="{{route('gallery')}}">Gallery</a>
             </li>
           </ul>
         </div>

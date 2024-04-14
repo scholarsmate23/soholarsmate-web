@@ -1,8 +1,11 @@
-@extends('auth.layouts')
 
-@section('content')
 
-<div class="row justify-content-center mt-5">
+
+@extends('header')
+@extends('blocks/navigation')
+<section class="section">
+<div class="container">
+<div class="row justify-content-center mt-7">
     <div class="col-md-8">
 
         <div class="card">
@@ -37,5 +40,8 @@
         </div>
     </div>    
 </div>
-    
-@endsection
+</div>
+</section>
+
+@include('blocks/footer') 
+@include('footer')
