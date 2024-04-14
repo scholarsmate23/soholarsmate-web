@@ -125,7 +125,7 @@
 </section>
 
 <div class="ba-we-love-subscribers-wrap">
-<a aria-label="Chat on WhatsApp" href="https://wa.me/9102428333" target="_blank"> <img alt="Chat on WhatsApp" src="{{ asset('assets/source/images/icons/WhatsAppButtons.png') }}" />
+<a aria-label="Chat on WhatsApp" href="https://wa.me/+919102428333" target="_blank"> <img alt="Chat on WhatsApp" src="{{ asset('assets/source/images/icons/WhatsAppButtons.png') }}" />
 </div>
 
 @include('blocks/footer')
