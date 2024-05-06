@@ -1,8 +1,13 @@
-@include('header') 
-@include('blocks/navigation') 
+@include('header')
+@include('blocks/navigation')
 @include('blocks/page-title')
 
 <!-- contact -->
+@if(session('success'))
+            <div class="alert alert-success">
+                {{ session('success') }}
+            </div>
+            @endif
 <section class="section bg-gray">
     <div class="container">
         <div class="row">
@@ -12,13 +17,35 @@
         </div>
         <div class="row">
             <div class="col-lg-7 mb-4 mb-lg-0">
-                <form action="/contact.html" method="POST">
-                    <input type="text" class="form-control mb-3" id="name" name="name" placeholder="Your Name" required>
-                    <input type="email" class="form-control mb-3" id="mail" name="mail" placeholder="Your Email" required>
-                    <input type="text" class="form-control mb-3" id="subject" name="subject" placeholder="Subject" required>
-                    <textarea name="message" id="message" class="form-control mb-3" placeholder="Your Message" required></textarea>
+                <form action="{{ route('save.contact') }}" method="POST">
+                    @csrf
+                    <div class="form-group">
+                        <input type="text" class="form-control mb-3 @error('name') is-invalid @enderror" id="name" name="name" placeholder="Your Name" required>
+                        @error('name')
+                        <div class="invalid-feedback">{{ $message }}</div>
+                        @enderror
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control mb-3 @error('mail') is-invalid @enderror" id="mail" name="mail" placeholder="Your Email" required>
+                        @error('mail')
+                        <div class="invalid-feedback">{{ $message }}</div>
+                        @enderror
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control mb-3 @error('subject') is-invalid @enderror" id="mobile" name="mobile" placeholder="Mobile" required>
+                        @error('subject')
+                        <div class="invalid-feedback">{{ $message }}</div>
+                        @enderror
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" id="message" class="form-control mb-3 @error('message') is-invalid @enderror" placeholder="Your Message" required></textarea>
+                        @error('message')
+                        <div class="invalid-feedback">{{ $message }}</div>
+                        @enderror
+                    </div>
                     <button type="submit" value="send" class="btn btn-primary">SEND MESSAGE</button>
                 </form>
+
             </div>
             <div class="col-lg-5">
                 <!-- <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit recusandae voluptates doloremque veniam temporibus porro culpa ipsa, nisi soluta minima saepe laboriosam debitis nesciunt. Dolore, labore. Accusamus nulla sed cum aliquid
@@ -40,5 +67,5 @@
 </section>
 <!-- /gmap -->
 
-@include('blocks/footer') 
+@include('blocks/footer')
 @include('footer')

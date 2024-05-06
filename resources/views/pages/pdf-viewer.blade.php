@@ -6,7 +6,7 @@
     <div class="row">
       <div class="col-md-8">
         <ul class="list-inline custom-breadcrumb mb-2">
-          <li class="list-inline-item"><a class="h2 text-primary font-secondary" >{{ $data->exam }}</a></li>
+          <li class="list-inline-item"><a class="h2 text-primary font-secondary" >{{ $filename }}</a></li>
         </ul>
       </div>
     </div>
@@ -15,9 +15,24 @@
 
 <section class="section">
     <div class="container">
-    <div id="pdf-container"></div>
+    <div id="adobe-dc-view" style="width: 100%;"></div>
     </div>
 </section>
+
+
+
+<script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+<script type="text/javascript">
+    document.addEventListener("adobe_dc_view_sdk.ready", function(){ 
+        var adobeDCView = new AdobeDC.View({clientId: "2d68314ab5814d53a72917ff4b48e569", divId: "adobe-dc-view"});
+        var route =  "{{ $pdfPath }}";
+        console.log(route);
+        adobeDCView.previewFile({
+            content:{location: {url: route}},
+            metaData:{fileName: "{{ $filename }}"}
+        }, {embedMode: "IN_LINE", showDownloadPDF: false, showPrintPDF: false});
+    });
+</script>
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {

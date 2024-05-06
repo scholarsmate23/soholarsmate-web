@@ -37,7 +37,7 @@
             <!-- <h2>Event Category</h2> -->
             @foreach ($eventImages as $image)
             <div class="col-lg-4 col-sm-6 mb-5">
-                <img src="{{ asset('assets/storage/gallery/' . $image->file_name. '.jpg') }}" alt="This is an image" width="100%" height="auto">
+                <img src="{{ asset('storage/gallery/' . $image->file_name) }}" alt="This is an image" width="100%" height="auto">
             </div>
             @endforeach
         </div>
@@ -50,7 +50,7 @@
             <!-- <h2>Distribution Category</h2> -->
             @foreach ($distributionImages as $image)
             <div class="col-lg-4 col-sm-6 mb-5">
-                <img src="{{ asset('assets/storage/gallery/' . $image->file_name. '.jpg') }}" alt="This is an image" width="100%" height="auto">
+                <img src="{{ asset('storage/gallery/' . $image->file_name) }}" alt="This is an image" width="100%" height="auto">
             </div>
             @endforeach
         </div>
@@ -63,4 +63,4 @@
 
 @include('blocks/footer') 
 @include('footer')
-            <img src="{{ asset('storage/' . $image->name) }}" alt="{{ $image->name }}">
+            <!-- <img src="{{ asset('storage/' . $image->name) }}" alt="{{ $image->name }}"> -->

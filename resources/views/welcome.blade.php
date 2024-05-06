@@ -5,7 +5,6 @@
 @include('blocks/banner-feature') 
 @include('blocks/about')
 @include('blocks/scholarship-detail')
-@include('blocks/uddyam-detail')
 <!-- courses -->
 <section class="section-sm">
     <div class="container">

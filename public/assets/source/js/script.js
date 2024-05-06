@@ -225,3 +225,13 @@ $(document).ready(function() {
         window.location.href = '/'; // Change the URL to your home page
     });
 });
+
+// Remove error messages after 5 seconds
+setTimeout(function() {
+    $('.invalid-feedback').fadeOut('slow');
+}, 5000);
+
+
+setTimeout(function() {
+    $('.alert-success').fadeOut('slow');
+}, 5000);

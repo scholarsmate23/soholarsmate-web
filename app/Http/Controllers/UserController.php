@@ -2,15 +2,26 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Career;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Response;
 use App\Models\Pdf;
 use App\Models\Results;
 use App\Models\GalleryImage;
 use App\Models\NewApplicants;
+use App\Models\Contact;
+use App\Models\SliderImg;
+use App\Models\News;
 
 class UserController extends Controller
 {
+
+    public function viewWelcome(){
+        $data = SliderImg::orderBy('created_at', 'desc')->get();
+        $news = News::orderBy('created_at', 'desc')->get();
+        return view('welcome', compact('data','news'));
+    }
+
     public function viewCourse(){
         $title = "COURSES";
         return view('courses', compact('title'));
@@ -37,13 +48,13 @@ class UserController extends Controller
     }
 
     public function viewResult(){
-        $title = "RESULTS";
-        return view('pages/result', compact('title'));
+        $results = Results::get();
+        return view('pages/result', compact('results'));
     }
 
     public function viewCareer(){
-        $title= "CAREER";
-        return view('pages/career', compact('title'));
+        $careers = Career::all();
+        return view('pages/career', compact('careers'));
     }
 
     public function viewGallery()
@@ -64,8 +75,8 @@ class UserController extends Controller
     }
     
     public function viewSyllabus(){
-        $title= "SYLLABUS";
-        return view('pages/syllabus', compact('title'));
+        $syllabus = Pdf::all();
+        return view('pages/syllabus', compact('syllabus'));
     }
 
     public function viewFoundation(){
@@ -88,7 +99,7 @@ class UserController extends Controller
         $pdf = Pdf::findOrFail($id);
 
         // Path to the PDF file (assuming it's stored in the public folder)
-        $filePath = public_path('assets/storage/pdfs/' . $pdf->filename . '.pdf');
+        $filePath = public_path('storage/syllabus/' . $pdf->filename);
 
         // Return the file as a download response
         return Response::download($filePath);
@@ -96,23 +107,42 @@ class UserController extends Controller
 
     public function showViewer($id)
     {   
-
-        // Fetch the PDF record from the database based on the ID
         $pdf = Results::findOrFail($id);
-
-        // Construct the path to the PDF file
-        $path = asset('assets/storage/results/' . $pdf->file_name . '.pdf');
-
-        // Check if the file exists
+        $filename= $pdf->exam;
+        $path = asset('storage/result/' . $pdf->file_name);
         if (!file_exists($path)) {
-            return view('pages/pdf-viewer', ['pdfPath' => $path, 'data' => $pdf]);
+            return view('pages/pdf-viewer', ['pdfPath' => $path, 'filename' => $filename]);
         }else{
-            return view('pages/pdf-viewer', ['pdfPath' => $path, 'data' => $pdf]);
+            return view('pages/pdf-viewer', ['pdfPath' => $path, 'filename' => $filename]);
 
         }
-
-        // Pass the PDF path to the view along with the PDF filename
     }
+
+    public function discriptionViewer($id){
+        $pdf = Career::findOrFail($id);
+        $filename= $pdf->position;
+        $path = asset('storage/career/' . $pdf->description_file);
+        if (!file_exists($path)) {
+            return view('pages/pdf-viewer', ['pdfPath' => $path, 'filename' => $filename]);
+        }else{
+            return view('pages/pdf-viewer', ['pdfPath' => $path, 'filename' => $filename]);
+
+        }
+    }
+
+    public function newsViewer($id){
+        $pdf = News::findOrFail($id);
+        $filename= $pdf->title;
+        $path = asset('storage/news/' . $pdf->image);
+        if (!file_exists($path)) {
+            return view('blocks/news-detail', ['pdfPath' => $path, 'filename' => $filename]);
+        }else{
+            return view('blocks/news-detail', ['pdfPath' => $path, 'filename' => $filename]);
+
+        }
+    }
+
+
 
     public function viewCalender(){
         $title= "ACADEMIC CALENDER";
@@ -149,6 +179,30 @@ class UserController extends Controller
         $applicant->save();
 
         return response()->json(['status' => true,  'message' => 'Data submitted successfully'], 200);
+    }
+
+    public function saveContact(Request $request)
+    {
+        // Validate the incoming request
+        // $validatedData = $request->validate([
+        //     'name' => 'required|string|max:255',
+        //     'mail' => 'required|email|max:255',
+        //     'mobile' => 'required|string|max:255',
+        //     'message' => 'required|string',
+        // ]);
+
+        // Create a new Contact instance
+        $contact = new Contact;
+        $contact->name = $request->name;
+        $contact->email = $request->mail;
+        $contact->mobile = $request->mobile;
+        $contact->message = $request->message;
+
+        // Save the contact details
+        $contact->save();
+
+        // Optionally, you can return a response or redirect the user
+        return redirect()->back()->with('success', 'Message sent successfully!');
     }
 
 }

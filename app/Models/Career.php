@@ -5,16 +5,15 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Pdf extends Model
+class Career extends Model
 {
     use HasFactory;
 
-    protected $table = 'pdfs';
+    protected $table = 'career_page';
 
     protected $fillable = [
-        'id',
-        'name',
-        'filename',
-        'course_type'
+        'position',
+        'location',
+        'description_file',
     ];
 }

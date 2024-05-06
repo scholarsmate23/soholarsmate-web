@@ -5,11 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class GalleryImage extends Model
+class SliderImg extends Model
 {
     use HasFactory;
 
-    protected $table ='gallery_images';
+    protected $table ='slider_img';
 
-    protected $fillable = ['file_name', 'category']; 
+    protected $fillable = ['category','file_name']; 
 }

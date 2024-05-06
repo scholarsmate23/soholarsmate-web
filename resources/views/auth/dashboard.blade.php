@@ -2,23 +2,15 @@
 
 @section('content')
 
-<div class="row justify-content-center mt-5">
-    <div class="col-md-8">
-        <div class="card">
-            <div class="card-header">Dashboard</div>
-            <div class="card-body">
-                @if ($message = Session::get('success'))
-                    <div class="alert alert-success">
-                        {{ $message }}
-                    </div>
-                @else
-                    <div class="alert alert-success">
-                        You are logged in!
-                    </div>       
-                @endif                
+<div class="table-title">
+                <div class="row">
+                    <div class="col-sm-6">
+						<h2>Dashboard</h2>
+					</div>
+					<div class="col-sm-6">
+						<!-- <a href="#addEmployeeModal" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Add New Employee</span></a>
+						<a href="#deleteEmployeeModal" class="btn btn-danger" data-toggle="modal"><i class="material-icons">&#xE15C;</i> <span>Delete</span></a>						 -->
+					</div>
+                </div>
             </div>
-        </div>
-    </div>    
-</div>
-    
 @endsection

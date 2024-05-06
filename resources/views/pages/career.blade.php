@@ -1,6 +1,19 @@
 @include('header') 
 @include('blocks/navigation') 
-@include('blocks/page-title')
+
+<!-- page title -->
+<section class="page-title-section overlay" data-background="images/backgrounds/page-title.jpg">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <ul class="list-inline custom-breadcrumb mb-2">
+          <li class="list-inline-item"><a class="h2 text-primary font-secondary" >CAREER</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /page title -->
 
 <!-- contact -->
 <section class="section bg-gray">
@@ -24,24 +37,14 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td>Marketing executive</td>
-        <td>Bhagalpur, Bihar</td>
-        <td><a href="">Know More ..</a></td>
+    @foreach($careers as $career)
+    <tr>
+        <td>{{ $career->position }}</td>
+        <td>{{ $career->location }}</td>
+        <td><a href="{{ route('discription.viewer', ['id' => $career->id]) }}">Know More ..</a></td>
         <td><button class="btn btn-primary btn-sm">Apply Now</button></td>
-      </tr>
-      <tr>
-        <td>Tele caller</td>
-        <td>Bhagalpur, Bihar</td>
-        <td><a href="">Know More ..</a></td>
-        <td><button class="btn btn-primary btn-sm">Apply Now</button></td>
-      </tr>
-      <tr>
-        <td>Receptionist cum counsellor</td>
-        <td>Bhagalpur, Bihar</td>
-        <td><a href="">Know More ..</a></td>
-        <td><button class="btn btn-primary btn-sm">Apply Now</button></td>
-      </tr>
+    </tr>
+@endforeach
     </tbody>
   </table>
   </p>

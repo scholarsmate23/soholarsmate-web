@@ -13,12 +13,12 @@ class LoginRegisterController extends Controller
     /**
      * Instantiate a new LoginRegisterController instance.
      */
-    public function __construct()
-    {
-        $this->middleware('guest')->except([
-            'logout', 'dashboard'
-        ]);
-    }
+    // public function __construct()
+    // {
+    //     $this->middleware('auth')->except([
+    //         'logout', 'dashboard'
+    //     ]);
+    // }
 
     /**
      * Display a registration form.
@@ -123,8 +123,8 @@ class LoginRegisterController extends Controller
         Auth::logout();
         $request->session()->invalidate();
         $request->session()->regenerateToken();
-        return redirect()->route('login')
-            ->withSuccess('You have logged out successfully!');;
+        return redirect()->route('home')
+            ->withSuccess('You have logged out successfully!');
     }    
 
 }
