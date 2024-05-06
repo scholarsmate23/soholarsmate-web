@@ -1378,9 +1378,10 @@ table tr td {
     border-radius: 3px;
 }
 
-.list-style:hover {
+
+/* .list-style:hover {
     color: green
-}
+} */
 
 #Iframe-Master-CC-and-Rs {
     max-width: 100%;
