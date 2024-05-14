@@ -32,7 +32,7 @@
                             <a href="{{route('udgosh.jee')}}">
                                 <h4 class="card-title">उद्घोष-JEE</h4>
                             </a>
-                            <p>Commencement On: <strong>1 April 2024</strong></p>
+                            <p>Commencement On: <strong>25 May 2024</strong></p>
                             <p><i class="ti-location-pin text-primary mr-2"></i>Bhagalpur</p>
                         </div>
                     </div>
@@ -48,7 +48,7 @@
                             <a href="{{route('udgosh.neet')}}">
                                 <h4 class="card-title">उद्घोष-NEET</h4>
                             </a>
-                            <p>Commencement On: <strong>1 April 2024</strong></p>
+                            <p>Commencement On: <strong>25 May 2024</strong></p>
                             <p><i class="ti-location-pin text-primary mr-2"></i>Bhagalpur</p>
                         </div>
                     </div>
@@ -64,7 +64,7 @@
                             <a href="{{route('safal.jee')}}">
                                 <h4 class="card-title">सफल -JEE</h4>
                             </a>
-                            <p>Commencement On: <strong>15 April 2024</strong></p>
+                            <p>Commencement On: <strong>25 May 2024</strong></p>
                             <p><i class="ti-location-pin text-primary mr-2"></i>Bhagalpur</p>
                         </div>
                     </div>
@@ -79,7 +79,7 @@
                             <a href="{{route('safal.neet')}}">
                                 <h4 class="card-title">सफल -NEET</h4>
                             </a>
-                            <p>Commencement On: <strong>15 April 2024</strong></p>
+                            <p>Commencement On: <strong>25 May 2024</strong></p>
                             <p><i class="ti-location-pin text-primary mr-2"></i>Bhagalpur</p>
                         </div>
                     </div>

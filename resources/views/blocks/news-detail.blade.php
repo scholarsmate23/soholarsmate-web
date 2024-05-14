@@ -19,11 +19,8 @@
 
 <section class="section">
     <div class="container">
-        <div id="Iframe-Master-CC-and-Rs" class="set-margin set-padding set-border set-box-shadow center-block-horiz">
-            <div class="responsive-wrapper responsive-wrapper-wxh-572x612">
-                <object class="pdf" data="{{$pdfPath}}" width="800" height="500"></object>
-                <!-- <embed   src="{{$pdfPath}}"> -->
-            </div>
+        <div class="col-lg-12">
+            <img style="display: block;margin-left: auto; margin-right: auto;" src="{{$pdfPath}}" alt="" srcset="">
         </div>
     </div>
 </section>

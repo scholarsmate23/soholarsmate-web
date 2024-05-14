@@ -63,4 +63,3 @@
 
 @include('blocks/footer') 
 @include('footer')
-            <!-- <img src="{{ asset('storage/' . $image->name) }}" alt="{{ $image->name }}"> -->
