@@ -20,7 +20,7 @@
 <section class="section">
     <div class="container">
         <div class="col-lg-12">
-            <img style="display: block;margin-left: auto; margin-right: auto;" src="{{$pdfPath}}" alt="" srcset="">
+            <img style="display: block;margin-left: auto; margin-right: auto;width: 100%;" src="{{$pdfPath}}" alt="" srcset="">
         </div>
     </div>
 </section>
