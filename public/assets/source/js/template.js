@@ -520,14 +520,14 @@ $(document).ready(function() {
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
             },
             success: function(response) {
-                modalBody.empty().html('<div class="alert alert-success">Image Deleted successfully.</div>');
+                modalBody.empty().html('<div class="alert alert-success">Slider Deleted successfully.</div>');
                 // Optional: Reload the page after a delay to show the success message for a moment
                 setTimeout(function() {
                     location.reload();
                 }, 2000);
             },
             error: function(xhr, status, error) {
-                modalBody.empty().html('<div class="alert alert-danger">An error occurred while Deleting the image.</div>');
+                modalBody.empty().html('<div class="alert alert-danger">An error occurred while Deleting the slider.</div>');
                 setTimeout(function() {
                     location.reload();
                 }, 2000);
@@ -553,14 +553,14 @@ $(document).ready(function() {
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
             },
             success: function(response) {
-                modalBody.empty().html('<div class="alert alert-success">Image Deleted successfully.</div>');
+                modalBody.empty().html('<div class="alert alert-success">Syllabus Deleted successfully.</div>');
                 // Optional: Reload the page after a delay to show the success message for a moment
                 setTimeout(function() {
                     location.reload();
                 }, 2000);
             },
             error: function(xhr, status, error) {
-                modalBody.empty().html('<div class="alert alert-danger">An error occurred while Deleting the image.</div>');
+                modalBody.empty().html('<div class="alert alert-danger">An error occurred while Deleting the syllabus.</div>');
                 setTimeout(function() {
                     location.reload();
                 }, 2000);
@@ -586,14 +586,14 @@ $(document).ready(function() {
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
             },
             success: function(response) {
-                modalBody.empty().html('<div class="alert alert-success">Image Deleted successfully.</div>');
+                modalBody.empty().html('<div class="alert alert-success">Career Deleted successfully.</div>');
                 // Optional: Reload the page after a delay to show the success message for a moment
                 setTimeout(function() {
                     location.reload();
                 }, 2000);
             },
             error: function(xhr, status, error) {
-                modalBody.empty().html('<div class="alert alert-danger">An error occurred while Deleting the image.</div>');
+                modalBody.empty().html('<div class="alert alert-danger">An error occurred while Deleting the Career.</div>');
                 setTimeout(function() {
                     location.reload();
                 }, 2000);
@@ -619,14 +619,14 @@ $(document).ready(function() {
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
             },
             success: function(response) {
-                modalBody.empty().html('<div class="alert alert-success">Image Deleted successfully.</div>');
+                modalBody.empty().html('<div class="alert alert-success">Results Deleted successfully.</div>');
                 // Optional: Reload the page after a delay to show the success message for a moment
                 setTimeout(function() {
                     location.reload();
                 }, 2000);
             },
             error: function(xhr, status, error) {
-                modalBody.empty().html('<div class="alert alert-danger">An error occurred while Deleting the image.</div>');
+                modalBody.empty().html('<div class="alert alert-danger">An error occurred while Deleting the result.</div>');
                 setTimeout(function() {
                     location.reload();
                 }, 2000);
@@ -652,14 +652,80 @@ $(document).ready(function() {
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
             },
             success: function(response) {
-                modalBody.empty().html('<div class="alert alert-success">Image Deleted successfully.</div>');
+                modalBody.empty().html('<div class="alert alert-success">News Deleted successfully.</div>');
                 // Optional: Reload the page after a delay to show the success message for a moment
                 setTimeout(function() {
                     location.reload();
                 }, 2000);
             },
             error: function(xhr, status, error) {
-                modalBody.empty().html('<div class="alert alert-danger">An error occurred while Deleting the image.</div>');
+                modalBody.empty().html('<div class="alert alert-danger">An error occurred while Deleting the news.</div>');
+                setTimeout(function() {
+                    location.reload();
+                }, 2000);
+            }
+        });
+    });
+});
+
+
+// Function to handle Events
+$('#addEventModal form').submit(function(event) {
+    event.preventDefault();
+    var formData = new FormData($(this)[0]);
+    var modalBody = $('#addEventModal .modal-body');
+    $.ajax({
+        url: '/add-events',
+        type: 'POST',
+        data: formData,
+        contentType: false,
+        processData: false,
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        },
+        success: function(response) {
+            // Update modal body with success message
+            modalBody.empty().html('<div class="alert alert-success">Events Added successfully.</div>');
+            // Optional: Reload the page after a delay to show the success message for a moment
+            setTimeout(function() {
+                location.reload();
+            }, 2000);
+        },
+        error: function(xhr, status, error) {
+            // Handle error
+            modalBody.empty().html('<div class="alert alert-danger">An error occurred while uploading the Events.</div>');
+            setTimeout(function() {
+                location.reload();
+            }, 2000);
+        }
+    });
+})
+
+$(document).ready(function() {
+    $('.delete').click(function() {
+        var id = $(this).attr('value');
+        $('#delete_news_id').val(id);
+    });
+
+    $('.delete-confirm').click(function() {
+        var id = $('#delete_news_id').val(); // Get the ID of the record to be deleted
+        var modalBody = $('#deleteEventModal .modal-body');
+        $.ajax({
+            url: '/delete-events', // Your delete route
+            type: 'POST',
+            data: { id: id },
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            },
+            success: function(response) {
+                modalBody.empty().html('<div class="alert alert-success">Events Deleted successfully.</div>');
+                // Optional: Reload the page after a delay to show the success message for a moment
+                setTimeout(function() {
+                    location.reload();
+                }, 2000);
+            },
+            error: function(xhr, status, error) {
+                modalBody.empty().html('<div class="alert alert-danger">An error occurred while Deleting the Events.</div>');
                 setTimeout(function() {
                     location.reload();
                 }, 2000);

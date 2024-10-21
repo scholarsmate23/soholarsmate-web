@@ -561,6 +561,7 @@ textarea.form-control {
     }
     .navbar-collapse.show {
         overflow-y: auto;
+        display: block;
     }
 }
 
@@ -1449,7 +1450,6 @@ td {
     align-items: center;
     justify-content: center;
     padding: 48px;
-    box-shadow: 0px 4px 25px 0px rgba(27, 39, 71, 0.15);
 }
 
 .formbold-form-wrapper {
@@ -1457,6 +1457,8 @@ td {
     max-width: 550px;
     width: 100%;
     background: white;
+    border: 2px solid #b6afaf;
+    border-radius: 5px;
 }
 
 .formbold-form-label {
@@ -1493,7 +1495,7 @@ td {
 
 .formbold-btn {
     text-align: center;
-    font-size: 16px;
+    font-size: 1.5rem;
     border-radius: 6px;
     padding: 14px 32px;
     border: none;
@@ -1506,6 +1508,8 @@ td {
 
 .formbold-btn:hover {
     box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+    background-color: #037a1b;
+    color: white;
 }
 
 .formbold--mx-3 {
@@ -2700,4 +2704,61 @@ table.table .avatar {
 
 .modal form label {
     font-weight: normal;
+}
+
+#form-builder {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+/* .btn-primary {
+    background-color: #007bff;
+    color: white;
+} */
+
+.btn-success {
+    background-color: #28a745;
+    color: white;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+}
+
+#dynamic-fields>div {
+    margin-bottom: 10px;
+}
+
+input[name="field_name[]"],
+select[name="field_type[]"],
+input[name="field_options[]"] {
+    margin-right: 10px;
+    display: inline-block;
 }

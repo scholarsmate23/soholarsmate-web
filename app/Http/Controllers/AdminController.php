@@ -9,59 +9,72 @@ use App\Models\NewApplicants;
 use App\Models\Pdf;
 use App\Models\Career;
 use App\Models\News;
+use App\Models\Event;
 use Illuminate\Support\Facades\Storage;
 
 class AdminController extends Controller
 {
-    public function manageCourse(){
+    public function manageCourse()
+    {
         return view('auth/manage-course');
     }
 
-    public function manageContacts(){
+    public function manageContacts()
+    {
         $data = Contact::orderBy('created_at', 'desc')->get();
         return view('auth/manage-contacts', compact('data'));
     }
-    
 
-    public function manageApplicants(){
+
+    public function manageApplicants()
+    {
         $data = NewApplicants::orderBy('created_at', 'desc')->get();
         return view('auth/manage-applicants', compact('data'));
     }
-    
-    public function manageResults(){
+
+    public function manageResults()
+    {
         $data = Results::get();
         return view('auth/manage-result', compact('data'));
     }
-    
-    public function manageSyllabus(){
+
+    public function manageSyllabus()
+    {
         $data = Pdf::get();
         return view('auth/manage-syllabus', compact('data'));
     }
 
 
-    public function manageCareer(){
+    public function manageCareer()
+    {
         $data = Career::get();
         return view('auth/manage-career', compact('data'));
     }
 
-    public function manageNews(){
+    public function manageNews()
+    {
         $data = News::get();
         return view('auth/manage-news', compact('data'));
     }
 
 
-    public function manageJobApplicants(){
+    public function manageJobApplicants()
+    {
         return view('auth/job-applicants');
-
     }
 
+    public function manageEvents()
+    {
+        $data = Event::get();
+        return view('auth/manage-events', compact('data'));
+    }
 
     public function addSyllabus(Request $request)
     {
         if ($request->hasFile('pdf')) {
             $pdfFile = $request->file('pdf');
-            $filename = time().'_'.$pdfFile->getClientOriginalName();
-    
+            $filename = time() . '_' . $pdfFile->getClientOriginalName();
+
             $path = $pdfFile->storeAs('public/syllabus', $filename);
 
             // Save the file name in the database
@@ -71,15 +84,15 @@ class AdminController extends Controller
                 'filename' => $filename,
             ]);
             return response()->json(['message' => 'Syllabus Added successfully'], 200);
-        }else {
+        } else {
             return response()->json(['message' => 'Something Went Wrong'], 200);
-
         }
     }
 
-    public function deleteSyllabus(Request $request){
+    public function deleteSyllabus(Request $request)
+    {
         $image = Pdf::findOrFail($request->id);
-        Storage::delete('public/syllabus'.$image->filename);
+        Storage::delete('public/syllabus' . $image->filename);
 
         $image->delete();
         return redirect()->back()->with('success', 'Image deleted successfully.');
@@ -89,7 +102,7 @@ class AdminController extends Controller
     {
         if ($request->hasFile('image')) {
             $image = $request->file('image');
-            $imageName = time().'.'.$image->getClientOriginalExtension();
+            $imageName = time() . '.' . $image->getClientOriginalExtension();
             $path = $image->storeAs('public/news', $imageName);
 
             // Save the file name in the database
@@ -102,9 +115,10 @@ class AdminController extends Controller
         return response()->json(['message' => 'News uploaded successfully'], 200);
     }
 
-    public function deleteNews(Request $request){
+    public function deleteNews(Request $request)
+    {
         $image = News::findOrFail($request->id);
-        Storage::delete('public/news'.$image->filename);
+        Storage::delete('public/news' . $image->filename);
 
         $image->delete();
         return redirect()->back()->with('success', 'Image deleted successfully.');
@@ -115,8 +129,8 @@ class AdminController extends Controller
     {
         if ($request->hasFile('pdf')) {
             $pdfFile = $request->file('pdf');
-            $filename = time().'_'.$pdfFile->getClientOriginalName();
-    
+            $filename = time() . '_' . $pdfFile->getClientOriginalName();
+
             $path = $pdfFile->storeAs('public/career', $filename);
 
             // Save the file name in the database
@@ -126,15 +140,15 @@ class AdminController extends Controller
                 'description_file' => $filename,
             ]);
             return response()->json(['message' => 'Career Added successfully'], 200);
-        }else {
+        } else {
             return response()->json(['message' => 'Something Went Wrong'], 200);
-
         }
     }
 
-    public function deletCareer(Request $request){
+    public function deletCareer(Request $request)
+    {
         $image = Career::findOrFail($request->id);
-        Storage::delete('public/career'.$image->filename);
+        Storage::delete('public/career' . $image->filename);
 
         $image->delete();
         return redirect()->back()->with('success', 'Image deleted successfully.');
@@ -145,8 +159,8 @@ class AdminController extends Controller
     {
         if ($request->hasFile('pdf')) {
             $pdfFile = $request->file('pdf');
-            $filename = time().'_'.$pdfFile->getClientOriginalName();
-    
+            $filename = time() . '_' . $pdfFile->getClientOriginalName();
+
             $path = $pdfFile->storeAs('public/result', $filename);
 
             // Save the file name in the database
@@ -155,19 +169,44 @@ class AdminController extends Controller
                 'file_name' => $filename,
             ]);
             return response()->json(['message' => 'Career Added successfully'], 200);
-        }else {
+        } else {
             return response()->json(['message' => 'Something Went Wrong'], 200);
-
         }
     }
 
-    public function deletResult(Request $request){
+    public function deletResult(Request $request)
+    {
         $image = Results::findOrFail($request->id);
-        Storage::delete('public/result'.$image->filename);
+        Storage::delete('public/result' . $image->filename);
 
         $image->delete();
         return redirect()->back()->with('success', 'Career deleted successfully.');
     }
 
+    public function addEvents(Request $request)
+    {
+        if ($request->hasFile('image')) {
+            $image = $request->file('image');
+            $imageName = time() . '.' . $image->getClientOriginalExtension();
+            $path = $image->storeAs('public/events', $imageName);
 
+            // Save the file name in the database
+            Event::create([
+                'title' => $request->title,
+                'event_on' => $request->event_on,
+                'location' => $request->location,
+                'filename' => $imageName,
+            ]);
+        }
+        return response()->json(['message' => 'Events uploaded successfully'], 200);
+    }
+
+    public function deleteEvents(Request $request)
+    {
+        $image = Event::findOrFail($request->id);
+        Storage::delete('public/events' . $image->filename);
+
+        $image->delete();
+        return redirect()->back()->with('success', 'Events deleted successfully.');
+    }
 }

@@ -1,4 +1,5 @@
 <?php
+
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\LoginRegisterController;
 use App\Http\Controllers\UserController;
@@ -6,7 +7,7 @@ use  App\Http\Controllers\CourseContrpoller;
 use App\Http\Controllers\MailController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ImageController;
-
+use App\Http\Controllers\FormController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,13 +23,13 @@ use App\Http\Controllers\ImageController;
 //     return view('welcome');
 // })->name('home');
 
-Route::controller(LoginRegisterController::class)->group(function() {
-    Route::get('/login', 'login')->name('login');
+Route::controller(LoginRegisterController::class)->group(function () {
+    Route::get('/admin', 'login')->name('login');
     Route::post('/authenticate', 'authenticate')->name('authenticate');
 });
 
 
-Route::controller(UserController::class)->group(function(){
+Route::controller(UserController::class)->group(function () {
     Route::get('/', 'viewWelcome')->name('home');
     Route::get('/about', 'viewAbout')->name('about');
     Route::get('/contact', 'viewContact')->name('contact');
@@ -52,10 +53,10 @@ Route::controller(UserController::class)->group(function(){
     Route::post('/save-contact',  'saveContact')->name('save.contact');
     Route::get('/discription/{id}', 'discriptionViewer')->name('discription.viewer');
     Route::get('/news-details/{id}', 'newsViewer')->name('news.details');
-
+    Route::get('/event-details/{id}', 'eventViewer')->name('event.details');
 });
 
-Route::controller(CourseContrpoller::class)->group(function(){
+Route::controller(CourseContrpoller::class)->group(function () {
     Route::get('/akalan', 'viewAaklan')->name('akalan');
     Route::get('/tad-cbse', 'viewTadCbse')->name('tad.cbse');
     Route::get('/tad-icse', 'viewTadIcse')->name('tad.icse');
@@ -71,12 +72,22 @@ Route::controller(CourseContrpoller::class)->group(function(){
     Route::get('/tarun-math', 'viewTarunMath')->name('tarun.math');
     Route::get('/tarun-bio', 'viewTarunBio')->name('tarun.bio');
 });
+// Dynamic route to display a form based on its slug
+Route::get('/form/{slug}', [FormController::class, 'showForm'])->name('showForm');
+// Route to handle form submissions
+Route::post('/form/{formId}/submit', [FormController::class, 'submitForm'])->name('submitForm');
 
 Route::post('/sent-mail', [MailController::class, 'sentMail']);
 
 
 Route::middleware('auth')->group(function () {
-    Route::controller(AdminController::class)->group(function() {
+    Route::get('/manage-forms', [FormController::class, 'manageForm'])->name('manage.form');
+    Route::get('/create-forms', [FormController::class, 'createForm'])->name('create.form');
+    Route::post('/form/save', [FormController::class, 'saveForm'])->name('saveForm');
+    Route::delete('/form/{id}', [FormController::class, 'destroy'])->name('delete.form');
+
+
+    Route::controller(AdminController::class)->group(function () {
         Route::get('/manage-course', 'manageCourse')->name('manage.course');
         Route::get('/manage-contact', 'manageContacts')->name('manage.contact');
         Route::get('/manage-applicants', 'manageApplicants')->name('manage.applicants');
@@ -93,16 +104,18 @@ Route::middleware('auth')->group(function () {
         Route::post('/delete-news', 'deleteNews')->name('delete.news');
         Route::post('/delete-career', 'deletCareer')->name('delete.career');
         Route::post('/delete-result', 'deletResult')->name('delete.result');
-
+        Route::get('/manage-event', 'manageEvents')->name('manage.event');
+        Route::post('/add-events', 'addEvents')->name('add.events');
+        Route::post('/delete-events', 'deleteEvents')->name('delete.events');
     });
-    Route::controller(LoginRegisterController::class)->group(function() {
+    Route::controller(LoginRegisterController::class)->group(function () {
         Route::post('/logout', 'logout')->name('logout');
         Route::get('/dashboard', 'dashboard')->name('dashboard');
         Route::get('/register', 'register')->name('register');
         Route::post('/store', 'store')->name('store');
     });
 
-    Route::controller(ImageController::class)->group(function() {
+    Route::controller(ImageController::class)->group(function () {
         Route::post('/image/upload', 'uploadImage')->name('image.upload');
         Route::post('/image/edit', 'editImage')->name('image.edit');
         Route::post('/image/delete', 'deleteImage')->name('image.delete');
@@ -110,7 +123,5 @@ Route::middleware('auth')->group(function () {
         Route::get('/manage-slider', 'manageSlider')->name('manage.slider');
         Route::post('/add/slider', 'addSliderImage')->name('add.slider');
         Route::post('/delete/slider', 'deleteSliderImage')->name('delete.slider');
-
     });
-
 });

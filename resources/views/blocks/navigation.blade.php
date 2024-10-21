@@ -15,14 +15,32 @@
         </div>
         <div class="col-lg-8 text-center text-lg-right">
           <ul class="list-inline">
-            <li class="list-inline-item"><a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block" href="{{route('career')}}">Career</a></li>
-            <li class="list-inline-item"><a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block" href="{{route('result')}}">Result</a></li>
+            <li class="list-inline-item">
+              <a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block" href="{{ route('career') }}">Career</a>
+            </li>
+            <li class="list-inline-item">
+              <a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block" href="{{ route('result') }}">Result</a>
+            </li>
             <!-- <li class="list-inline-item"><a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block" href="{{route('gallery')}}">Gallery</a></li> -->
-            <li class="list-inline-item"><a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block" href="{{route('events')}}">News/Events</a></li>
-            <li class="list-inline-item"><a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block" href="{{route('student.zone')}}">Student Zone</a></li>
-            <li class="list-inline-item"><a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block" href="{{route('login')}}">login</a></li>
+            <li class="list-inline-item">
+              <a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block" href="{{ route('events') }}">News/Events</a>
+            </li>
+            <li class="list-inline-item">
+              <a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block" href="{{ route('student.zone') }}">Student Zone</a>
+            </li>
+
+            @auth
+            <li class="list-inline-item">
+              <a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block" href="{{ route('dashboard') }}">Dashboard</a>
+            </li>
+            @else
+            <li class="list-inline-item">
+              <a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block" href="{{ route('login') }}">Login</a>
+            </li>
+            @endauth
           </ul>
         </div>
+
       </div>
     </div>
   </div>
@@ -49,7 +67,7 @@
             </li> -->
             <li class="nav-item dropdown view">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              ACADEMICS
+                ACADEMICS
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <li><a class="dropdown-item" href="{{route('engineering')}}">ENGINEERING</a></li>
@@ -64,7 +82,7 @@
             </li>
             <li class="nav-item dropdown view">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Test-Series
+                Test-Series
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <li><a class="dropdown-item" href="{{route('tad.icse')}}">TAD-ICSE</a></li>
@@ -77,11 +95,11 @@
               </ul>
             </li>
             <li class="nav-item @blog">
-              <a class="nav-link" href="{{route('home')}}">ADMISSION</a>
+              <a class="nav-link" href="{{route('apply.form')}}">ADMISSION</a>
             </li>
             <li class="nav-item dropdown view">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              COURSES
+                COURSES
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <li><a class="dropdown-item" href="{{route('udgosh.jee')}}">उद्घोष-JEE (Foundation Course)</a></li>
@@ -91,11 +109,11 @@
                 <li><a class="dropdown-item" href="{{route('eklavya.tenth')}}">एकलव्य -Tenth</a></li>
                 <li><a class="dropdown-item" href="{{route('eklavya.ninth')}}">एकलव्य - Ninth</a></li>
                 <li><a class="dropdown-item" href="{{route('eklavya.eighth')}}">एकलव्य - Eighth</a></li>
-                <li><a class="dropdown-item" href="{{route('tarun.math')}}">तरूण - Maths</a></li>                
-                <li><a class="dropdown-item" href="{{route('tarun.bio')}}">तरूण - Biology</a></li>                
+                <li><a class="dropdown-item" href="{{route('tarun.math')}}">तरूण - Maths</a></li>
+                <li><a class="dropdown-item" href="{{route('tarun.bio')}}">तरूण - Biology</a></li>
 
-           
-                
+
+
                 <!-- <li class="dropdown-item dropdown dropleft">
                   <a class="dropdown-toggle" href="#" id="navbarDropdownSubmenu" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Sub Menu

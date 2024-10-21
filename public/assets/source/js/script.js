@@ -195,8 +195,9 @@ $(document).ready(function() {
             }
         });
 
-        // If all fields are valid, submit the form
+        // If all fields are valid, disable the button and submit the form
         if (isValid) {
+            $('#submitBtn').prop('disabled', true); // Disable the submit button
             submitFormData();
         }
     });
@@ -213,10 +214,12 @@ $(document).ready(function() {
             success: function(response) {
                 // Show success modal
                 $('#successModal').modal('show');
+                $('#submitBtn').prop('disabled', false); // Re-enable the submit button after success
             },
             error: function(xhr, status, error) {
                 console.error(xhr.responseText); // Log error message
                 alert('An error occurred while submitting the data. Please try again.'); // Show error message
+                $('#submitBtn').prop('disabled', false); // Re-enable the submit button after error
             }
         });
     }

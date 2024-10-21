@@ -1,5 +1,5 @@
-@include('header') 
-@include('blocks/navigation') 
+@include('header')
+@include('blocks/navigation')
 @include('blocks/page-title')
 
 <!-- about -->
@@ -9,11 +9,22 @@
             <div class="col-12">
                 <img class="img-fluid w-100 mb-4 mt-10" src="{{asset('assets/source/images/about/BUILDING.jpg')}}" alt="about image">
                 <h2 class="section-title">ABOUT OUR JOURNEY</h2>
-                <p>Scholar's Mate Career Institute is a fast-growing coaching institute in Eastern India for the preparation of IIT JEE, NEET (Medical), KVPY, NTSE, OLYMPIADS, Academic, Board and other Exams like that. We have experts & experienced faculties (IITians/NITians, Doctor & NET Qualified teachers).</p>
-                <p>We offer foundation courses for the students moving in class VI, VII, VIII, IX, X & XI for initial phase of        preparation and aims at building story foundation for IIT JEE, NEET (Medical), KVPY, Board, NTSE, OLYMPAIDS.9th & 10th
-                NTSE, OlympiadsST-JEE</p>
+                <p>Scholar's Mate Career Institute is one of the fastest-growing coaching institutes in Eastern India, specializing in the preparation for competitive exams like IIT-JEE, NEET (Medical), KVPY, NTSE, Olympiads, and Board exams. We pride ourselves on shaping the future of young aspirants by providing exceptional guidance and a strong academic foundation, crucial for excelling in these competitive arenas.
+                </p>
+                <p>
+                    Our expert faculty comprises highly qualified and experienced professionals, including IITians, NITians, Doctors, and NET-qualified teachers. Their in-depth knowledge, combined with years of mentoring experience, equips students with the tools needed to excel not only in academics but also in life. At Scholar's Mate, we ensure that students receive personalized attention, and our results-driven approach helps unlock their true potential.
+                </p>
+                <p>
+                    We offer comprehensive foundation courses designed for students moving into classes VI, VII, VIII, IX, X, and XI, aimed at creating a strong conceptual base for IIT-JEE, NEET, KVPY, Board exams, NTSE, and Olympiads. These courses are meticulously crafted to develop a deep understanding of core subjects, foster analytical thinking, and cultivate problem-solving skills from an early stage, giving students a competitive edge.
+                </p>
+
+                <p>
+                    At Scholar's Mate, we believe in holistic development and encourage students to excel both academically and personally. We provide a conducive environment that nurtures curiosity, inspires a love for learning, and empowers students to take ownership of their academic journey.
+
+                    Join us at Scholar's Mate and embark on a journey toward excellence. Let’s build a strong foundation for your bright future. 🚀
+                </p>
+            </div>
         </div>
-    </div>
 </section>
 <!-- /about -->
 <section class="section">
@@ -22,8 +33,8 @@
             <div class="col-12">
                 <h2 class="section-title">OUR VISION</h2>
                 <p>Our Vision Our Vision is to provide equal studying opportunities to all students appearing for competitive examinations and enhance development of our students through quality teaching by adopting change introduced in the field of Engineering and Medical entrance examination and mould our teaching methods accordingly.</p>
+            </div>
         </div>
-    </div>
 </section>
 
 <section class="section">
@@ -38,8 +49,8 @@
                     <li>Truthfulness towards students, parent, society and national.</li>
                 </ul>
                 <p>In our students, we aspire to instill the attitudes, values and vision that will prepare them for lifetimes of continued learning and leadership in their chosen careers.</p>
+            </div>
         </div>
-    </div>
 </section>
 <section class="section">
     <div class="container">
@@ -47,8 +58,8 @@
             <div class="col-12">
                 <h2 class="section-title">Academic Highlights</h2>
                 <img class="img-fluid w-100 mb-4 mt-10" src="{{asset('assets/source/images/about/academic-highlight.jpg')}}" alt="">
+            </div>
         </div>
-    </div>
 </section>
 
 <section class="section">
@@ -57,8 +68,8 @@
             <div class="col-12">
                 <h2 class="section-title">Teaching - Methodology</h2>
                 <img class="img-fluid w-100 mb-4 mt-10" src="{{asset('assets/source/images/about/teaching-methodology.jpg')}}" alt="">
+            </div>
         </div>
-    </div>
 </section>
 <!-- funfacts -->
 <!-- <section class="section-sm bg-primary">
@@ -167,4 +178,4 @@
 <!-- /teachers -->
 
 @include('blocks/footer')
- @include('footer')
+@include('footer')

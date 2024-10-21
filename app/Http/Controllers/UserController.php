@@ -12,85 +12,102 @@ use App\Models\NewApplicants;
 use App\Models\Contact;
 use App\Models\SliderImg;
 use App\Models\News;
+use App\Models\Event;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\ApplicationSubmitted;
 
 class UserController extends Controller
 {
 
-    public function viewWelcome(){
+    public function viewWelcome()
+    {
         $data = SliderImg::orderBy('created_at', 'desc')->get();
         $news = News::orderBy('created_at', 'desc')->get();
-        return view('welcome', compact('data','news'));
+        return view('welcome', compact('data', 'news'));
     }
 
-    public function viewCourse(){
+    public function viewCourse()
+    {
         $title = "COURSES";
         return view('courses', compact('title'));
     }
 
-    public function viewAbout(){
+    public function viewAbout()
+    {
         $title = "ABOUT";
         return view('about-page', compact('title'));
     }
 
-    public function viewContact(){
+    public function viewContact()
+    {
         $title = "CONTACTS";
         return view('contact', compact('title'));
     }
 
-    public function viewScholarship(){
+    public function viewScholarship()
+    {
         $title = "ACADEMICS";
         return view('scholarship', compact('title'));
     }
-    
-    public function viewEvents(){
-        $title = "EVENTS";
-        return view('events-page', compact('title'));
+
+    public function viewEvents()
+    {
+        $data = Event::get();
+        return view('events-page', compact('data'));
     }
 
-    public function viewResult(){
+    public function viewResult()
+    {
         $results = Results::get();
         return view('pages/result', compact('results'));
     }
 
-    public function viewCareer(){
+    public function viewCareer()
+    {
         $careers = Career::all();
         return view('pages/career', compact('careers'));
     }
 
     public function viewGallery()
     {
-        $title= "Gallery";
+        $title = "Gallery";
         $images = GalleryImage::all();
         return view('pages/gallery', compact('images', 'title'));
     }
 
-    public function viewStudentZone(){
-        $title= "STUDENT-ZONE";
+    public function viewStudentZone()
+    {
+        $title = "STUDENT-ZONE";
         return view('pages/student-zone', compact('title'));
     }
 
-    public function viewEngineering(){
-        $title= "Engineering Division (IITJEE-Main/Adv)";
+    public function viewEngineering()
+    {
+        $title = "Engineering Division (IITJEE-Main/Adv)";
         return view('pages/engineering', compact('title'));
     }
-    
-    public function viewSyllabus(){
+
+    public function viewSyllabus()
+    {
         $syllabus = Pdf::all();
         return view('pages/syllabus', compact('syllabus'));
     }
 
-    public function viewFoundation(){
-        $title= "PRE - FOUNDATION";
+    public function viewFoundation()
+    {
+        $title = "PRE - FOUNDATION";
         return view('pages/pre-foundation', compact('title'));
     }
 
-    public function viewMedical(){
-        $title= "Medical Division (NEET)";
+    public function viewMedical()
+    {
+        $title = "Medical Division (NEET)";
         return view('pages/medical', compact('title'));
     }
 
-    public function viewBoards(){
-        $title= "BOARDS";
+    public function viewBoards()
+    {
+        $title = "BOARDS";
         return view('pages/boards', compact('title'));
     }
 
@@ -106,54 +123,55 @@ class UserController extends Controller
     }
 
     public function showViewer($id)
-    {   
+    {
         $pdf = Results::findOrFail($id);
-        $filename= $pdf->exam;
+        $filename = $pdf->exam;
         $path = asset('storage/result/' . $pdf->file_name);
         if (!file_exists($path)) {
             return view('pages/pdf-viewer', ['pdfPath' => $path, 'filename' => $filename]);
-        }else{
+        } else {
             return view('pages/pdf-viewer', ['pdfPath' => $path, 'filename' => $filename]);
-
         }
     }
 
-    public function discriptionViewer($id){
+    public function discriptionViewer($id)
+    {
         $pdf = Career::findOrFail($id);
-        $filename= $pdf->position;
+        $filename = $pdf->position;
         $path = asset('storage/career/' . $pdf->description_file);
         if (!file_exists($path)) {
             return view('pages/pdf-viewer', ['pdfPath' => $path, 'filename' => $filename]);
-        }else{
+        } else {
             return view('pages/pdf-viewer', ['pdfPath' => $path, 'filename' => $filename]);
-
         }
     }
 
-    public function newsViewer($id){
+    public function newsViewer($id)
+    {
         $pdf = News::findOrFail($id);
-        $filename= $pdf->title;
+        $filename = $pdf->title;
         $path = asset('storage/news/' . $pdf->image);
         if (!file_exists($path)) {
             return view('blocks/news-detail', ['pdfPath' => $path, 'filename' => $filename]);
-        }else{
+        } else {
             return view('blocks/news-detail', ['pdfPath' => $path, 'filename' => $filename]);
-
         }
     }
 
 
 
-    public function viewCalender(){
-        $title= "ACADEMIC CALENDER";
+    public function viewCalender()
+    {
+        $title = "ACADEMIC CALENDER";
         return view('pages/calender', compact('title'));
     }
 
-    public function viewApplication(){
-        $title= "Apply for Admission";
+    public function viewApplication()
+    {
+        $title = "Apply for Admission";
         return view('pages/apply-form', compact('title'));
     }
-    
+
     public function submitData(Request $request)
     {
         $applicant = new NewApplicants();
@@ -177,6 +195,8 @@ class UserController extends Controller
         $applicant->grade = $request->grade;
         $applicant->course = $request->course;
         $applicant->save();
+
+        Mail::to($applicant->email)->send(new ApplicationSubmitted($applicant));
 
         return response()->json(['status' => true,  'message' => 'Data submitted successfully'], 200);
     }
@@ -205,4 +225,15 @@ class UserController extends Controller
         return redirect()->back()->with('success', 'Message sent successfully!');
     }
 
+    public function eventViewer($id)
+    {
+        $pdf = Event::findOrFail($id);
+        $filename = $pdf->title;
+        $path = asset('storage/events/' . $pdf->filename);
+        if (!file_exists($path)) {
+            return view('blocks/event-details', ['pdfPath' => $path, 'filename' => $filename]);
+        } else {
+            return view('blocks/event-details', ['pdfPath' => $path, 'filename' => $filename]);
+        }
+    }
 }
