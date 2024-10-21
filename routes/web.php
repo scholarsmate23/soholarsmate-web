@@ -85,6 +85,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/create-forms', [FormController::class, 'createForm'])->name('create.form');
     Route::post('/form/save', [FormController::class, 'saveForm'])->name('saveForm');
     Route::delete('/form/{id}', [FormController::class, 'destroy'])->name('delete.form');
+    Route::get('/show-submission', [FormController::class, 'showSubmissions'])->name('show.submission');
 
 
     Route::controller(AdminController::class)->group(function () {

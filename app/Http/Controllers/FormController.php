@@ -76,7 +76,6 @@ class FormController extends Controller
         // Get form structure to validate fields
         $formStructure = json_decode($form->form_structure, true);
         $formName = $form->form_name;
-        \Log::info('formName' . json_encode($formName));
 
         // Collect the submitted data
         $submittedData = [];
@@ -114,5 +113,20 @@ class FormController extends Controller
 
         // Redirect back with success message
         return redirect()->back()->with('success', 'Form deleted successfully.');
+    }
+
+    public function showSubmissions()
+    {
+        // Retrieve all forms
+        $forms = Form::with('submissions')->get();
+
+        // Group the submissions by form name
+        $groupedSubmissions = $forms->mapWithKeys(function ($form) {
+            return [$form->form_name => $form->submissions];
+        });
+        \Log::info('groupedSubmissions' . json_encode($groupedSubmissions));
+        return view('auth.manage-form-applicants', [
+            'groupedSubmissions' => $groupedSubmissions
+        ]);
     }
 }
