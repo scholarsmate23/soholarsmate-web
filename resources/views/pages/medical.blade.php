@@ -6,23 +6,27 @@
     <div class="container">
         <div class="row">
             <div class="col-12" style="margin-bottom: 20px;">
+                <h4>Your Pathway to a Successful Medical Career</h4><br>
+                <p>Preparing for a career in medicine is a challenging yet rewarding journey, and our Medical Division for NEET is designed to guide aspiring doctors through every step of the preparation process. NEET (National Eligibility cum Entrance Test) is the gateway to securing admission in prestigious medical colleges across the country. With our comprehensive NEET preparation program, students are given the right tools, guidance, and resources to excel in this competitive examination.</p><br>
+                <h6>Why Choose Our NEET Program?</h6><br>
+                <p>The NEET exam is highly competitive, requiring in-depth knowledge, strong conceptual understanding, and strategic preparation. Our Medical Division specializes in building a solid foundation in Biology, Physics, and Chemistry, providing students with an edge in this national-level examination.</p>
                 <h3 class="section-title">Head of Department</h3>
                 <ul>
-                <h4><strong>Dr. Iraza Idrisi</strong></h4>
+                    <h4><strong>Dr. Iraza Idrisi</strong></h4>
                     <ul>
                         <p></p>
                         <ul class="list-inline">
                             <li class="card-list">Biology Faculty-NEET</li>
                             <li class="card-list">Experience: 12 year</li>
                             <li class="card-list">Ex-Faculty: Akash Institute(Delhi), Baluni classes (uttrakhand) , Abhyas Foundation (Gujrat),B.Shaper's (Himachal)
- </li>
+                            </li>
                         </ul>
                     </ul>
             </div>
             <div class="col-12" style="margin-bottom: 20px;">
                 <h3 class="section-title">Faculty Members</h3>
                 <div class="row">
-                <div class="col-lg-3 col-sm-6 mb-5 mb-lg-0">
+                    <div class="col-lg-3 col-sm-6 mb-5 mb-lg-0">
                         <div class="card border-0 rounded-0 hover-shadow">
                             <div class="card-body">
                                 <h4 class="card-title">Mr. Shailesh Namdeo Khandagle</h4>
@@ -73,6 +77,18 @@
                             </div>
                         </div>
                     </div>
+                    <div class="col-lg-3 col-sm-6 mb-5 mb-lg-0">
+                        <div class="card border-0 rounded-0 hover-shadow">
+                            <div class="card-body">
+                                <h4 class="card-title">Er. Rishabh Gupta
+                                </h4>
+                                <p>Physical chemistry</p>
+                                <ul class="list-inline">
+                                    <li class="card-list"> IIT KHARAGPUR</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -114,17 +130,14 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h3 class="section-title">Apply for  Admission</h3>
+                <h3 class="section-title">Apply for Admission</h3>
                 <ul>
-                <li><a href="{{route('apply.form')}}" class="btn btn-primary btn-sm">Apply now</a></li>
-            </ul>
-                
+                    <li><a href="{{route('apply.form')}}" class="btn-primary btn-sm">Apply now</a></li>
+                </ul>
+
+            </div>
         </div>
-    </div>
 </section>
 
-<div class="ba-we-love-subscribers-wrap">
-<a aria-label="Chat on WhatsApp" href="https://wa.me/+919102428333" target="_blank"> <img alt="Chat on WhatsApp" src="{{ asset('assets/source/images/icons/WhatsAppButtons.png') }}" />
-</div>
 @include('blocks/footer')
 @include('footer')

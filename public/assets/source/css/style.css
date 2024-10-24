@@ -1191,10 +1191,6 @@ link:focus,
     background-color: #0f3969;
 }
 
-.ba-we-love-subscribers .img {
-    background-image: url("https://4.bp.blogspot.com/-1J75Et4_5vc/WAYhWRVuMiI/AAAAAAAAArE/gwa-mdtq0NIqOrlVvpLAqdPTV4VAahMsQCPcB/s1600/barrel-we-love-subscribers-img.png");
-}
-
 .ba-we-love-subscribers-fab {
     width: 65px;
     height: 65px;
@@ -1210,7 +1206,6 @@ link:focus,
     height: 30px;
     width: 30px;
     margin: 15px auto;
-    background-image: url("https://4.bp.blogspot.com/-1J75Et4_5vc/WAYhWRVuMiI/AAAAAAAAArE/gwa-mdtq0NIqOrlVvpLAqdPTV4VAahMsQCPcB/s1600/barrel-we-love-subscribers-img.png");
     background-position: -1px -53px;
 }
 
@@ -1240,6 +1235,15 @@ link:focus,
     right: 25px;
     bottom: 25px;
     z-index: 1000;
+}
+
+.ba-we-love-apply-wrap {
+    position: fixed;
+    right: 25px;
+    bottom: 80px;
+    z-index: 1000;
+    border: 1px solid black;
+    border-radius: 15px;
 }
 
 .ba-settings {
@@ -1366,7 +1370,8 @@ table tr td {
 
 .list-style {
     list-style-type: square !important;
-    margin: 0px;
+    margin: 2px;
+    padding: 2px;
 }
 
 .list-style li {
@@ -1435,6 +1440,7 @@ td {
     background-color: transparent;
     border: 0;
     font-family: "Lora", serif;
+    padding: 4px;
 }
 
 .formbold-mb-5 {
