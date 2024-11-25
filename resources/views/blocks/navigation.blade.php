@@ -87,9 +87,9 @@
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <li><a class="dropdown-item" href="{{route('tad.icse')}}">TAD-ICSE</a></li>
                 <li><a class="dropdown-item" href="{{route('tad.cbse')}}">TAD-CBSE</a></li>
-                <li><a class="dropdown-item" href="{{route('akalan')}}">AAKALAN- 2024</a></li>
-                <li><a class="dropdown-item" href="{{route('prayash.jee')}}">PRAYASH JEE- 2024</a></li>
-                <li><a class="dropdown-item" href="{{route('prayash.neet')}}">PRAYASH NEET- 2024</a></li>
+                <li><a class="dropdown-item" href="{{route('akalan')}}">AAKALAN- (2024-25)</a></li>
+                <li><a class="dropdown-item" href="{{route('prayash.jee')}}">PRAYASH JEE- (2024-25)</a></li>
+                <li><a class="dropdown-item" href="{{route('prayash.neet')}}">PRAYASH NEET- (2024-25)</a></li>
 
 
               </ul>

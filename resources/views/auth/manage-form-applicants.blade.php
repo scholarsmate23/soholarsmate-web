@@ -31,14 +31,19 @@
             <tr>
                 <th>#</th>
                 @php
-                // Get the keys from the first submission data to use as headers
-                $firstSubmission = json_decode($submissions[0]['submission_data'], true);
+                // Safely extract headers
+                $firstSubmission = !empty($submissions) && isset($submissions[0]['submission_data'])
+                ? json_decode($submissions[0]['submission_data'], true)
+                : [];
                 @endphp
+                @if(!empty($firstSubmission))
                 @foreach(array_keys($firstSubmission) as $fieldName)
                 <th>{{ ucfirst(str_replace('_', ' ', $fieldName)) }}</th>
                 @endforeach
+                @endif
                 <th>Submitted On</th>
             </tr>
+
         </thead>
         <tbody>
             @foreach($submissions as $index => $submission)
