@@ -53,7 +53,7 @@
 <body>
     <div class="email-container">
         <div class="header">
-            <img src="{{asset('assets/source/images/about/LOGO.jpg')}}" alt="Institution Logo">
+            <img src="https://www.scholarsmate.co.in/assets/source/images/about/LOGO.jpg" alt="Institution Logo">
         </div>
         <div class="email-card">
             <div class="content">
@@ -66,7 +66,9 @@
             </div>
         </div>
         <div class="footer">
-            <p>Scholar's Mate Bhagalpur</p>
+            <p class="mb-0 text-white">Copyright &copy;
+                <a href="https://www.scholarsmate.co.in" class="text-muted"><strong>Scholar's Mate</strong></a>
+            </p>
         </div>
     </div>
 </body>

@@ -10,7 +10,9 @@ use App\Models\Pdf;
 use App\Models\Career;
 use App\Models\News;
 use App\Models\Event;
+use App\Models\Teacher;
 use Illuminate\Support\Facades\Storage;
+use DB;
 
 class AdminController extends Controller
 {
@@ -60,13 +62,34 @@ class AdminController extends Controller
 
     public function manageJobApplicants()
     {
-        return view('auth/job-applicants');
+        $applications = DB::table('applications')
+            ->join('career_page', 'applications.career_id', '=', 'career_page.id')
+            ->select(
+                'applications.id as application_id',
+                'applications.name as applicant_name',
+                'applications.email',
+                'applications.phone',
+                'applications.address',
+                'applications.resume',
+                'applications.availability',
+                'applications.salary',
+                'career_page.position as career_position',
+                'career_page.location as career_location'
+            )
+            ->get();
+        return view('auth/job-applicants', compact('applications'));
     }
 
     public function manageEvents()
     {
         $data = Event::get();
         return view('auth/manage-events', compact('data'));
+    }
+
+    public function manageTeacher()
+    {
+        $data = Teacher::get();
+        return view('auth/manage-teacher', compact('data'));
     }
 
     public function addSyllabus(Request $request)
@@ -208,5 +231,45 @@ class AdminController extends Controller
 
         $image->delete();
         return redirect()->back()->with('success', 'Events deleted successfully.');
+    }
+
+
+    public function addTeacher(Request $request)
+    {
+        // Validate incoming data
+        $validated = $request->validate([
+            'name' => 'required|string|max:45',
+            'qualification' => 'required|string|max:45',
+            'details' => 'nullable|string|max:100',
+            'experience_year' => 'nullable|integer',
+            'prev_exp' => 'nullable|array',
+            'profile_img' => 'nullable|image|mimes:jpg,png,jpeg,gif|max:2048',
+            'instagram_url' => 'nullable|url|max:100',
+            'facebook_url' => 'nullable|url|max:100',
+            'video_url' => 'nullable|url|max:255', // New column for demo video URL
+        ]);
+
+        // Handle file upload for profile image with custom filename logic
+        if ($request->hasFile('profile_img')) {
+            $image = $request->file('profile_img');
+            $imageName = time() . '.' . $image->getClientOriginalExtension();
+            $path = $image->storeAs('public/teacher', $imageName);
+            $validated['profile_img'] = $imageName;
+
+
+            // Store data in the database
+            Teacher::create([
+                'name' => $validated['name'],
+                'qualification' => $validated['qualification'],
+                'details' => $validated['details'],
+                'experience_year' => $validated['experience_year'],
+                'prev_exp' => json_encode($validated['prev_exp']),
+                'profile_img' => $validated['profile_img'] ?? null,
+                'instagram_url' => $validated['instagram_url'],
+                'facebook_url' => $validated['facebook_url'],
+                'video_url' => $validated['video_url'], // Save demo video URL
+            ]);
+        }
+        return redirect()->back()->with('success', 'Teacher added successfully!');
     }
 }

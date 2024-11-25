@@ -15,6 +15,9 @@ use App\Models\News;
 use App\Models\Event;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\ApplicationSubmitted;
+use App\Models\Teacher;
+use App\Models\Application;
+use App\Mail\ApplicationReceived;
 
 class UserController extends Controller
 {
@@ -109,6 +112,13 @@ class UserController extends Controller
     {
         $title = "BOARDS";
         return view('pages/boards', compact('title'));
+    }
+
+    public function viewFaculty()
+    {
+        $data = Teacher::all();
+        $title = "MEET OUR FACULTY MEMBERS";
+        return view('pages/faculty', compact('title', 'data'));
     }
 
     public function downloadPdf($id)
@@ -235,5 +245,44 @@ class UserController extends Controller
         } else {
             return view('blocks/event-details', ['pdfPath' => $path, 'filename' => $filename]);
         }
+    }
+
+    public function careerApply(Request $request)
+    {
+        $request->validate([
+            'career_id' => 'required|exists:career_page,id',
+            'name' => 'required|string|max:255',
+            'email' => 'required|email',
+            'phone' => 'required|string|max:15',
+            'address' => 'required|string',
+            'resume' => 'required|file|mimes:pdf,doc,docx|max:2048',
+            'availability' => 'required|date',
+            'salary' => 'required|string|max:255',
+        ]);
+
+        // Store the uploaded resume
+        $pdfFile = $request->file('resume');
+        $filename = time() . '.' . $pdfFile->getClientOriginalExtension();
+        $path = $pdfFile->storeAs('public/application', $filename);
+
+        // Save application data
+        $application = Application::create([
+            'career_id' => $request->career_id,
+            'name' => $request->name,
+            'email' => $request->email,
+            'phone' => $request->phone,
+            'address' => $request->address,
+            'resume' => $filename,
+            'availability' => $request->availability,
+            'salary' => $request->salary,
+        ]);
+
+        // Attach career details for email
+        $application->career = $application->career()->first();
+
+        // Send email with the application details and attached resume
+        Mail::to($request->email)->send(new ApplicationReceived($application, $path));
+
+        return response()->json(['success' => true, 'message' => 'Application Sent successfully, We Will Contact You Soon!']);
     }
 }

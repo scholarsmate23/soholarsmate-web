@@ -733,3 +733,68 @@ $(document).ready(function() {
         });
     });
 });
+
+document.getElementById('add_exp_btn').addEventListener('click', function() {
+    const container = document.getElementById('prev_exp_container');
+
+    // Create a new div to hold the input and remove button
+    const inputGroup = document.createElement('div');
+    inputGroup.className = 'input-group mb-2';
+
+    // Create the experience input field
+    const input = document.createElement('input');
+    input.type = 'text';
+    input.className = 'form-control prev_exp_input';
+    input.name = 'prev_exp[]';
+    input.placeholder = 'Previous experience';
+
+    // Create the remove button
+    const removeBtn = document.createElement('button');
+    removeBtn.type = 'button';
+    removeBtn.className = 'btn btn-danger ml-2';
+    removeBtn.textContent = 'Remove';
+
+    // Append the input field and remove button to the input group div
+    inputGroup.appendChild(input);
+    inputGroup.appendChild(removeBtn);
+
+    // Add the new input group to the container
+    container.appendChild(inputGroup);
+
+    // Add event listener to remove the input field when the "Remove" button is clicked
+    removeBtn.addEventListener('click', function() {
+        container.removeChild(inputGroup);
+    });
+});
+
+
+$('#addTeacherModal form').submit(function(event) {
+    event.preventDefault();
+    var formData = new FormData($(this)[0]);
+    var modalBody = $('#addTeacherModal .modal-body');
+    $.ajax({
+        url: '/add-teacher',
+        type: 'POST',
+        data: formData,
+        contentType: false,
+        processData: false,
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        },
+        success: function(response) {
+            // Update modal body with success message
+            modalBody.empty().html('<div class="alert alert-success">Teacher Data Added successfully.</div>');
+            // Optional: Reload the page after a delay to show the success message for a moment
+            setTimeout(function() {
+                location.reload();
+            }, 2000);
+        },
+        error: function(xhr, status, error) {
+            // Handle error
+            modalBody.empty().html('<div class="alert alert-danger">An error occurred while Adding the Data.</div>');
+            setTimeout(function() {
+                location.reload();
+            }, 2000);
+        }
+    });
+})

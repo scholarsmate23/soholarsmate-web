@@ -2,45 +2,45 @@
 
 @section('content')
 
-
-
 <div class="table-title">
     <div class="row">
         <div class="col-sm-6">
             <h2>Manage <b>Applicants</b></h2>
         </div>
-        <div class="col-sm-6">
-            <!-- <a href="#addImageModal" class="btn btn-success" data-toggle="modal"><i class="ti-plus menu-icon"></i> <span>Add Image</span></a> -->
-            <!-- <a href="#deleteEmployeeModal" class="btn btn-danger" data-toggle="modal"><i class="material-icons">&#xE15C;</i> <span>Delete</span></a> -->
-        </div>
     </div>
 </div>
+
 <table class="table table-striped table-hover">
     <thead>
         <tr>
-            <th>Name</th>
-            <th>Mobile</th>
+            <th>#</th>
+            <th>Applicant Name</th>
             <th>Email</th>
-            <th>Course</th>
+            <th>Phone</th>
             <th>Address</th>
-            <th>Boards</th>
-            <th>Applied On</th>
+            <th>Resume</th>
+            <th>Availability</th>
+            <th>Expected Salary</th>
+            <th>Position</th>
+            <th>Location</th>
         </tr>
     </thead>
     <tbody>
+        @foreach ($applications as $application)
         <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-
+            <td>{{ $application->application_id }}</td>
+            <td>{{ $application->applicant_name }}</td>
+            <td>{{ $application->email }}</td>
+            <td>{{ $application->phone }}</td>
+            <td>{{ $application->address }}</td>
+            <td><a href="{{ asset('storage/application/' . $application->resume) }}" target="_blank">View Resume</a></td>
+            <td>{{ $application->availability }}</td>
+            <td>{{ $application->salary }}</td>
+            <td>{{ $application->career_position }}</td>
+            <td>{{ $application->career_location }}</td>
         </tr>
+        @endforeach
     </tbody>
 </table>
-
-
 
 @endsection

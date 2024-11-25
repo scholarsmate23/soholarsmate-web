@@ -7,9 +7,8 @@
         <div class="col-lg-4 text-center text-lg-left">
           <a class="text-color mr-3" href="+91 9102282333"><strong>CALL</strong> +91 9102282333</a>
           <ul class="list-inline d-inline">
-            <li class="list-inline-item mx-0"><a class="d-inline-block p-2 text-color" href=""><i class="ti-facebook"></i></a></li>
-            <li class="list-inline-item mx-0"><a class="d-inline-block p-2 text-color" href=""><i class="ti-twitter-alt"></i></a></li>
-            <li class="list-inline-item mx-0"><a class="d-inline-block p-2 text-color" href=""><i class="ti-github"></i></a></li>
+            <li class="list-inline-item mx-0"><a class="d-inline-block p-2 text-color" href="https://www.facebook.com/profile.php?id=61558490291137" target="_blank"><i class="ti-facebook"></i></a></li>
+            <li class="list-inline-item mx-0"><a class="d-inline-block p-2 text-color" href=""><i class="ti-linkedin"></i></a></li>
             <li class="list-inline-item mx-0"><a class="d-inline-block p-2 text-color" href="https://www.instagram.com/scholarsmateofficial/" target="_blank"><i class="ti-instagram"></i></a></li>
           </ul>
         </div>
@@ -76,6 +75,7 @@
                 <li><a class="dropdown-item" href="{{route('boards')}}">BOARDS</a></li>
                 <li><a class="dropdown-item" href="{{route('syllabus')}}">SYLLABUS</a></li>
                 <li><a class="dropdown-item" href="{{route('calender')}}">ACADEMIC CALENDER</a></li>
+                <li><a class="dropdown-item" href="{{route('faculty')}}">OUR FACULTY</a></li>
 
 
               </ul>

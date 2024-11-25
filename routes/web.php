@@ -54,6 +54,8 @@ Route::controller(UserController::class)->group(function () {
     Route::get('/discription/{id}', 'discriptionViewer')->name('discription.viewer');
     Route::get('/news-details/{id}', 'newsViewer')->name('news.details');
     Route::get('/event-details/{id}', 'eventViewer')->name('event.details');
+    Route::get('/faculty', 'viewFaculty')->name('faculty');
+    Route::post('career-apply', 'careerApply')->name('career.apply');
 });
 
 Route::controller(CourseContrpoller::class)->group(function () {
@@ -108,6 +110,8 @@ Route::middleware('auth')->group(function () {
         Route::get('/manage-event', 'manageEvents')->name('manage.event');
         Route::post('/add-events', 'addEvents')->name('add.events');
         Route::post('/delete-events', 'deleteEvents')->name('delete.events');
+        Route::get('/manage-teacher', 'manageTeacher')->name('manage.teacher');
+        Route::post('/add-teacher', 'addTeacher')->name('add.teacher');
     });
     Route::controller(LoginRegisterController::class)->group(function () {
         Route::post('/logout', 'logout')->name('logout');

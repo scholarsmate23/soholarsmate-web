@@ -78,5 +78,11 @@
         <span class="menu-title">Forms Applicants</span>
       </a>
     </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{{route('manage.teacher')}}">
+        <i class="ti-calendar menu-icon"></i>
+        <span class="menu-title">Manage Teachers</span>
+      </a>
+    </li>
   </ul>
 </nav>
