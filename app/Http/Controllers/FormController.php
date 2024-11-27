@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Form;
 use App\Models\FormSubmission;
 use Illuminate\Support\Str;
+use PDF;
 
 class FormController extends Controller
 {
@@ -124,9 +125,55 @@ class FormController extends Controller
         $groupedSubmissions = $forms->mapWithKeys(function ($form) {
             return [$form->form_name => $form->submissions];
         });
-        \Log::info('groupedSubmissions' . json_encode($groupedSubmissions));
         return view('auth.manage-form-applicants', [
             'groupedSubmissions' => $groupedSubmissions
         ]);
+    }
+
+    public function toggleStatus(Request $request, $id)
+    {
+        try {
+
+            $form = Form::findOrFail($id);
+
+            // Update the status
+            $form->status = $request->input('new_status');
+            $form->save();
+
+            return response()->json([
+                'success' => true,
+                'message' => $form->status ? 'Form activated successfully.' : 'Form deactivated successfully.',
+            ]);
+        } catch (\Exception $e) {
+            return response()->json([
+                'success' => false,
+                'message' => 'An error occurred while updating the form status.',
+            ], 500);
+        }
+    }
+
+    public function downloadPDF($formName)
+    {
+        // Fetch data for the specific form
+        $submissions = FormSubmission::where('form_name', $formName)->get();
+
+        // Format submissions for the PDF
+        $formattedSubmissions = [];
+        foreach ($submissions as $submission) {
+            $submittedData = json_decode($submission->submission_data, true);
+            $formattedSubmissions[] = array_merge($submittedData, [
+                'submitted_on' => \Carbon\Carbon::parse($submission->created_at)->format('d-m-Y H:i:s'),
+            ]);
+        }
+
+        $data = [
+            'formName' => $formName,
+            'submissions' => $formattedSubmissions,
+        ];
+
+        // Load the view and set PDF orientation to landscape
+        $pdf = PDF::loadView('pdf.submissions', $data)->setPaper('a4', 'landscape');
+
+        return $pdf->download("Submissions_for_{$formName}.pdf");
     }
 }

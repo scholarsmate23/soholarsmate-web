@@ -90,6 +90,8 @@
                 <li><a class="dropdown-item" href="{{route('akalan')}}">AAKALAN- (2024-25)</a></li>
                 <li><a class="dropdown-item" href="{{route('prayash.jee')}}">PRAYASH JEE- (2024-25)</a></li>
                 <li><a class="dropdown-item" href="{{route('prayash.neet')}}">PRAYASH NEET- (2024-25)</a></li>
+                <li><a class="dropdown-item" href="{{route('crash.course')}}">Class-10 Crash Course cum Test-Series (2024-25)</a></li>
+
 
 
               </ul>

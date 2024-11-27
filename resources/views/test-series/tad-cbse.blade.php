@@ -1,20 +1,18 @@
-
-@include('header') 
-@include('blocks/navigation') 
+@include('header')
+@include('blocks/navigation')
 @include('blocks/page-title')
 
 <!-- courses -->
 <section class="section">
     <div class="container">
-            <!-- <div class="col-lg-12 mb-10">
-                <button style="float: right;" class="btn btn-primary btn-sm">Apply for Test-Series</button>            
-            </div> -->
-            <div class="col-lg-12 mt-5">
-                <img style="display: block;margin-left: auto; margin-right: auto;" src="{{asset('assets/storage/test-series/TAD-CBSE-2024.jpg')}}" alt="" srcset="">
+        <div id="Iframe-Master-CC-and-Rs" class="set-margin set-padding set-border set-box-shadow center-block-horiz">
+            <div class="responsive-wrapper responsive-wrapper-wxh-572x612" style="-webkit-overflow-scrolling: touch; overflow: auto;">
+                <iframe src="{{asset('assets/storage/test-series/TAD-CBSE.pdf')}}"> </iframe>
             </div>
+        </div>
     </div>
 </section>
 <!-- /courses -->
 
-@include('blocks/footer') 
+@include('blocks/footer')
 @include('footer')

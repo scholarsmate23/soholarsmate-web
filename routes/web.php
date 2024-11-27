@@ -73,12 +73,11 @@ Route::controller(CourseContrpoller::class)->group(function () {
     Route::get('/eklavya-eighth', 'viewEklavyaEight')->name('eklavya.eighth');
     Route::get('/tarun-math', 'viewTarunMath')->name('tarun.math');
     Route::get('/tarun-bio', 'viewTarunBio')->name('tarun.bio');
+    Route::get('/crash-course', 'viewCrashCourse')->name('crash.course');
 });
-// Dynamic route to display a form based on its slug
-Route::get('/form/{slug}', [FormController::class, 'showForm'])->name('showForm');
-// Route to handle form submissions
-Route::post('/form/{formId}/submit', [FormController::class, 'submitForm'])->name('submitForm');
 
+Route::get('/form/{slug}', [FormController::class, 'showForm'])->name('showForm');
+Route::post('/form/{formId}/submit', [FormController::class, 'submitForm'])->name('submitForm');
 Route::post('/sent-mail', [MailController::class, 'sentMail']);
 
 
@@ -88,7 +87,8 @@ Route::middleware('auth')->group(function () {
     Route::post('/form/save', [FormController::class, 'saveForm'])->name('saveForm');
     Route::delete('/form/{id}', [FormController::class, 'destroy'])->name('delete.form');
     Route::get('/show-submission', [FormController::class, 'showSubmissions'])->name('show.submission');
-
+    Route::post('/forms/{id}/toggle-status', [FormController::class, 'toggleStatus'])->name('forms.toggle-status');
+    Route::get('/download-pdf/{formName}', [FormController::class, 'downloadPDF'])->name('download-pdf');
 
     Route::controller(AdminController::class)->group(function () {
         Route::get('/manage-course', 'manageCourse')->name('manage.course');
