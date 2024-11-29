@@ -9,7 +9,7 @@ class NewApplicants extends Model
 {
     use HasFactory;
 
-    protected $table ='new_applicants';
+    protected $table = 'new_applicants';
 
     protected $fillable = [
         'name',
@@ -17,6 +17,7 @@ class NewApplicants extends Model
         'phone',
         'father_name',
         'father_occupation',
+        'mobile',
         'mother_name',
         'mother_occupation',
         'dob',

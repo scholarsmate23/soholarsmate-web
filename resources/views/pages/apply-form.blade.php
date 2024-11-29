@@ -15,9 +15,12 @@
             </label>
 
             <select class="formbold-form-select" name="course" id="course">
-              <option value="Engineering">Engineering</option>
-              <option value="Medical">Medical</option>
-              <option value="Boards">Boards</option>
+              <option value="Engineering">IIT-JEE(2 Year Foundation Course)</option>
+              <option value="Engineering">IIT-JEE(1 Year Target Course)</option>
+              <option value="Medical">NEET (2 Year Foundation Course)</option>
+              <option value="Medical">NEET(1 Year Target Course)</option>
+              <option value="Boards">PCM Boards</option>
+              <option value="Boards">PCB Boards</option>
               <option value="Pre-Foundation">Pre-Foundation (8th, 9th, 10th)</option>
             </select>
           </div>
@@ -28,6 +31,10 @@
           <div class="formbold-mb-5">
             <label for="phone" class="formbold-form-label"> Father's Name </label>
             <input type="text" name="father_name" id="father_name" placeholder="Enter Father's Name" class="formbold-form-input" />
+          </div>
+          <div class="formbold-mb-5">
+            <label for="phone" class="formbold-form-label"> Phone Number </label>
+            <input type="text" name="phone" id="phone" placeholder="Enter your phone number" class="formbold-form-input" />
           </div>
           <!-- <div class="formbold-mb-5">
             <label for="phone" class="formbold-form-label"> Mother's Name </label>
@@ -42,8 +49,8 @@
             <input type="mother_occupation" name="mother_occupation" id="mother_occupation" placeholder="Enter your phone number" class="formbold-form-input" />
           </div> -->
           <div class="formbold-mb-5">
-            <label for="phone" class="formbold-form-label"> Phone Number </label>
-            <input type="text" name="phone" id="phone" placeholder="Enter your phone number" class="formbold-form-input" />
+            <label for="phone" class="formbold-form-label"> Father Mobile Number </label>
+            <input type="text" name="mobile" id="mobile" placeholder="Enter your phone number" class="formbold-form-input" />
           </div>
           <div class="formbold-mb-5">
             <label for="email" class="formbold-form-label"> Email Address </label>

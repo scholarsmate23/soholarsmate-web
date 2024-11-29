@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('phone', 45)->nullable();
             $table->string('father_name', 45)->nullable();
             $table->string('father_occupation', 45)->nullable();
+            $table->string('mobile', 45)->nullable();
             $table->string('mother_name', 45)->nullable();
             $table->string('mother_occupation', 45)->nullable();
             $table->date('dob')->nullable();

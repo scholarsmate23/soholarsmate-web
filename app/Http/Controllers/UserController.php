@@ -192,6 +192,7 @@ class UserController extends Controller
         $applicant->phone = $request->phone;
         $applicant->father_name = $request->father_name;
         $applicant->father_occupation = $request->father_occupation;
+        $applicant->mobile = $request->mobile;
         $applicant->mother_name = $request->mother_name;
         $applicant->mother_occupation = $request->mother_occupation;
         $applicant->dob = $request->dob;

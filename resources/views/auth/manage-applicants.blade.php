@@ -19,22 +19,28 @@
     <thead>
         <tr>
             <th>Name</th>
-            <th>Mobile</th>
+            <th>Phone</th>
             <th>Email</th>
+            <th>Father Name</th>
+            <th>Father Mobile</th>
             <th>Course</th>
             <th>Address</th>
+            <th>School Name</th>
             <th>Boards</th>
             <th>Applied On</th>
         </tr>
     </thead>
     <tbody>
-    @foreach($data as $item)
+        @foreach($data as $item)
         <tr>
             <td>{{ $item['name'] }}</td>
             <td>{{ $item['phone'] }}</td>
             <td>{{ $item['email'] }}</td>
+            <td>{{ $item['father_name'] }}</td>
+            <td>{{ $item['mobile'] }}</td>
             <td>{{ $item['course'] }}</td>
             <td>{{ $item['address'] }}</td>
+            <td>{{ $item['school_name'] }}</td>
             <td>{{ $item['boards'] }}</td>
             <td>{{ $item['created_at'] }}</td>
 
