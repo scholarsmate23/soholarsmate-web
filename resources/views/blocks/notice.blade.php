@@ -7,7 +7,7 @@
                 <ul class="list-unstyled">
                     @foreach ($forms as $notice)
                     <li class="mb-3">
-                        <i class="fas fa-bullhorn"></i> &nbsp;&nbsp; <p class="d-inline mb-0">{{$notice->form_name}} :&nbsp;&nbsp;</p>
+                        <i class="fas fa-bullhorn" style=" color: red !important; font-size: large !important;"></i> &nbsp;&nbsp; <p class="d-inline mb-0">{{$notice->form_name}} :&nbsp;&nbsp;</p>
                         <a href="{{ url('/form/' . $notice->form_slug) }}" class=" ms-2">
                             {{$notice->form_slug}}
                         </a>

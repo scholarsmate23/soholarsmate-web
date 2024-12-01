@@ -2888,8 +2888,3 @@ input[name="field_options[]"] {
 .is-invalid {
     border: 2px solid red !important;
 }
-
-.fa-bullhorn{
-    color: red !important;
-    font-size: large !important;
-}
