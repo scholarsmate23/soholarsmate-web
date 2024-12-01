@@ -7,8 +7,10 @@
       </div> -->
       <div class="card-body">
         <!-- location -->
-        <a href="{{route('udgosh.jee')}}"><h4 class="card-title">उद्घोष-JEE</h4></a>
-        <p>Commencement On: <strong>25 May 2024</strong></p>
+        <a href="{{route('udgosh.jee')}}">
+          <h4 class="card-title">उद्घोष-JEE</h4>
+        </a>
+        <p>Commencement On: <strong>25 May 2025</strong></p>
         <p><i class="ti-location-pin text-primary mr-2"></i>Bhagalpur</p>
       </div>
     </div>
@@ -21,8 +23,10 @@
       </div> -->
       <div class="card-body">
         <!-- location -->
-        <a href="{{route('udgosh.neet')}}"><h4 class="card-title">उद्घोष-NEET</h4></a>
-        <p>Commencement On: <strong>25 May 2024</strong></p>
+        <a href="{{route('udgosh.neet')}}">
+          <h4 class="card-title">उद्घोष-NEET</h4>
+        </a>
+        <p>Commencement On: <strong>25 May 2025</strong></p>
         <p><i class="ti-location-pin text-primary mr-2"></i>Bhagalpur</p>
       </div>
     </div>
@@ -35,8 +39,10 @@
       </div> -->
       <div class="card-body">
         <!-- location -->
-        <a href="{{route('safal.jee')}}"><h4 class="card-title">सफल -JEE</h4></a>
-        <p>Commencement On: <strong>25 May 2024</strong></p>
+        <a href="{{route('safal.jee')}}">
+          <h4 class="card-title">सफल -JEE</h4>
+        </a>
+        <p>Commencement On: <strong>25 May 2025</strong></p>
         <p><i class="ti-location-pin text-primary mr-2"></i>Bhagalpur</p>
       </div>
     </div>
@@ -48,8 +54,10 @@
       </div> -->
       <div class="card-body">
         <!-- location -->
-        <a href="{{route('safal.neet')}}"><h4 class="card-title">सफल -NEET</h4></a>
-        <p>Commencement On: <strong>25 May 2024</strong></p>
+        <a href="{{route('safal.neet')}}">
+          <h4 class="card-title">सफल -NEET</h4>
+        </a>
+        <p>Commencement On: <strong>25 May 2025</strong></p>
         <p><i class="ti-location-pin text-primary mr-2"></i>Bhagalpur</p>
       </div>
     </div>

@@ -272,4 +272,18 @@ class AdminController extends Controller
         }
         return redirect()->back()->with('success', 'Teacher added successfully!');
     }
+
+    public function updateStatus(Request $request)
+    {
+        $career = Career::find($request->id);
+
+        if ($career) {
+            $career->status = $request->status;
+            $career->save();
+
+            return response()->json(['success' => true, 'message' => 'Status updated successfully']);
+        }
+
+        return response()->json(['success' => false, 'message' => 'Career not found']);
+    }
 }

@@ -2,6 +2,7 @@
 @include('blocks/navigation')
 @include('blocks/slider')
 @include('blocks/banner-feature')
+@include('blocks/notice')
 @include('blocks/about')
 @include('blocks/scholarship-detail')
 <!-- courses -->

@@ -130,28 +130,19 @@ class FormController extends Controller
         ]);
     }
 
-    public function toggleStatus(Request $request, $id)
+    public function updateFormStatus(Request $request)
     {
-        try {
+        $form = Form::find($request->id);
 
-            $form = Form::findOrFail($id);
-
-            // Update the status
-            $form->status = $request->input('new_status');
+        if ($form) {
+            $form->status = $request->status;
             $form->save();
 
-            return response()->json([
-                'success' => true,
-                'message' => $form->status ? 'Form activated successfully.' : 'Form deactivated successfully.',
-            ]);
-        } catch (\Exception $e) {
-            return response()->json([
-                'success' => false,
-                'message' => 'An error occurred while updating the form status.',
-            ], 500);
+            return response()->json(['success' => true, 'message' => 'Status updated successfully']);
         }
-    }
 
+        return response()->json(['success' => false, 'message' => 'Career not found']);
+    }
     public function downloadPDF($formName)
     {
         // Fetch data for the specific form

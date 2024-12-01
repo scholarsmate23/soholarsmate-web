@@ -18,6 +18,7 @@ use App\Mail\ApplicationSubmitted;
 use App\Models\Teacher;
 use App\Models\Application;
 use App\Mail\ApplicationReceived;
+use App\Models\Form;
 
 class UserController extends Controller
 {
@@ -26,7 +27,8 @@ class UserController extends Controller
     {
         $data = SliderImg::orderBy('created_at', 'desc')->get();
         $news = News::orderBy('created_at', 'desc')->get();
-        return view('welcome', compact('data', 'news'));
+        $forms = Form::where('status', 'active')->orderBy('created_at', 'desc')->get();
+        return view('welcome', compact('data', 'news', 'forms'));
     }
 
     public function viewCourse()
@@ -67,7 +69,7 @@ class UserController extends Controller
 
     public function viewCareer()
     {
-        $careers = Career::all();
+        $careers = Career::where('status', 'active')->get();
         return view('pages/career', compact('careers'));
     }
 

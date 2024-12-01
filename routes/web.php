@@ -87,8 +87,8 @@ Route::middleware('auth')->group(function () {
     Route::post('/form/save', [FormController::class, 'saveForm'])->name('saveForm');
     Route::delete('/form/{id}', [FormController::class, 'destroy'])->name('delete.form');
     Route::get('/show-submission', [FormController::class, 'showSubmissions'])->name('show.submission');
-    Route::post('/forms/{id}/toggle-status', [FormController::class, 'toggleStatus'])->name('forms.toggle-status');
     Route::get('/download-pdf/{formName}', [FormController::class, 'downloadPDF'])->name('download-pdf');
+    Route::post('/update-form-status', [FormController::class, 'updateFormStatus'])->name('updateFromStatus');
 
     Route::controller(AdminController::class)->group(function () {
         Route::get('/manage-course', 'manageCourse')->name('manage.course');
@@ -112,6 +112,7 @@ Route::middleware('auth')->group(function () {
         Route::post('/delete-events', 'deleteEvents')->name('delete.events');
         Route::get('/manage-teacher', 'manageTeacher')->name('manage.teacher');
         Route::post('/add-teacher', 'addTeacher')->name('add.teacher');
+        Route::post('/update-career-status', 'updateStatus')->name('career.updateStatus');
     });
     Route::controller(LoginRegisterController::class)->group(function () {
         Route::post('/logout', 'logout')->name('logout');

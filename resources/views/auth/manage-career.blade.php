@@ -21,6 +21,8 @@
             <th>Position</th>
             <th>Location</th>
             <th>Description</th>
+            <th>Status</th>
+            <th>Action</th>
             <th>Delete</th>
         </tr>
     </thead>
@@ -30,6 +32,19 @@
             <td>{{ $item['position'] }}</td>
             <td>{{ $item['location'] }}</td>
             <td>{{ $item['description_file'] }}</td>
+            <td>{{ $item['status'] }}</td>
+            <td>
+                <div class="form-check form-switch">
+                    <input
+                        class="form-check-input toggle-status"
+                        type="checkbox"
+                        role="switch"
+                        data-id="{{ $item->id }}"
+                        {{ $item->status == 'active' ? 'checked' : '' }}>
+                    <label class="form-check-label" for="flexSwitchCheckChecked"></label>
+                </div>
+            </td>
+
             <td>
                 <a href="#deleteCareerModal" class="delete" id="deleteImage" data-toggle="modal" value="{{ $item->id }}"><i class="ti-trash menu-icon"></i></a>
             </td>

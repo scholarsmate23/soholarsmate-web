@@ -15,5 +15,6 @@ class Career extends Model
         'position',
         'location',
         'description_file',
+        'status',
     ];
 }

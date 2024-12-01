@@ -734,38 +734,41 @@ $(document).ready(function() {
     });
 });
 
-document.getElementById('add_exp_btn').addEventListener('click', function() {
-    const container = document.getElementById('prev_exp_container');
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('add_exp_btn').addEventListener('click', function() {
+        const container = document.getElementById('prev_exp_container');
 
-    // Create a new div to hold the input and remove button
-    const inputGroup = document.createElement('div');
-    inputGroup.className = 'input-group mb-2';
+        // Create a new div to hold the input and remove button
+        const inputGroup = document.createElement('div');
+        inputGroup.className = 'input-group mb-2';
 
-    // Create the experience input field
-    const input = document.createElement('input');
-    input.type = 'text';
-    input.className = 'form-control prev_exp_input';
-    input.name = 'prev_exp[]';
-    input.placeholder = 'Previous experience';
+        // Create the experience input field
+        const input = document.createElement('input');
+        input.type = 'text';
+        input.className = 'form-control prev_exp_input';
+        input.name = 'prev_exp[]';
+        input.placeholder = 'Previous experience';
 
-    // Create the remove button
-    const removeBtn = document.createElement('button');
-    removeBtn.type = 'button';
-    removeBtn.className = 'btn btn-danger ml-2';
-    removeBtn.textContent = 'Remove';
+        // Create the remove button
+        const removeBtn = document.createElement('button');
+        removeBtn.type = 'button';
+        removeBtn.className = 'btn btn-danger ml-2';
+        removeBtn.textContent = 'Remove';
 
-    // Append the input field and remove button to the input group div
-    inputGroup.appendChild(input);
-    inputGroup.appendChild(removeBtn);
+        // Append the input field and remove button to the input group div
+        inputGroup.appendChild(input);
+        inputGroup.appendChild(removeBtn);
 
-    // Add the new input group to the container
-    container.appendChild(inputGroup);
+        // Add the new input group to the container
+        container.appendChild(inputGroup);
 
-    // Add event listener to remove the input field when the "Remove" button is clicked
-    removeBtn.addEventListener('click', function() {
-        container.removeChild(inputGroup);
+        // Add event listener to remove the input field when the "Remove" button is clicked
+        removeBtn.addEventListener('click', function() {
+            container.removeChild(inputGroup);
+        });
     });
 });
+
 
 
 $('#addTeacherModal form').submit(function(event) {
@@ -798,3 +801,66 @@ $('#addTeacherModal form').submit(function(event) {
         }
     });
 })
+
+$(document).ready(function () {
+    $('.form-status').change(function () {
+        const formId = $(this).data('id');
+        const status = $(this).is(':checked') ? 'active' : 'inactive';
+
+        $.ajax({
+            url: "/update-form-status",
+            method: "POST",
+            data: {
+                id: formId,
+                status: status
+            },
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            },
+            success: function (response) {
+                if (response.success) {
+                    alert(response.message);
+                } else {
+                    alert('Failed to update status');
+                }
+            },
+            error: function () {
+                alert('An error occurred. Please try again.');
+            }
+        });
+    });
+});
+
+
+
+
+
+    $(document).ready(function () {
+        $('.toggle-status').change(function () {
+            const careerId = $(this).data('id');
+            const status = $(this).is(':checked') ? 'active' : 'inactive';
+
+            $.ajax({
+                url: "/update-career-status",
+                method: "POST",
+                data: {
+                    id: careerId,
+                    status: status
+                },
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                },
+                success: function (response) {
+                    if (response.success) {
+                        alert(response.message);
+                    } else {
+                        alert('Failed to update status');
+                    }
+                },
+                error: function () {
+                    alert('An error occurred. Please try again.');
+                }
+            });
+        });
+    });
+
