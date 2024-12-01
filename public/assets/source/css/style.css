@@ -2888,3 +2888,27 @@ input[name="field_options[]"] {
 .is-invalid {
     border: 2px solid red !important;
 }
+
+.glowing-star {
+    color: gold;
+    font-size: large;
+    animation: glow 1s infinite alternate;
+}
+
+.whiteboard {
+    background-color: #ffffff; /* White background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 20px; /* Inner padding */
+    margin-top: 20px; /* Spacing above the container */
+    border: 1px solid #ddd; /* Light border for structure */
+}
+
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 5px rgb(255, 0, 0), 0 0 10px rgb(195, 136, 42), 0 0 20px rgb(255, 0, 0), 0 0 30px rgb(218, 33, 33);
+    }
+    100% {
+        text-shadow: 0 0 10px orange, 0 0 20px orange, 0 0 30px orange, 0 0 40px orange;
+    }
+}
