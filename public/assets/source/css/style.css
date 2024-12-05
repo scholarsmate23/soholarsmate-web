@@ -2893,11 +2893,7 @@ input[name="field_options[]"] {
     color: red !important;
 }
 
-.glowing-star {
-    color: gold !important;
-    font-size: large !important;
-    animation: glow 2s infinite alternate !important;
-}
+
 
 .whiteboard {
     background-color: #ffffff !important; 
@@ -2906,12 +2902,19 @@ input[name="field_options[]"] {
     padding: 20px !important; 
     margin-top: 20px !important; 
     border: 1px solid #ddd !important; 
+}
+.glowing-star {
+    color: gold;
+    font-size: large;
+    animation: glow 1s infinite alternate;
+}
 
 @keyframes glow {
     0% {
-        text-shadow: 0 0 5px rgb(255, 0, 0), 0 0 10px rgb(195, 136, 42), 0 0 20px rgb(255, 0, 0), 0 0 30px rgb(218, 33, 33) !important;
+        text-shadow: 0 0 5px rgba(255, 0, 0, 0.928), 0 0 10px rgb(255, 0, 0), 0 0 20px rgb(255, 0, 0), 0 0 30px rgb(255, 0, 0);
     }
     100% {
-        text-shadow: 0 0 10px orange, 0 0 20px orange, 0 0 30px orange, 0 0 40px orange !important;
+        text-shadow: 0 0 10px rgb(243, 220, 176), 0 0 20px orange, 0 0 30px orange, 0 0 40px orange;
     }
 }
+
