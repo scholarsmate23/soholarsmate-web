@@ -2889,20 +2889,23 @@ input[name="field_options[]"] {
     border: 2px solid red !important;
 }
 
+.fa-bullhorn{
+    color: red !important;
+}
+
 .glowing-star {
     color: gold !important;
     font-size: large !important;
-    animation: glow 1s infinite alternate !important;
+    animation: glow 2s infinite alternate !important;
 }
 
 .whiteboard {
-    background-color: #ffffff; /* White background */
-    border-radius: 10px !important; /* Rounded corners */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1) !important; /* Subtle shadow */
-    padding: 20px; /* Inner padding */
-    margin-top: 20px !important; /* Spacing above the container */
-    border: 1px solid #ddd !important; /* Light border for structure */
-}
+    background-color: #ffffff !important; 
+    border-radius: 10px !important; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1) !important; 
+    padding: 20px !important; 
+    margin-top: 20px !important; 
+    border: 1px solid #ddd !important; 
 
 @keyframes glow {
     0% {

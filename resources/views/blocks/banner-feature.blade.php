@@ -8,7 +8,7 @@
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="flush-headingSix">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
-                                <strong>Admission Open for the Courses</strong>
+                                <i class="fas fa-bullhorn"></i> &nbsp; &nbsp;<strong>Admission Open for the Courses</strong>
                             </button>
                         </h2>
                         <div id="flush-collapseSix" class="accordion-collapse collapse" aria-labelledby="flush-headingSix" data-bs-parent="#accordionFlushExample">
@@ -30,7 +30,7 @@
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="flush-heading{{$item->id}}">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse{{$item->id}}" aria-expanded="false" aria-controls="flush-collapse{{$item->id}}">
-                                <strong>{{ $item->title }}</strong>
+                                <i class="fas fa-bullhorn"></i> &nbsp; &nbsp;<strong>{{ $item->title }}</strong>
                             </button>
                         </h2>
                         <div id="flush-collapse{{$item->id}}" class="accordion-collapse collapse" aria-labelledby="flush-heading{{$item->id}}" data-bs-parent="#accordionFlushExample">
