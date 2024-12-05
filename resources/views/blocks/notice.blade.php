@@ -2,7 +2,7 @@
     <div class="container whiteboard">
         <div class="row">
             <!-- Notices Section -->
-            <div class="col-md-6 mb-4">
+            <div class="col-md-12 mb-4">
                 <h3 class="font-secondary mb-3 text-primary">Notices</h3>
                 <ul class="list-unstyled">
                     @foreach ($forms as $notice)
