@@ -17,7 +17,10 @@
 
 <section class="section">
     <div class="container">
+        <div class="loader" id="dynamicLoader"></div>
         <div class="formbold-form-wrapper">
+            <div id="success-message" class="alert alert-success d-none" role="alert"></div>
+            <div id="error-message" class="alert alert-danger d-none" role="alert"></div>
             <form id="dynamicForm" style="margin: 2rem;" method="POST" action="{{ route('submitForm', $form->id) }}">
                 @csrf
                 @foreach($formStructure as $field)

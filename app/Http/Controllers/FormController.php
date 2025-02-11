@@ -92,7 +92,7 @@ class FormController extends Controller
             'submission_data' => json_encode($submittedData),
         ]);
 
-        return redirect()->route('home')->with('success', 'Form submitted successfully!');
+        return response()->json(['success' => true,  'message' => 'Data submitted successfully']);
     }
 
 
@@ -119,7 +119,7 @@ class FormController extends Controller
     public function showSubmissions()
     {
         // Retrieve all forms
-        $forms = Form::with('submissions')->get();
+        $forms = Form::with('submissions')->orderBy('id', 'desc')->get();
 
         // Group the submissions by form name
         $groupedSubmissions = $forms->mapWithKeys(function ($form) {

@@ -5,16 +5,19 @@
 <section class="section">
   <div class="container">
     <div class="formbold-main-wrapper">
+      <div class="loader" id="applyLoader"></div>
 
       <div class="formbold-form-wrapper">
-        <form style="margin: 2rem;" id="applicantForm">
+        <div id="success-message" class="alert alert-success d-none" role="alert"></div>
+        <div id="error-message" class="alert alert-danger d-none" role="alert"></div>
+
+        <form style="margin: 2rem;" id="applicantApplyForm" action="{{ route('submitData') }}" method="POST" enctype="multipart/form-data">
           @csrf
           <div class="formbold-mb-5">
             <label class="formbold-form-label">
               Select the Course You want to Enroll in:
             </label>
-
-            <select class="formbold-form-select" name="course" id="course">
+            <select class="formbold-form-select" name="course" id="course" required>
               <option value="Engineering">IIT-JEE(2 Year Foundation Course)</option>
               <option value="Engineering">IIT-JEE(1 Year Target Course)</option>
               <option value="Medical">NEET (2 Year Foundation Course)</option>
@@ -26,78 +29,48 @@
           </div>
           <div class="formbold-mb-5">
             <label for="name" class="formbold-form-label"> Full Name </label>
-            <input type="text" name="name" id="name" placeholder="Full Name" class="formbold-form-input" />
+            <input type="text" name="name" id="name" placeholder="Full Name" class="formbold-form-input" required />
           </div>
           <div class="formbold-mb-5">
-            <label for="phone" class="formbold-form-label"> Father's Name </label>
-            <input type="text" name="father_name" id="father_name" placeholder="Enter Father's Name" class="formbold-form-input" />
+            <label for="father_name" class="formbold-form-label"> Father's Name </label>
+            <input type="text" name="father_name" id="father_name" placeholder="Enter Father's Name" class="formbold-form-input" required />
           </div>
           <div class="formbold-mb-5">
             <label for="phone" class="formbold-form-label"> Phone Number </label>
-            <input type="text" name="phone" id="phone" placeholder="Enter your phone number" class="formbold-form-input" />
+            <input type="text" name="phone" id="phone" placeholder="Enter your phone number" class="formbold-form-input" required />
           </div>
-          <!-- <div class="formbold-mb-5">
-            <label for="phone" class="formbold-form-label"> Mother's Name </label>
-            <input type="text" name="mother_name" id="mother_name" placeholder="Enter Father's Name" class="formbold-form-input" />
-          </div> -->
           <div class="formbold-mb-5">
-            <label for="phone" class="formbold-form-label"> Occupation of Father </label>
-            <input type="text" name="father_occupation" id="father_occupation" placeholder="Enter Occupation" class="formbold-form-input" />
+            <label for="father_occupation" class="formbold-form-label"> Occupation of Father </label>
+            <input type="text" name="father_occupation" id="father_occupation" placeholder="Enter Occupation" class="formbold-form-input" required />
           </div>
-          <!-- <div class="formbold-mb-5">
-            <label for="phone" class="formbold-form-label"> Occupation of Mother</label>
-            <input type="mother_occupation" name="mother_occupation" id="mother_occupation" placeholder="Enter your phone number" class="formbold-form-input" />
-          </div> -->
           <div class="formbold-mb-5">
-            <label for="phone" class="formbold-form-label"> Father Mobile Number </label>
-            <input type="text" name="mobile" id="mobile" placeholder="Enter your phone number" class="formbold-form-input" />
+            <label for="mobile" class="formbold-form-label"> Father Mobile Number </label>
+            <input type="text" name="mobile" id="mobile" placeholder="Enter your phone number" class="formbold-form-input" required />
           </div>
           <div class="formbold-mb-5">
             <label for="email" class="formbold-form-label"> Email Address </label>
-            <input type="email" name="email" id="email" placeholder="Enter your email" class="formbold-form-input" />
+            <input type="email" name="email" id="email" placeholder="Enter your email" class="formbold-form-input" required />
           </div>
           <div class="flex flex-wrap formbold--mx-3">
             <div class="w-full sm:w-half formbold-px-3">
               <div class="formbold-mb-5 w-full">
-                <label for="date" class="formbold-form-label"> Date of Birth</label>
-                <input type="date" name="dob" id="dob" class="formbold-form-input" />
+                <label for="dob" class="formbold-form-label"> Date of Birth</label>
+                <input type="date" name="dob" id="dob" class="formbold-form-input" required />
               </div>
             </div>
             <div class="w-full sm:w-half formbold-px-3">
               <div class="formbold-mb-5">
-                <label for="date" class="formbold-form-label"> Category </label>
-                <select class="formbold-form-select" name="category" id="category">
+                <label for="category" class="formbold-form-label"> Category </label>
+                <select class="formbold-form-select" name="category" id="category" required>
                   <option value="General">General</option>
                   <option value="OBC">OBC</option>
                   <option value="SC">SC</option>
                   <option value="ST">ST</option>
-                  <option value="ST">Other</option>
+                  <option value="Other">Other</option>
                 </select>
               </div>
             </div>
           </div>
-          <!-- <div class="flex flex-wrap formbold--mx-3">
-            <div class="w-full sm:w-half formbold-px-3">
-              <div class="formbold-mb-5 w-full">
-                <label for="date" class="formbold-form-label"> Category </label>
-                <select class="formbold-form-select" name="category" id="category">
-                  <option value="General">General</option>
-                  <option value="OBC">OBC</option>
-                  <option value="SC">SC</option>
-                  <option value="ST">ST</option>
-                  <option value="ST">Other</option>
-
-                </select>
-              </div>
-            </div>
-            <div class="w-full sm:w-half formbold-px-3">
-              <div class="formbold-mb-5">
-                <label for="time" class="formbold-form-label"> Nationality </label>
-                <input type="text" name="nationality" id="nationality" class="formbold-form-input" />
-              </div>
-            </div>
-          </div> -->
-
           <div class="formbold-mb-5 formbold-pt-3">
             <label class="formbold-form-label formbold-form-label-2">
               Address Details
@@ -105,27 +78,26 @@
             <div class="flex flex-wrap formbold--mx-3">
               <div class="w-full sm:w-half formbold-px-3">
                 <div class="formbold-mb-5">
-                  <input type="text" name="area" id="area" placeholder="Enter area" class="formbold-form-input" />
+                  <input type="text" name="area" id="area" placeholder="Enter area" class="formbold-form-input" required />
                 </div>
               </div>
               <div class="w-full sm:w-half formbold-px-3">
                 <div class="formbold-mb-5">
-                  <input type="text" name="city" id="city" placeholder="Enter city" class="formbold-form-input" />
+                  <input type="text" name="city" id="city" placeholder="Enter city" class="formbold-form-input" required />
                 </div>
               </div>
               <div class="w-full sm:w-half formbold-px-3">
                 <div class="formbold-mb-5">
-                  <input type="text" name="state" id="state" placeholder="Enter state" class="formbold-form-input" />
+                  <input type="text" name="state" id="state" placeholder="Enter state" class="formbold-form-input" required />
                 </div>
               </div>
               <div class="w-full sm:w-half formbold-px-3">
                 <div class="formbold-mb-5">
-                  <input type="text" name="post_code" id="post_code" placeholder="Post Code" class="formbold-form-input" />
+                  <input type="text" name="post_code" id="post_code" placeholder="Post Code" class="formbold-form-input" required />
                 </div>
               </div>
             </div>
           </div>
-
           <div class="formbold-mb-5 formbold-pt-3">
             <label class="formbold-form-label formbold-form-label-2">
               Educational Details
@@ -133,65 +105,42 @@
             <div class="flex flex-wrap formbold--mx-3">
               <div class="w-full sm:w-half formbold-px-3">
                 <div class="formbold-mb-5">
-                  <input type="text" name="school_name" id="school_name" placeholder="School/College Name" class="formbold-form-input" />
+                  <input type="text" name="school_name" id="school_name" placeholder="School/College Name" class="formbold-form-input" required />
                 </div>
               </div>
               <div class="w-full sm:w-half formbold-px-3">
                 <div class="formbold-mb-5">
-                  <input type="text" name="school_address" id="school_address" placeholder="Address" class="formbold-form-input" />
+                  <input type="text" name="school_address" id="school_address" placeholder="Address" class="formbold-form-input" required />
                 </div>
               </div>
               <div class="w-full sm:w-half formbold-px-3">
                 <div class="formbold-mb-5">
-                  <select class="formbold-form-select" name="boards" id="boards">
+                  <select class="formbold-form-select" name="boards" id="boards" required>
                     <option value="Boards">Boards</option>
                     <option value="CBSE">CBSE</option>
                     <option value="ICSE">ICSE</option>
                     <option value="Bihar Board">Bihar Board</option>
                     <option value="Other">Other</option>
-
                   </select>
                 </div>
               </div>
               <div class="w-full sm:w-half formbold-px-3">
                 <div class="formbold-mb-5">
-                  <input type="text" name="grade" id="grade" placeholder="Grade" class="formbold-form-input" />
+                  <input type="text" name="grade" id="grade" placeholder="Grade" class="formbold-form-input" required />
                 </div>
               </div>
             </div>
           </div>
-
-          <div>
-            <button id="submitBtn" class="formbold-btn">Apply</button>
+          <div class="text-center">
+            <button type="submit" id="submitBtn" class="btn-primary btn-sm">Apply</button>
           </div>
         </form>
       </div>
     </div>
-
   </div>
 </section>
 
 
-
-<div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="successModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="successModalLabel">Success</h5>
-        <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button> -->
-      </div>
-      <div class="modal-body">
-        <H4>Application Sent successfully.</H4>
-        <h5>You Will Get an Update form the Admission Department.</h5>
-      </div>
-      <div class="modal-footer">
-        <button type="button" id="closeModalBtn" class="btn btn-secondary" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
 
 @include('blocks/footer')
 @include('footer')

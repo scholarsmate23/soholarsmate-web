@@ -7,7 +7,7 @@
         <div class="row">
             <div class="col-md-8">
                 <ul class="list-inline custom-breadcrumb mb-2">
-                    <li class="list-inline-item"><a class="h2 text-primary font-secondary">Apply for Job</a></li>
+                    <li class="list-inline-item"><a class="h2 text-primary font-secondary">Apply for the Role of {{ $career->position }}</a></li>
                 </ul>
             </div>
         </div>

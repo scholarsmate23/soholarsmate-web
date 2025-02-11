@@ -186,32 +186,32 @@ class UserController extends Controller
 
     public function submitData(Request $request)
     {
-        $applicant = new NewApplicants();
 
-        // Fill the model with data from the request
-        $applicant->name = $request->name;
-        $applicant->email = $request->email;
-        $applicant->phone = $request->phone;
-        $applicant->father_name = $request->father_name;
-        $applicant->father_occupation = $request->father_occupation;
-        $applicant->mobile = $request->mobile;
-        $applicant->mother_name = $request->mother_name;
-        $applicant->mother_occupation = $request->mother_occupation;
-        $applicant->dob = $request->dob;
-        $applicant->blood_group = $request->blood_group;
-        $applicant->category = $request->category;
-        $applicant->nationality = $request->nationality;
-        $applicant->address = $request->area . ', ' . $request->city . ', ' . $request->state;
-        $applicant->school_name = $request->school_name;
-        $applicant->school_address = $request->school_address;
-        $applicant->boards = $request->boards;
-        $applicant->grade = $request->grade;
-        $applicant->course = $request->course;
-        $applicant->save();
+        $applicant = NewApplicants::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'phone' => $request->phone,
+            'father_name' => $request->father_name,
+            'father_occupation' => $request->father_occupation,
+            'father_mobile' => $request->mobile,
+            'mother_name' => $request->mother_name,
+            'mother_occupation' => $request->mother_occupation,
+            'dob' => $request->dob,
+            'blood_group' => $request->blood_group,
+            'category' => $request->category,
+            'nationality' => $request->nationality,
+            'address' => $request->area . ', ' . $request->city . ', ' . $request->state,
+            'school_name' => $request->school_name,
+            'school_address' => $request->school_address,
+            'boards' => $request->boards,
+            'grade' => $request->grade,
+            'course' => $request->course,
+        ]);
+        $applicant = NewApplicants::find($applicant->id);
 
         Mail::to($applicant->email)->send(new ApplicationSubmitted($applicant));
 
-        return response()->json(['status' => true,  'message' => 'Data submitted successfully'], 200);
+        return response()->json(['success' => true,  'message' => 'Data submitted successfully']);
     }
 
     public function saveContact(Request $request)
