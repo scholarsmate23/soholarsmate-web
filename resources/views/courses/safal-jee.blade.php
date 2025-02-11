@@ -1,5 +1,5 @@
-@include('header') 
-@include('blocks/navigation') 
+@include('header')
+@include('blocks/navigation')
 @include('blocks/page-title')
 
 <!-- courses -->
@@ -7,14 +7,15 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h2 class="section-title"></h2>
+                <h3 class="section-title">Target Course for JEE</h3>
+                <p>The One-Year Target Course for JEE is expertly crafted for students aiming to secure top ranks in JEE Main and JEE Advanced within a focused time frame. This intensive program comprehensively covers the entire syllabus of Mathematics, Physics, and Chemistry, emphasizing problem-solving, conceptual clarity, and advanced application. Designed for students in class 12 or those taking a drop year, the course integrates rigorous practice sessions, mock tests, and personalized mentoring to maximize performance. With a result-oriented approach, the Target Course equips students to achieve their engineering aspirations confidently.</p>
                 <ul>
                     <li class="list-style">1 Years Program</li>
-                    <li class="list-style">Entry Level :  12th Pass</li>
+                    <li class="list-style">Entry Level : 12th Pass</li>
                     <li class="list-style">Entry Criteria : Entrance Test</li>
                 </ul>
+            </div>
         </div>
-    </div>
 </section>
 <!-- /about -->
 <section class="section">
@@ -23,29 +24,30 @@
             <div class="col-12">
                 <h3 class="section-title">Features</h3>
                 <ul>
-                <li class="list-style">Prepare NEET along with 11th and 12th</li>
-                <li class="list-style">Regular Classes</li>
-                <li class="list-style">Study Material of All Subject will provided</li>
-                <li class="list-style">DPP/Assignments</li>
-                <li class="list-style">Doubt Session</li>
-                <li class="list-style">Testing Process<ul>
-                    <li class="list-style">Regular Test (15 Days Intervals)</li>
-                    <li class="list-style">Year Planner Available</li>
-                    <li class="list-style">Feedbacks</li>
-                </ul></li>
-                <li class="list-style">Syllabus <a href="{{route('syllabus')}}">Download from here</a></li>
-                <li class="list-style">Crash Course (Revision cum Test Planner) <a href="{{route('prayash.jee')}}">Know More</a></li>
+                    <li class="list-style">Prepare NEET along with 11th and 12th</li>
+                    <li class="list-style">Regular Classes</li>
+                    <li class="list-style">Study Material of All Subject will provided</li>
+                    <li class="list-style">DPP/Assignments</li>
+                    <li class="list-style">Doubt Session</li>
+                    <li class="list-style">Testing Process<ul>
+                            <li class="list-style">Regular Test (15 Days Intervals)</li>
+                            <li class="list-style">Year Planner Available</li>
+                            <li class="list-style">Feedbacks</li>
+                        </ul>
+                    </li>
+                    <li class="list-style">Syllabus <a href="{{route('syllabus')}}">Download from here</a></li>
+                    <li class="list-style">Crash Course (Revision cum Test Planner) <a href="{{route('prayash.jee')}}">Know More</a></li>
                 </ul>
-        </div>
+            </div>
 
-        <div class="col-12" style="margin-top: 20px;">
-            <h2>Note:</h2>
-            <ul class="list-style">
-                <li class="list-style">Non-Attending Student may also study here.</li>
-                <li class="list-style">Seprate Hostel Facility Available for both Boys and Girls</li>
-            </ul>
+            <div class="col-12" style="margin-top: 20px;">
+                <h2>Note:</h2>
+                <ul class="list-style">
+                    <li class="list-style">Non-Attending Student may also study here.</li>
+                    <li class="list-style">Seprate Hostel Facility Available for both Boys and Girls</li>
+                </ul>
+            </div>
         </div>
-    </div>
 </section>
 
 <section class="section">
@@ -118,9 +120,9 @@
                     </tr>
                 </table> -->
 
-  
+
+            </div>
         </div>
-    </div>
 </section>
 
 
@@ -128,15 +130,15 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h3 class="section-title">Apply for  Admission</h3>
+                <h3 class="section-title">Apply for Admission</h3>
                 <ul>
-                <li><a href="{{route('apply.form')}}" class="btn btn-primary btn-sm">Apply now</a></li>
-            </ul>
-                
+                    <li><a href="{{route('apply.form')}}" class="btn btn-primary btn-sm">Apply now</a></li>
+                </ul>
+
+            </div>
         </div>
-    </div>
 </section>
 <!-- /courses -->
 
-@include('blocks/footer') 
+@include('blocks/footer')
 @include('footer')

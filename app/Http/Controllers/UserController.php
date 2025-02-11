@@ -288,4 +288,10 @@ class UserController extends Controller
 
         return response()->json(['success' => true, 'message' => 'Application Sent successfully, We Will Contact You Soon!']);
     }
+
+    public function showApplicationForm($id)
+    {
+        $career = Career::findOrFail($id);
+        return view('pages.job-apply', compact('career'));
+    }
 }

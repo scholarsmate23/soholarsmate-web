@@ -1,5 +1,5 @@
-@include('header') 
-@include('blocks/navigation') 
+@include('header')
+@include('blocks/navigation')
 @include('blocks/page-title')
 
 <!-- courses -->
@@ -7,14 +7,15 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h2 class="section-title"></h2>
+                <h3 class="section-title">Foundation Course for NEET</h3>
+                <p>The Foundation Course module is thoughtfully curated to cover the entire syllabus of Biology, Chemistry, and Physics, enabling students to perform exceptionally well in their school board exams while establishing a strong base for NEET. This holistic program bridges foundational knowledge with advanced concepts, ensuring students are well-prepared for the challenges of classes 11 and 12 as well as the highly competitive NEET exam. With a focus on conceptual clarity, critical thinking, and problem-solving, the Foundation Course empowers students to excel academically and achieve their dreams in the field of medicine.</p>
                 <ul>
                     <li class="list-style">2 Years Program</li>
                     <li class="list-style">Entry Level : 10th Pass</li>
                     <li class="list-style">Entry Criteria : Entrance Test</li>
                 </ul>
+            </div>
         </div>
-    </div>
 </section>
 <!-- /about -->
 <section class="section">
@@ -23,29 +24,30 @@
             <div class="col-12">
                 <h3 class="section-title">Features</h3>
                 <ul>
-                <li class="list-style">Prepare NEET along with 11th and 12th</li>
-                <li class="list-style">Regular Classes</li>
-                <li class="list-style">Study Material of All Subject will provided</li>
-                <li class="list-style">DPP/Assignments</li>
-                <li class="list-style">Doubt Session</li>
-                <li class="list-style">Testing Process<ul>
-                    <li class="list-style">Regular Test (15 Days Intervals)</li>
-                    <li class="list-style">Year Planner Available</li>
-                    <li class="list-style">Feedbacks</li>
-                </ul></li>
-                <li class="list-style">Syllabus <a href="{{route('syllabus')}}">Download From here</a></li>
-                <li class="list-style">Crash Course (Revision cum Test Planner) <a href="{{route('prayash.jee')}}">Know More</a></li>
+                    <li class="list-style">Prepare NEET along with 11th and 12th</li>
+                    <li class="list-style">Regular Classes</li>
+                    <li class="list-style">Study Material of All Subject will provided</li>
+                    <li class="list-style">DPP/Assignments</li>
+                    <li class="list-style">Doubt Session</li>
+                    <li class="list-style">Testing Process<ul>
+                            <li class="list-style">Regular Test (15 Days Intervals)</li>
+                            <li class="list-style">Year Planner Available</li>
+                            <li class="list-style">Feedbacks</li>
+                        </ul>
+                    </li>
+                    <li class="list-style">Syllabus <a href="{{route('syllabus')}}">Download From here</a></li>
+                    <li class="list-style">Crash Course (Revision cum Test Planner) <a href="{{route('prayash.jee')}}">Know More</a></li>
                 </ul>
-        </div>
+            </div>
 
-        <div class="col-12" style="margin-top: 20px;">
-            <h2>Note:</h2>
-            <ul class="list-style">
-                <li class="list-style">Non-Attending Student may also study here.</li>
-                <li class="list-style">Seprate Hostel Facility Available for both Boys and Girls</li>
-            </ul>
+            <div class="col-12" style="margin-top: 20px;">
+                <h2>Note:</h2>
+                <ul class="list-style">
+                    <li class="list-style">Non-Attending Student may also study here.</li>
+                    <li class="list-style">Seprate Hostel Facility Available for both Boys and Girls</li>
+                </ul>
+            </div>
         </div>
-    </div>
 </section>
 
 <section class="section">
@@ -117,24 +119,24 @@
                     </tr>
                 </table> -->
 
-  
+
+            </div>
         </div>
-    </div>
 </section>
 
 <section class="section">
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h3 class="section-title">Apply for  Admission</h3>
+                <h3 class="section-title">Apply for Admission</h3>
                 <ul>
-                <li><a href="{{route('apply.form')}}" class="btn btn-primary btn-sm">Apply now</a></li>
-            </ul>
-                
+                    <li><a href="{{route('apply.form')}}" class="btn-primary btn-sm">Apply now</a></li>
+                </ul>
+
+            </div>
         </div>
-    </div>
 </section>
 <!-- /courses -->
 
-@include('blocks/footer') 
+@include('blocks/footer')
 @include('footer')

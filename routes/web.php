@@ -8,6 +8,7 @@ use App\Http\Controllers\MailController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ImageController;
 use App\Http\Controllers\FormController;
+use App\Http\Controllers\EventController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -55,7 +56,8 @@ Route::controller(UserController::class)->group(function () {
     Route::get('/news-details/{id}', 'newsViewer')->name('news.details');
     Route::get('/event-details/{id}', 'eventViewer')->name('event.details');
     Route::get('/faculty', 'viewFaculty')->name('faculty');
-    Route::post('career-apply', 'careerApply')->name('career.apply');
+    Route::get('/career/apply/{id}',  'showApplicationForm')->name('career.apply.form');
+    Route::post('/career/apply',  'careerApply')->name('career.apply');
 });
 
 Route::controller(CourseContrpoller::class)->group(function () {
@@ -80,6 +82,9 @@ Route::get('/form/{slug}', [FormController::class, 'showForm'])->name('showForm'
 Route::post('/form/{formId}/submit', [FormController::class, 'submitForm'])->name('submitForm');
 Route::post('/sent-mail', [MailController::class, 'sentMail']);
 
+Route::get('/calendar', [EventController::class, 'viewEvents'])->name('academic.calendar'); // Calendar page
+Route::get('/calendar/events', [EventController::class, 'fetchEvents']);
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/manage-forms', [FormController::class, 'manageForm'])->name('manage.form');
@@ -89,6 +94,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/show-submission', [FormController::class, 'showSubmissions'])->name('show.submission');
     Route::get('/download-pdf/{formName}', [FormController::class, 'downloadPDF'])->name('download-pdf');
     Route::post('/update-form-status', [FormController::class, 'updateFormStatus'])->name('updateFromStatus');
+    Route::resource('/admin/events', EventController::class);
 
     Route::controller(AdminController::class)->group(function () {
         Route::get('/manage-course', 'manageCourse')->name('manage.course');

@@ -49,7 +49,7 @@ class CourseContrpoller extends Controller
     public function viewUdgoshNeet()
     {
         $title = "उद्घोष-NEET (Foundation Course)";
-        return view('courses/udgosh-jee', compact('title'));
+        return view('courses/udgosh-neet', compact('title'));
     }
 
     public function viewSafalNeet()
