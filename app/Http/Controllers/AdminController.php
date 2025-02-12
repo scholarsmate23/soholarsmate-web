@@ -76,6 +76,7 @@ class AdminController extends Controller
                 'career_page.position as career_position',
                 'career_page.location as career_location'
             )
+            ->orderBy('applications.created_at', 'desc')
             ->get();
         return view('auth/job-applicants', compact('applications'));
     }
@@ -236,38 +237,37 @@ class AdminController extends Controller
 
     public function addTeacher(Request $request)
     {
-        // Validate incoming data
-        $validated = $request->validate([
-            'name' => 'required|string|max:45',
-            'qualification' => 'required|string|max:45',
-            'details' => 'nullable|string|max:100',
-            'experience_year' => 'nullable|integer',
-            'prev_exp' => 'nullable|array',
-            'profile_img' => 'nullable|image|mimes:jpg,png,jpeg,gif|max:2048',
-            'instagram_url' => 'nullable|url|max:100',
-            'facebook_url' => 'nullable|url|max:100',
-            'video_url' => 'nullable|url|max:255', // New column for demo video URL
-        ]);
 
+        // Validate incoming data
+        // $validated = $request->validate([
+        //     'name' => 'required|string|max:45',
+        //     'qualification' => 'required|string|max:45',
+        //     'details' => 'nullable|string|max:100',
+        //     'experience_year' => 'nullable|integer',
+        //     'prev_exp' => 'nullable|array',
+        //     'profile_img' => 'nullable|image|mimes:jpg,png,jpeg,gif|max:2048',
+        //     'instagram_url' => 'nullable|url|max:100',
+        //     'facebook_url' => 'nullable|url|max:100',
+        //     'video_url' => 'nullable|url|max:255', // New column for demo video URL
+        // ]);
         // Handle file upload for profile image with custom filename logic
         if ($request->hasFile('profile_img')) {
             $image = $request->file('profile_img');
             $imageName = time() . '.' . $image->getClientOriginalExtension();
             $path = $image->storeAs('public/teacher', $imageName);
-            $validated['profile_img'] = $imageName;
 
 
             // Store data in the database
             Teacher::create([
-                'name' => $validated['name'],
-                'qualification' => $validated['qualification'],
-                'details' => $validated['details'],
-                'experience_year' => $validated['experience_year'],
-                'prev_exp' => json_encode($validated['prev_exp']),
-                'profile_img' => $validated['profile_img'] ?? null,
-                'instagram_url' => $validated['instagram_url'],
-                'facebook_url' => $validated['facebook_url'],
-                'video_url' => $validated['video_url'], // Save demo video URL
+                'name' => $request['name'],
+                'qualification' => $request['qualification'],
+                'details' => $request['details'],
+                'experience_year' => $request['experience_year'],
+                'prev_exp' => json_encode($request['prev_exp']),
+                'profile_img' => $imageName,
+                'instagram_url' => $request['instagram_url'],
+                'facebook_url' => $request['facebook_url'],
+                'video_url' => $request['video_url'], // Save demo video URL
             ]);
         }
         return redirect()->back()->with('success', 'Teacher added successfully!');
