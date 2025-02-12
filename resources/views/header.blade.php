@@ -12,7 +12,7 @@
 	================================================== -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="Scholar's Mate | Career Institute is a fast-growing coaching institute in BHAGALPUR for the preparation of IIT JEE, NEET(Medical), KVPY, NTSE, OLYMPIADS, Academic, BOARD, and another Exams like that.">
-  <meta name="keywords" content="Scholarsmate, Scholarsmate Bhagalpur, IIT Institute in Bhagalpur, Neet Institute in Bhagalpur, Institute in Bhgalpur, IIT CLASSES BHAGALPUR | IIT INSTITUTE BHAGALPUR ">
+  <meta name="keywords" content="Scholarsmate, Scholarsmate Bhagalpur,Top Institute in bhagalpur, Best Institute in Bhagalpur, IIT Institute in Bhagalpur, Neet Institute in Bhagalpur, Institute in Bhgalpur, IIT CLASSES BHAGALPUR | IIT INSTITUTE BHAGALPUR ">
   <meta property="og:image" content="{{asset('assets/source/images/about/icon.png')}}">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
   <meta name="author" content="Themefisher">
@@ -51,6 +51,9 @@
 </head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-GMK8H5WF6T"></script>
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.4/main.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 <script>
   window.dataLayer = window.dataLayer || [];
 
