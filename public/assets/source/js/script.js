@@ -389,3 +389,69 @@ setTimeout(function() {
             });
         }
     });
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const form = document.getElementById('tadFeedbackForm');
+        const loader = document.getElementById('loader');
+        const successMessage = document.getElementById('success-message');
+        const errorMessage = document.getElementById('error-message');
+    
+        if (form) {
+            form.addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevent the default form submission
+    
+                // Show the loader
+                loader.style.display = 'block';
+    
+                const formData = new FormData(form);
+                const actionUrl = form.getAttribute('action'); // Get the form's action attribute
+    
+                fetch(actionUrl, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'X-Requested-With': 'XMLHttpRequest',
+                        'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
+                    },
+                })
+                .then(response => response.json())
+                .then(data => {
+                    // Hide the loader
+                    loader.style.display = 'none';
+    
+                    if (data.success) {
+                        Swal.fire({
+                            icon: 'success',
+                            title: 'Success',
+                            text: data.message || 'Feedback submitted successfully!',
+                            confirmButtonText: 'OK'
+                        }).then((result) => {
+                            if (result.isConfirmed) {
+                                // Optionally, you can redirect or perform other actions here
+                                window.location.href = '/';
+                            }
+                        });
+                    } else {
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Error',
+                            text: data.message || 'Something went wrong. Please try again.',
+                            confirmButtonText: 'OK'
+                        });
+                    }
+                })
+                .catch(error => {
+                    // Hide the loader
+                    loader.style.display = 'none';
+    
+                    console.error('Error:', error);
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Error',
+                        text: 'An unexpected error occurred. Please try again.',
+                        confirmButtonText: 'OK'
+                    });
+                });
+            });
+        }
+    });

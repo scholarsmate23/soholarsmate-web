@@ -58,6 +58,8 @@ Route::controller(UserController::class)->group(function () {
     Route::get('/faculty', 'viewFaculty')->name('faculty');
     Route::get('/career/apply/{id}',  'showApplicationForm')->name('career.apply.form');
     Route::post('/career/apply',  'careerApply')->name('career.apply');
+    Route::post('/submit-feedback', 'submitFeedback')->name('submitFeedback');
+    Route::get('/tad-feedback/2025', 'viewTadFeedback')->name('tad.feedback');
 });
 
 Route::controller(CourseContrpoller::class)->group(function () {
@@ -95,6 +97,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/download-pdf/{formName}', [FormController::class, 'downloadPDF'])->name('download-pdf');
     Route::post('/update-form-status', [FormController::class, 'updateFormStatus'])->name('updateFromStatus');
     Route::resource('/admin/events', EventController::class);
+    Route::get('/view-form-applicants/{formName}', [FormController::class, 'viewFormApplicants'])->name('view.form.applicants');
 
     Route::controller(AdminController::class)->group(function () {
         Route::get('/manage-course', 'manageCourse')->name('manage.course');

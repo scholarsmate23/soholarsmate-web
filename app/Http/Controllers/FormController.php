@@ -167,4 +167,11 @@ class FormController extends Controller
 
         return $pdf->download("Submissions_for_{$formName}.pdf");
     }
+
+    public function viewFormApplicants($formName)
+    {
+        $submissions = FormSubmission::where('form_name', $formName)->get();
+
+        return view('auth.view-form-applicants', compact('formName', 'submissions'));
+    }
 }

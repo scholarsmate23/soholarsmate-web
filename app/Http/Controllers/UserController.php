@@ -19,6 +19,7 @@ use App\Models\Teacher;
 use App\Models\Application;
 use App\Mail\ApplicationReceived;
 use App\Models\Form;
+use App\Models\TadFeedback;
 
 class UserController extends Controller
 {
@@ -293,5 +294,54 @@ class UserController extends Controller
     {
         $career = Career::findOrFail($id);
         return view('pages.job-apply', compact('career'));
+    }
+
+    public function viewTadFeedback()
+    {
+        $title = "TAD - Feedback From 2025";
+        return view('pages/tad-feedback-form', compact('title'));
+    }
+
+    public function submitFeedback(Request $request)
+    {
+        $validatedData = $request->all();
+
+        // Check if the mobile number already exists
+        if (TadFeedback::where('mobile', $validatedData['mobile'])->exists()) {
+            return response()->json(['success' => false, 'message' => 'You have already submitted feedback.']);
+        }
+
+        // Store the uploaded photo and admit card
+        $photoFile = $request->file('photo');
+        $photoFilename = time() . '_photo.' . $photoFile->getClientOriginalExtension();
+        $photoPath = $photoFile->storeAs('public/feedback', $photoFilename);
+
+        $admitCardFile = $request->file('admit_card');
+        $admitCardFilename = time() . '_admit_card.' . $admitCardFile->getClientOriginalExtension();
+        $admitCardPath = $admitCardFile->storeAs('public/feedback', $admitCardFilename);
+
+        // Generate the reference number
+        $currentYear = date('Y');
+        $serialNumber = TadFeedback::count() + 1;
+        $referenceNo = 'SMCI' . $currentYear . str_pad($serialNumber, 2, '0', STR_PAD_LEFT);
+
+        TadFeedback::create([
+            'reference_no' => $referenceNo,
+            'name' => $validatedData['name'],
+            'class' => $validatedData['class'],
+            'boards' => $validatedData['boards'],
+            'address' => $validatedData['address'],
+            'mobile' => $validatedData['mobile'],
+            'father_name' => $validatedData['father_name'],
+            'father_mobile' => $validatedData['father_mobile'],
+            'mother_name' => $validatedData['mother_name'],
+            'mother_mobile' => $validatedData['mother_mobile'],
+            'photo' => $photoFilename,
+            'admit_card' => $admitCardFilename,
+            'email' => $validatedData['email'],
+            'feedback' => $validatedData['feedback'],
+        ]);
+
+        return response()->json(['success' => true, 'message' => 'Feedback submitted successfully']);
     }
 }

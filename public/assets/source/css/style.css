@@ -136,12 +136,12 @@ h6,
     z-index: 1;
     transition: 0.2s ease;
     overflow: hidden;
-    white-space: nowrap;
+    color: #fff !important;
+    background-color: #0f3969 !important;
 }
 
 .btn::before {
     position: absolute;
-    content: "";
     height: 80%;
     width: 100%;
     left: 0;
@@ -152,23 +152,6 @@ h6,
     transform: scaleY(0);
 }
 
-.btn:active,
-.btn:hover,
-.btn.focus,
-.btn:focus,
-.btn.active {
-    outline: 0;
-    box-shadow: none !important;
-}
-
-.btn:active::before,
-.btn:hover::before,
-.btn.focus::before,
-.btn:focus::before,
-.btn.active::before {
-    transform: scaleY(1);
-    transform-origin: bottom;
-}
 
 .btn-sm {
     font-size: 14px;
@@ -180,10 +163,6 @@ h6,
     padding: 5px 15px;
 }
 
-.btn-primary {
-    color: #fff;
-    background-color: #0f3969;
-}
 
 .btn-primary::before {
     background-color: #fff;
@@ -199,45 +178,7 @@ h6,
     border-color: #ffab08 !important;
 }
 
-.btn-outline-primary {
-    color: #0f3969;
-    background-color: transparent;
-    border: 1px solid #0f3969;
-}
 
-.btn-outline-primary::before {
-    background-color: #fff;
-}
-
-.btn-outline-primary:active,
-.btn-outline-primary:hover,
-.btn-outline-primary.focus,
-.btn-outline-primary:focus,
-.btn-outline-primary.active {
-    color: #0f3969 !important;
-    background-color: #0f3969 !important;
-    border-color: #0f3969 !important;
-}
-
-.btn-light {
-    color: #0f3969;
-    background-color: #fff;
-    border: 1px solid #fff;
-}
-
-.btn-light::before {
-    background-color: #0f3969;
-}
-
-.btn-light:active,
-.btn-light:hover,
-.btn-light.focus,
-.btn-light:focus,
-.btn-light.active {
-    color: #fff !important;
-    background-color: #fff !important;
-    border: 1px solid #fff !important;
-}
 
 body {
     background-color: #fff;
@@ -325,7 +266,6 @@ a h4:hover {
 }
 
 .section {
-    padding-top: 40px;
     padding-bottom: 40px;
 }
 
@@ -1514,7 +1454,7 @@ td {
 
 .formbold-btn:hover {
     box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
-    background-color: #037a1b;
+    background-color: #ffab08;
     color: white;
 }
 
