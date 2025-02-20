@@ -42,19 +42,6 @@
                     <div class="col-lg-3 col-sm-6 mb-5 mb-lg-0">
                         <div class="card border-0 rounded-0 hover-shadow">
                             <div class="card-body">
-                                <h4 class="card-title">Mr. Jitendra Yadav</h4>
-                                <p>Chemistry Faculty</p>
-                                <ul class="list-inline">
-                                    <li class="card-list">Experience: 6 year</li>
-                                    <li class="card-list">Ex-Faculty: Edu mantra Institute</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- teacher -->
-                    <div class="col-lg-3 col-sm-6 mb-5 mb-lg-0">
-                        <div class="card border-0 rounded-0 hover-shadow">
-                            <div class="card-body">
                                 <h4 class="card-title">Mr. Amritanshu Anand</h4>
                                 <p>Guest Faculty Physics</p>
                                 <ul class="list-inline">
