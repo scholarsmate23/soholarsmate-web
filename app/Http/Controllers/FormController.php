@@ -119,18 +119,20 @@ class FormController extends Controller
 
     public function showSubmissions()
     {
-        // Retrieve all forms
-        $forms = Form::with('submissions')->orderBy('id', 'desc')->get();
+        // Retrieve all forms with pagination
+        $forms = Form::with('submissions')->orderBy('id', 'desc')->paginate(10);
 
         $groupedSubmissions = $forms->mapWithKeys(function ($form) {
             return [$form->form_name => $form->submissions];
         });
 
-        // Retrieve feedback ordered by created_at in ascending order
-        $feedback = TadFeedback::orderBy('created_at', 'asc')->get();
+        // Retrieve feedback ordered by created_at in ascending order with pagination
+        $feedback = TadFeedback::orderBy('created_at', 'asc')->paginate(10);
+
         return view('auth.manage-form-applicants', [
             'groupedSubmissions' => $groupedSubmissions,
-            'feedback' => $feedback
+            'feedback' => $feedback,
+            'forms' => $forms
         ]);
     }
 

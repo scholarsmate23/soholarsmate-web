@@ -23,6 +23,7 @@
             <th>Expected Salary</th>
             <th>Position</th>
             <th>Location</th>
+            <th>Applied On</th>
         </tr>
     </thead>
     <tbody>
@@ -38,6 +39,7 @@
             <td>{{ $application->salary }}</td>
             <td>{{ $application->career_position }}</td>
             <td>{{ $application->career_location }}</td>
+            <td>{{ \Carbon\Carbon::parse($application->created_at)->format('d-m-Y') }}</td>
         </tr>
         @endforeach
     </tbody>

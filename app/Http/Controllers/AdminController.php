@@ -74,7 +74,8 @@ class AdminController extends Controller
                 'applications.availability',
                 'applications.salary',
                 'career_page.position as career_position',
-                'career_page.location as career_location'
+                'career_page.location as career_location',
+                'applications.created_at'
             )
             ->orderBy('applications.created_at', 'desc')
             ->get();

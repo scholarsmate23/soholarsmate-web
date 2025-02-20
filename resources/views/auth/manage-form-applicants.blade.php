@@ -27,7 +27,7 @@
     <!-- Tab panes -->
     <div class="tab-content">
         <div class="tab-pane fade show active" id="view-submissions" role="tabpanel" aria-labelledby="view-submissions-tab">
-            @if(empty($groupedSubmissions))
+            @if($groupedSubmissions->isEmpty())
             <p>No submissions yet.</p>
             @else
             <table class="table table-bordered mt-3">
@@ -50,6 +50,7 @@
                     @endforeach
                 </tbody>
             </table>
+            {{ $forms->links() }}
             @endif
         </div>
         <div class="tab-pane fade" id="add-data" role="tabpanel" aria-labelledby="add-data-tab">
@@ -62,7 +63,10 @@
                         Export &nbsp; <i class="ti-download menu-icon"></i></a>
                 </div>
             </div>
-            <table class="table table-bordered">
+            @if($feedback->isEmpty())
+            <p>No feedback yet.</p>
+            @else
+            <table class="table table-bordered mt-3">
                 <thead>
                     <tr>
                         <th>Reference No</th>
@@ -95,11 +99,14 @@
                             </a>
                         </td>
                         <td>{{ $item->feedback }}</td>
-                        <td>{{ \Carbon\Carbon::parse($item->created_at)->format('d-m-Y H:i:s') }}</td>
+                        <td>{{ \Carbon\Carbon::parse($item->created_at)->format('d-m-Y') }}</td>
+
                     </tr>
                     @endforeach
                 </tbody>
             </table>
+            {{ $feedback->links() }}
+            @endif
         </div>
     </div>
 </div>
