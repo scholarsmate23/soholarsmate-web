@@ -7,6 +7,7 @@ use App\Models\Form;
 use App\Models\FormSubmission;
 use Illuminate\Support\Str;
 use PDF;
+use App\Models\TadFeedback;
 
 class FormController extends Controller
 {
@@ -121,12 +122,15 @@ class FormController extends Controller
         // Retrieve all forms
         $forms = Form::with('submissions')->orderBy('id', 'desc')->get();
 
-        // Group the submissions by form name
         $groupedSubmissions = $forms->mapWithKeys(function ($form) {
             return [$form->form_name => $form->submissions];
         });
+
+        // Retrieve feedback ordered by created_at in ascending order
+        $feedback = TadFeedback::orderBy('created_at', 'asc')->get();
         return view('auth.manage-form-applicants', [
-            'groupedSubmissions' => $groupedSubmissions
+            'groupedSubmissions' => $groupedSubmissions,
+            'feedback' => $feedback
         ]);
     }
 
@@ -171,7 +175,13 @@ class FormController extends Controller
     public function viewFormApplicants($formName)
     {
         $submissions = FormSubmission::where('form_name', $formName)->get();
-
         return view('auth.view-form-applicants', compact('formName', 'submissions'));
+    }
+
+    public function exportFeedbackToPDF()
+    {
+        $feedback = TadFeedback::orderBy('created_at', 'asc')->get();
+        $pdf = PDF::loadView('auth.feedback-pdf', compact('feedback'))->setPaper('a4', 'landscape');
+        return $pdf->download('feedback.pdf');
     }
 }
