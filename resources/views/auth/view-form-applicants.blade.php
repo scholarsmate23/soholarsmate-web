@@ -9,7 +9,7 @@
         </div>
         <div class="col-sm-6">
             <a href="{{ route('download-pdf', ['formName' => $formName]) }}" class="btn btn-primary" style="text-align: right !important; background-color: #f00 !important;">
-                Download PDF
+                Export PDF &nbsp;<i class="ti-download menu-icon"></i>
             </a>
         </div>
     </div>

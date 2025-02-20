@@ -98,6 +98,7 @@ Route::middleware('auth')->group(function () {
     Route::post('/update-form-status', [FormController::class, 'updateFormStatus'])->name('updateFromStatus');
     Route::resource('/admin/events', EventController::class);
     Route::get('/view-form-applicants/{formName}', [FormController::class, 'viewFormApplicants'])->name('view.form.applicants');
+    Route::get('/export-feedback-pdf', [FormController::class, 'exportFeedbackToPDF'])->name('export.feedback.pdf');
 
     Route::controller(AdminController::class)->group(function () {
         Route::get('/manage-course', 'manageCourse')->name('manage.course');
