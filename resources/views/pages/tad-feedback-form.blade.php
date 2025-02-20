@@ -55,7 +55,7 @@
                         <input type="text" name="mother_mobile" id="mother_mobile" placeholder="Enter mother's mobile number" class="formbold-form-input" required />
                     </div>
                     <div class="formbold-mb-5">
-                        <label for="photo" class="formbold-form-label"> Photo (Max 2 MB)</label>
+                        <label for="photo" class="formbold-form-label">Passport Photo (Max 2 MB)</label>
                         <input type="file" name="photo" id="photo" class="formbold-form-input" accept="image/*" required />
                     </div>
                     <div class="formbold-mb-5">
