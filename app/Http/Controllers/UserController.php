@@ -322,7 +322,8 @@ class UserController extends Controller
 
         // Generate the reference number
         $currentYear = date('Y');
-        $serialNumber = TadFeedback::count() + 1;
+        $lastFeedback = TadFeedback::orderBy('id', 'desc')->first();
+        $serialNumber = $lastFeedback ? $lastFeedback->id + 1 : 1;
         $referenceNo = 'SMCI' . $currentYear . str_pad($serialNumber, 2, '0', STR_PAD_LEFT);
 
         TadFeedback::create([
