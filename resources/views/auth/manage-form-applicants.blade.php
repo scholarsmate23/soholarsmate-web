@@ -17,7 +17,7 @@
     <!-- Nav tabs -->
     <ul class="nav nav-tabs" id="manageFormTabs" role="tablist">
         <li class="nav-item" role="presentation">
-            <a class="nav-link active" id="view-submissions-tab" data-bs-toggle="tab" href="#view-submissions" role="tab" aria-controls="view-submissions" aria-selected="true">Forms Submissions</a>
+            <a class="nav-link" id="view-submissions-tab" data-bs-toggle="tab" href="#view-submissions" role="tab" aria-controls="view-submissions" aria-selected="false">Forms Submissions</a>
         </li>
         <li class="nav-item" role="presentation">
             <a class="nav-link" id="add-data-tab" data-bs-toggle="tab" href="#add-data" role="tab" aria-controls="add-data" aria-selected="false">TAD-Feedback</a>
@@ -26,7 +26,7 @@
 
     <!-- Tab panes -->
     <div class="tab-content">
-        <div class="tab-pane fade show active" id="view-submissions" role="tabpanel" aria-labelledby="view-submissions-tab">
+        <div class="tab-pane fade" id="view-submissions" role="tabpanel" aria-labelledby="view-submissions-tab">
             @if($groupedSubmissions->isEmpty())
             <p>No submissions yet.</p>
             @else
@@ -113,5 +113,27 @@
         </div>
     </div>
 </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Get the active tab from local storage
+        var activeTab = localStorage.getItem('activeTab');
+        if (activeTab) {
+            var tabElement = document.querySelector('a[href="' + activeTab + '"]');
+            if (tabElement) {
+                var tab = new bootstrap.Tab(tabElement);
+                tab.show();
+            }
+        }
+
+        // Store the active tab in local storage when a tab is shown
+        var tabLinks = document.querySelectorAll('#manageFormTabs a[data-bs-toggle="tab"]');
+        tabLinks.forEach(function(tabLink) {
+            tabLink.addEventListener('shown.bs.tab', function(event) {
+                localStorage.setItem('activeTab', event.target.getAttribute('href'));
+            });
+        });
+    });
+</script>
 
 @endsection
