@@ -50,7 +50,9 @@
                     @endforeach
                 </tbody>
             </table>
-            {{ $forms->links() }}
+            <div class="d-flex justify-content-center">
+                {{ $forms->links('pagination::bootstrap-4') }}
+            </div>
             @endif
         </div>
         <div class="tab-pane fade" id="add-data" role="tabpanel" aria-labelledby="add-data-tab">
@@ -59,7 +61,7 @@
                     <h3 class="mt-3">Feedback Data</h3>
                 </div>
                 <div class="col-sm-6">
-                    <a href="{{ route('export.feedback.pdf') }}" class="btn btn-primary" style="float:inline-end  !important">
+                    <a href="{{ route('export.feedback.pdf') }}" class="btn btn-primary" style="float: right;">
                         Export &nbsp; <i class="ti-download menu-icon"></i></a>
                 </div>
             </div>
@@ -100,12 +102,13 @@
                         </td>
                         <td>{{ $item->feedback }}</td>
                         <td>{{ \Carbon\Carbon::parse($item->created_at)->format('d-m-Y') }}</td>
-
                     </tr>
                     @endforeach
                 </tbody>
             </table>
-            {{ $feedback->links() }}
+            <div class="d-flex justify-content-center">
+                {{ $feedback->links('pagination::bootstrap-4') }}
+            </div>
             @endif
         </div>
     </div>
