@@ -8,6 +8,8 @@ use App\Models\FormSubmission;
 use Illuminate\Support\Str;
 use PDF;
 use App\Models\TadFeedback;
+use App\Exports\FeedbackExport;
+use Maatwebsite\Excel\Facades\Excel;
 
 class FormController extends Controller
 {
@@ -185,5 +187,10 @@ class FormController extends Controller
         $feedback = TadFeedback::orderBy('created_at', 'asc')->get();
         $pdf = PDF::loadView('auth.feedback-pdf', compact('feedback'))->setPaper('a4', 'landscape');
         return $pdf->download('feedback.pdf');
+    }
+
+    public function exportFeedbackToExcel()
+    {
+        return Excel::download(new FeedbackExport, 'feedback.xlsx');
     }
 }

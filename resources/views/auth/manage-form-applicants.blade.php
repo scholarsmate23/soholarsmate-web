@@ -61,7 +61,7 @@
                     <h3 class="mt-3">Feedback Data</h3>
                 </div>
                 <div class="col-sm-6">
-                    <a href="{{ route('export.feedback.pdf') }}" class="btn btn-primary" style="float: right;">
+                    <a href="{{ route('export.feedback.excel') }}" class="btn btn-primary" style="float: right;">
                         Export &nbsp; <i class="ti-download menu-icon"></i></a>
                 </div>
             </div>
