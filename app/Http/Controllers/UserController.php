@@ -264,6 +264,24 @@ class UserController extends Controller
             'salary' => 'required|string|max:255',
         ]);
 
+        // Check if the mobile number or email has already been used to apply for the same career_id
+        $existingApplication = Application::where('career_id', $request->career_id)
+            ->where(function ($query) use ($request) {
+                $query->where('email', $request->email)
+                    ->orWhere('phone', $request->phone);
+            })
+            ->first();
+
+        if ($existingApplication) {
+            $applicationDate = \Carbon\Carbon::parse($existingApplication->created_at);
+            $currentDate = \Carbon\Carbon::now();
+            $monthsDifference = $applicationDate->diffInMonths($currentDate);
+
+            if ($monthsDifference < 6) {
+                return response()->json(['success' => false, 'message' => 'You have already applied for this job. You can apply again after 6 months.']);
+            }
+        }
+
         // Store the uploaded resume
         $pdfFile = $request->file('resume');
         $filename = time() . '.' . $pdfFile->getClientOriginalExtension();
@@ -289,6 +307,7 @@ class UserController extends Controller
 
         return response()->json(['success' => true, 'message' => 'Application Sent successfully, We Will Contact You Soon!']);
     }
+
 
     public function showApplicationForm($id)
     {

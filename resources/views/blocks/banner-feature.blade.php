@@ -1,4 +1,3 @@
-<!-- banner-feature -->
 <section class="overflow-md-hidden">
     <div class="container-fluid p-0">
         <div class="row no-gutters">
@@ -46,9 +45,48 @@
                 </div>
             </div>
             <div class="col-xl-4 col-lg-5">
-                <img class="img-fluid w-100" src="{{asset('assets/source/images/banner/abt.jpg')}}" alt="banner-feature">
+                <div class="video-container">
+                    <video id="bannerVideo" class="video-content" autoplay muted loop>
+                        <source src="{{ asset('assets/source/videos/Admission.mp4') }}" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <i id="muteButton" class="fas fa-volume-up mute-icon"></i>
+                </div>
             </div>
         </div>
     </div>
 </section>
 <!-- /banner-feature -->
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var video = document.getElementById('bannerVideo');
+        var muteButton = document.getElementById('muteButton');
+        var pauseButton = document.getElementById('pauseButton');
+
+
+        // Toggle mute/unmute
+        muteButton.addEventListener('click', function() {
+            if (video.muted) {
+                video.muted = false;
+                muteButton.classList.remove('fa-volume-mute');
+                muteButton.classList.add('fa-volume-up');
+            } else {
+                video.muted = true;
+                muteButton.classList.remove('fa-volume-up');
+                muteButton.classList.add('fa-volume-mute');
+            }
+        });
+
+        // Toggle play/pause
+        pauseButton.addEventListener('click', function() {
+            if (video.paused) {
+                video.play();
+                pauseButton.textContent = 'Pause';
+            } else {
+                video.pause();
+                pauseButton.textContent = 'Play';
+            }
+        });
+    });
+</script>
