@@ -7,9 +7,11 @@
         <div class="col-lg-4 text-center text-lg-left">
           <a class="text-color mr-3" href="+91 9102282333"><strong>CALL</strong> +91 9102282333</a>
           <ul class="list-inline d-inline">
-            <li class="list-inline-item mx-0"><a class="d-inline-block p-2 text-color" href="https://www.facebook.com/profile.php?id=61558490291137" target="_blank"><i class="ti-facebook"></i></a></li>
-            <li class="list-inline-item mx-0"><a class="d-inline-block p-2 text-color" href=""><i class="ti-linkedin"></i></a></li>
-            <li class="list-inline-item mx-0"><a class="d-inline-block p-2 text-color" href="https://www.instagram.com/scholarsmateofficial/" target="_blank"><i class="ti-instagram"></i></a></li>
+            <li class="list-inline-item mx-0"><a class="d-inline-block text-color" href="https://www.facebook.com/profile.php?id=61558490291137" target="_blank"><img style="width: 65%;" src="{{asset('assets/source/images/icons8-facebook.svg')}}" alt="facebook"></a></li>
+            <li class="list-inline-item mx-0"><a class="d-inline-block text-color" href="https://www.linkedin.com/company/scholars-mate/"><img style="width: 65%;" src="{{asset('assets/source/images/icons8-linkedin.svg')}}" alt="facebook"></i></a></li>
+            <li class="list-inline-item mx-0"><a class="d-inline-block text-color" href="https://www.instagram.com/scholarsmateofficial/" target="_blank"><img style="width: 65%;" src="{{asset('assets/source/images/icons8-instagram-logo.svg')}}" alt="facebook"></i></a></li>
+            <li class="list-inline-item mx-0"><a class="d-inline-block text-color" href="https://www.youtube.com/@Scholarsmate-ci/videos" target="_blank"><img style="width:65%" src="{{asset('assets/source/images/icons8-youtube.svg')}}" alt="youtube"></i></a></li>
+
           </ul>
         </div>
         <div class="col-lg-8 text-center text-lg-right">
@@ -47,7 +49,7 @@
   <div class="navigation w-100">
     <div class="container">
       <nav class="navbar navbar-expand-lg navbar-dark p-0">
-        <a class="navbar-brand" href="{{route('home')}}"><img class="img-fluid" src="{{asset('assets/source/images/about/LOGO.jpg')}}" alt="logo"></a>
+        <a class="navbar-brand" href="{{route('home')}}"><img class="img-fluid" src="{{asset('assets/source/images/about/Scholarsmate-logo-1.png')}}" alt="logo"></a>
         <button class="navbar-toggler rounded-0" type="button" data-toggle="collapse" data-target="#navigation"
           aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -135,6 +137,7 @@
             <li class="nav-item">
               <a class="nav-link" href="{{route('gallery')}}">Gallery</a>
             </li>
+
           </ul>
         </div>
       </nav>

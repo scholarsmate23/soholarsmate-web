@@ -22,7 +22,7 @@
       <div class="row">
         <div class="col-lg-4 col-sm-8 mb-5 mb-lg-0">
           <!-- logo -->
-          <a class="logo-footer" href="{{route('home')}}"><img class="img-fluid mb-4" src="{{asset('assets/source/images/about/LOGO.jpg')}}" alt="logo"></a>
+          <a class="logo-footer" href="{{route('home')}}"><img class="img-fluid mb-4" src="{{asset('assets/source/images/about/Scholarsmate-logo-1.png')}}" alt="logo"></a>
           <ul class="list-unstyled">
             <li class="mb-2 text-white">Near Saraswati Vidya Mandir, BudhaNath Road, Khalifabagh Chowk, Bhagalpur</li>
             <li class="mb-2 text-white">+91 9102282333</li>
@@ -48,6 +48,16 @@
             <li class="mb-3"><a class="text-white" href="{{route('result')}}">Result</a></li>
             <li class="mb-3"><a class="text-white" href="{{route('gallery')}}">Gallery</a></li>
             <li class="mb-3"><a class="text-white" href="{{route('student.zone')}}">Student Zone</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-5 mb-md-0">
+          <h4 class="text-white mb-5">SOCIALS</h4>
+          <ul class="list-unstyled">
+            <li class="mb-3"><a class="test-white" href="https://www.facebook.com/profile.php?id=61558490291137" target="_blank"><img src="{{asset('assets/source/images/icons8-facebook.svg')}}" alt="facebook"></a></li>
+            <li class="mb-3"><a class="test-white" href="https://www.linkedin.com/company/scholars-mate/"><img src="{{asset('assets/source/images/icons8-linkedin.svg')}}" alt="facebook"></i></a></li>
+            <li class="mb-3"><a class="test-white" href="https://www.instagram.com/scholarsmateofficial/" target="_blank"><img src="{{asset('assets/source/images/icons8-instagram-logo.svg')}}" alt="facebook"></i></a></li>
+            <li class="mb-3"><a class="test-white" href="https://www.youtube.com/@Scholarsmate-ci/videos" target="_blank"><img src="{{asset('assets/source/images/icons8-youtube.svg')}}" alt="youtube"></i></a></li>
+
           </ul>
         </div>
         <!-- support -->

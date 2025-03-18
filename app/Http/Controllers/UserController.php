@@ -29,7 +29,8 @@ class UserController extends Controller
         $data = SliderImg::orderBy('created_at', 'desc')->get();
         $news = News::orderBy('created_at', 'desc')->get();
         $forms = Form::where('status', 'active')->orderBy('created_at', 'desc')->get();
-        return view('welcome', compact('data', 'news', 'forms'));
+        $feedback = TadFeedback::select('name', 'photo', 'feedback', 'boards', 'class')->orderBy('created_at', 'desc')->take(12)->get();
+        return view('welcome', compact('data', 'news', 'forms', 'feedback'));
     }
 
     public function viewCourse()

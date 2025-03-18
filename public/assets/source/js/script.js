@@ -184,88 +184,66 @@ setTimeout(function() {
     $('.alert-success').fadeOut('slow');
 }, 5000);
 
-
-    function playVideo(url) {
-        // Extract YouTube video ID
-        const videoId = url.split('v=')[1];
-        const ampersandPosition = videoId.indexOf('&');
-        const cleanVideoId = ampersandPosition !== -1 ? videoId.substring(0, ampersandPosition) : videoId;
-
-        const iframe = document.getElementById('videoIframe');
-        iframe.src = `https://www.youtube.com/embed/${cleanVideoId}?autoplay=1`;
-
-        document.getElementById('videoModal').style.display = 'block';
-    }
-
-    function closeVideo() {
-        const iframe = document.getElementById('videoIframe');
-        iframe.src = '';
-
-        // Hide the modal
-        document.getElementById('videoModal').style.display = 'none';
-    }
-         
     
-    document.addEventListener('DOMContentLoaded', () => {
+    
+document.addEventListener('DOMContentLoaded', () => {
         
-        const form = document.getElementById('applicationForm');
-        const loader = document.getElementById('loader');
-        
-        form.addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent the default form submission
+    const form = document.getElementById('applicationForm');
+    const loader = document.getElementById('loader');
     
-            // Show the loader
-            loader.style.display = 'block';
-    
-            const formData = new FormData(form);
-            const actionUrl = form.getAttribute('action'); // Get the form's action attribute
-    
-            fetch(actionUrl, {
-                method: 'POST',
-                body: formData,
-                headers: {
-                    'X-Requested-With': 'XMLHttpRequest',
-                    'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
-                },
-            })
-            .then(response => response.json())
-            .then(data => {
-                // Hide the loader
-                loader.style.display = 'none';
-    
-                if (data.success) {
-                    // Display success message in a popup
-                    Swal.fire({
-                        icon: 'success',
-                        title: 'Success',
-                        text: data.message || 'Application Sent successfully, We Will Contact You Soon!',
-                        confirmButtonText: 'OK'
-                    }).then((result) => {
-                        if (result.isConfirmed) {
-                            // Redirect to career page
-                            window.location.href = '/career';
-                        }
-                    });
-                } else {
-                    // Handle server-side validation errors
-                    const errorMessage = document.getElementById('error-message');
-                    errorMessage.textContent = data.error || 'Something went wrong. Please try again.';
-                    errorMessage.classList.remove('d-none');
-                }
-            })
-            .catch(error => {
-                // Hide the loader
-                loader.style.display = 'none';
-    
-                console.error('Error:', error);
+    form.addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the default form submission
+
+        // Show the loader
+        loader.style.display = 'block';
+
+        const formData = new FormData(form);
+        const actionUrl = form.getAttribute('action'); // Get the form's action attribute
+
+        fetch(actionUrl, {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'X-Requested-With': 'XMLHttpRequest',
+                'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
+            },
+        })
+        .then(response => response.json())
+        .then(data => {
+            // Hide the loader
+            loader.style.display = 'none';
+
+            if (data.success) {
+                // Display success message in a popup
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Success',
+                    text: data.message || 'Application Sent successfully, We Will Contact You Soon!',
+                    confirmButtonText: 'OK'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        // Redirect to career page
+                        window.location.href = '/career';
+                    }
+                });
+            } else {
+                // Handle server-side validation errors
                 const errorMessage = document.getElementById('error-message');
-                errorMessage.textContent = 'An unexpected error occurred. Please try again.';
+                errorMessage.textContent = data.error || 'Something went wrong. Please try again.';
                 errorMessage.classList.remove('d-none');
-            });
+            }
+        })
+        .catch(error => {
+            // Hide the loader
+            loader.style.display = 'none';
+
+            console.error('Error:', error);
+            const errorMessage = document.getElementById('error-message');
+            errorMessage.textContent = 'An unexpected error occurred. Please try again.';
+            errorMessage.classList.remove('d-none');
         });
     });
-
-
+});
     document.addEventListener('DOMContentLoaded', () => {
         const form = document.getElementById('applicantApplyForm');
         const loader = document.getElementById('applyLoader');
@@ -299,7 +277,7 @@ setTimeout(function() {
                         Swal.fire({
                             icon: 'success',
                             title: 'Success',
-                            text: 'Application Received, We Will Contact You Soon!',
+                            text: data.message || 'Application Received, We Will Contact You Soon!',
                             confirmButtonText: 'OK'
                         }).then((result) => {
                             if (result.isConfirmed) {
@@ -361,7 +339,7 @@ setTimeout(function() {
                         Swal.fire({
                             icon: 'success',
                             title: 'Success',
-                            text: 'Application Received, We Will Contact You Soon!',
+                            text: data.message || 'Application Received, We Will Contact You Soon!',
                             confirmButtonText: 'OK'
                         }).then((result) => {
                             if (result.isConfirmed) {
@@ -455,3 +433,29 @@ setTimeout(function() {
             });
         }
     });
+
+
+    var swiper = new Swiper(".testimonial-wrapper", {
+        slidesPerView: 1,
+        slidesPerGroup: 1,
+        spaceBetween: 30,
+        loop: true,
+        speed: 1300,
+        autoplay: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true
+        },
+        breakpoints: {
+          768: {
+            slidesPerView: 3,
+            slidesPerGroup: 3
+          },
+          480: {
+            slidesPerView: 2,
+            slidesPerGroup: 1
+          }
+        }
+      });
+
+    

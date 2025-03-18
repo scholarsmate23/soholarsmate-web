@@ -84,7 +84,7 @@ Route::get('/form/{slug}', [FormController::class, 'showForm'])->name('showForm'
 Route::post('/form/{formId}/submit', [FormController::class, 'submitForm'])->name('submitForm');
 Route::post('/sent-mail', [MailController::class, 'sentMail']);
 
-Route::get('/calendar', [EventController::class, 'viewEvents'])->name('academic.calendar'); // Calendar page
+// Route::get('/view-calender', [EventController::class, 'viewEvents'])->name('academic.calendar'); // Calendar page
 Route::get('/calendar/events', [EventController::class, 'fetchEvents']);
 
 
@@ -124,6 +124,7 @@ Route::middleware('auth')->group(function () {
         Route::get('/manage-teacher', 'manageTeacher')->name('manage.teacher');
         Route::post('/add-teacher', 'addTeacher')->name('add.teacher');
         Route::post('/update-career-status', 'updateStatus')->name('career.updateStatus');
+        Route::post('/send-email', 'sendEmail')->name('send.email');
     });
     Route::controller(LoginRegisterController::class)->group(function () {
         Route::post('/logout', 'logout')->name('logout');

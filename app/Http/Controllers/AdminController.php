@@ -13,6 +13,7 @@ use App\Models\Event;
 use App\Models\Teacher;
 use Illuminate\Support\Facades\Storage;
 use DB;
+use Illuminate\Support\Facades\Mail;
 
 class AdminController extends Controller
 {
@@ -286,5 +287,21 @@ class AdminController extends Controller
         }
 
         return response()->json(['success' => false, 'message' => 'Career not found']);
+    }
+
+    public function sendEmail(Request $request)
+    {
+        $request->validate([
+            'email' => 'required|email',
+            'subject' => 'required|string',
+            'body' => 'required|string',
+        ]);
+
+        Mail::raw($request->body, function ($message) use ($request) {
+            $message->to($request->email)
+                ->subject($request->subject);
+        });
+
+        return redirect()->back()->with('success', 'Email sent successfully!');
     }
 }
