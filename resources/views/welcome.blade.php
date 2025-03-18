@@ -30,7 +30,6 @@
 </section>
 <!-- /courses -->
 
-@include('blocks/cta')
 
 <!-- events -->
 <section class="section bg-gray">
@@ -58,6 +57,7 @@
 <!-- /events -->
 @include('blocks/founders')
 @include('blocks/teachers')
+@include('blocks/testimonials')
 
 <!-- blog -->
 <!-- <section class="section pt-0">
