@@ -17,6 +17,9 @@
         <div class="col-lg-8 text-center text-lg-right">
           <ul class="list-inline">
             <li class="list-inline-item">
+              <a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block" href="{{route('calender')}}">ACADEMIC CALENDER</a>
+            </li>
+            <li class="list-inline-item">
               <a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block" href="{{ route('career') }}">Career</a>
             </li>
             <li class="list-inline-item">
@@ -49,7 +52,7 @@
   <div class="navigation w-100">
     <div class="container">
       <nav class="navbar navbar-expand-lg navbar-dark p-0">
-        <a class="navbar-brand" href="{{route('home')}}"><img class="img-fluid" src="{{asset('assets/source/images/about/Scholarsmate-logo-1.png')}}" alt="logo"></a>
+        <a class="navbar-brand" href="{{route('home')}}"><img class="img" style="width: 50%;" src="{{asset('assets/source/images/about/Scholarsmate-logo-1.png')}}" alt="logo"></a>
         <button class="navbar-toggler rounded-0" type="button" data-toggle="collapse" data-target="#navigation"
           aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -76,7 +79,6 @@
                 <li><a class="dropdown-item" href="{{route('pre.foundation')}}">PRE-FOUNDATION</a></li>
                 <li><a class="dropdown-item" href="{{route('boards')}}">BOARDS</a></li>
                 <li><a class="dropdown-item" href="{{route('syllabus')}}">SYLLABUS</a></li>
-                <li><a class="dropdown-item" href="{{route('calender')}}">ACADEMIC CALENDER</a></li>
                 <li><a class="dropdown-item" href="{{route('faculty')}}">OUR FACULTY</a></li>
 
 
