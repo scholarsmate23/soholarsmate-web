@@ -50,7 +50,7 @@
   </div>
   <!-- navbar -->
   <div class="navigation w-100">
-    <div class="container">
+    <div class="container-fluid">
       <nav class="navbar navbar-expand-lg navbar-dark p-0">
         <a class="navbar-brand" href="{{route('home')}}"><img class="img" style="width: 50%;" src="{{asset('assets/source/images/about/Scholarsmate-logo-1.png')}}" alt="logo"></a>
         <button class="navbar-toggler rounded-0" type="button" data-toggle="collapse" data-target="#navigation"
@@ -59,7 +59,7 @@
         </button>
 
         <div class="collapse navbar-collapse" id="navigation">
-          <ul class="navbar-nav ml-auto text-center">
+          <ul class="navbar-nav text-center">
             <li class="nav-item @home">
               <a class="nav-link" href="{{route('home')}}">Home</a>
             </li>

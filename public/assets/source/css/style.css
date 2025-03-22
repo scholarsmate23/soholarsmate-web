@@ -506,6 +506,7 @@ textarea.form-control {
 }
 
 .navbar-nav {
+    margin-left: 70px !important;
     padding-left: 50px;
     background: #0f3969;
 }
@@ -3314,7 +3315,8 @@ input[name="field_options[]"] {
 
 .navbar-brand {
     flex-shrink: 0;
-    max-width: 70%; /* Adjust as needed to prevent the logo from taking too much space */
+    max-width: 70%;
+    margin-left: 20px; 
 }
 
 .navbar-toggler {
