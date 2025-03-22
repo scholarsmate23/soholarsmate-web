@@ -707,7 +707,7 @@ link:focus,
 
 @media (max-width: 991px) {
     .hero-section {
-        padding: 175px 0 0;
+        padding: 150px 0 0;
     }
 }
 
@@ -3303,3 +3303,34 @@ input[name="field_options[]"] {
     color: #264143;
     padding: 5px;
   }
+
+  /* Ensure the navbar brand and toggle button are aligned on the same line */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+}
+
+.navbar-brand {
+    flex-shrink: 0;
+    max-width: 70%; /* Adjust as needed to prevent the logo from taking too much space */
+}
+
+.navbar-toggler {
+    flex-shrink: 0;
+    margin-left: auto;
+    border: none;
+}
+
+/* Adjustments for smaller screens */
+@media screen and (max-width: 768px) {
+    .navbar-brand img {
+        max-width: 80%; /* Ensure the logo scales properly on smaller screens */
+        height: auto;
+    }
+
+    .navbar-toggler {
+        margin-left: 10px;
+    }
+}
