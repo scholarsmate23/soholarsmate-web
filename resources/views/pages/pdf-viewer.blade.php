@@ -25,7 +25,7 @@
 <script type="text/javascript">
   document.addEventListener("adobe_dc_view_sdk.ready", function() {
     var adobeDCView = new AdobeDC.View({
-      clientId: "1777b5e72cfa4060918b488d38dd73c6",
+      clientId: "1172ee33b7814038882953530a64e128",
       divId: "adobe-dc-view"
     });
     var route = "{{ $pdfPath }}";
