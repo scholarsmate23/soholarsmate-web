@@ -458,4 +458,22 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       });
 
-    
+      function playVideo(url) {
+        // Extract YouTube video ID
+        const videoId = url.split('v=')[1];
+        const ampersandPosition = videoId.indexOf('&');
+        const cleanVideoId = ampersandPosition !== -1 ? videoId.substring(0, ampersandPosition) : videoId;
+
+        const iframe = document.getElementById('videoIframe');
+        iframe.src = `https://www.youtube.com/embed/${cleanVideoId}?autoplay=1`;
+
+        document.getElementById('videoModal').style.display = 'block';
+    }
+
+    function closeVideo() {
+        const iframe = document.getElementById('videoIframe');
+        iframe.src = '';
+
+        // Hide the modal
+        document.getElementById('videoModal').style.display = 'none';
+    }
