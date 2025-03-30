@@ -183,7 +183,8 @@ class AdminController extends Controller
 
     public function addResult(Request $request)
     {
-        if ($request->hasFile('pdf')) {
+        try {
+
             $pdfFile = $request->file('pdf');
             $filename = time() . '_' . $pdfFile->getClientOriginalName();
 
@@ -192,11 +193,14 @@ class AdminController extends Controller
             // Save the file name in the database
             Results::create([
                 'exam' => $request->exam,
+                'course_type' => $request->type,
                 'file_name' => $filename,
             ]);
-            return response()->json(['message' => 'Career Added successfully'], 200);
-        } else {
-            return response()->json(['message' => 'Something Went Wrong'], 200);
+
+            return response()->json(['message' => 'Result added successfully'], 200);
+        } catch (\Exception $e) {
+            \Log::error('Error adding result: ' . $e->getMessage());
+            return response()->json(['message' => 'Something went wrong', 'error' => $e->getMessage()], 500);
         }
     }
 

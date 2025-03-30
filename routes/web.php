@@ -60,6 +60,7 @@ Route::controller(UserController::class)->group(function () {
     Route::post('/career/apply',  'careerApply')->name('career.apply');
     Route::post('/submit-feedback', 'submitFeedback')->name('submitFeedback');
     Route::get('/tad-feedback/2025', 'viewTadFeedback')->name('tad.feedback');
+    Route::get('/result/{id}', 'viewResultByCourse')->name('result.course');
 });
 
 Route::controller(CourseContrpoller::class)->group(function () {

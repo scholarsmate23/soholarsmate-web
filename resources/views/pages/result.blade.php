@@ -6,7 +6,7 @@
     <div class="row">
       <div class="col-md-8">
         <ul class="list-inline custom-breadcrumb mb-2">
-          <li class="list-inline-item"><a class="h2 text-primary font-secondary" >Exams Result</a></li>
+          <li class="list-inline-item"><a class="h2 text-primary font-secondary">Exams Result</a></li>
         </ul>
       </div>
     </div>
@@ -15,26 +15,27 @@
 <!-- /page title -->
 
 <section class="section">
-    <div class="container">
-        <div class="row">
-            <table class="table-reset" cellspacing=0 cellpadding=0>
-                <tr>
-                    <th class="table-head">Results</th>
-                    <th class="table-head">View</th>
-
-                </tr>
-                @foreach($results as $result)
-                <tr>
-                    <td>{{ $result->exam }}</td>
-                    <td><a href="{{ route('pdf.viewer', ['id' => $result->id]) }}" target="_blank">Click to view</a></td>
-                </tr>
-                @endforeach
-
-
-            </table>
+  <div class="container">
+    <div class="row">
+      @foreach($results as $result)
+      <div class="col-md-4 mb-4">
+        <div class="result-card">
+          <a class="card1" href="{{ route('result.course', ['id' => $result->course_type]) }}">
+            <p><strong>{{ $result->course_type }}</strong></p>
+            <p class="small">Click to View the Result.</p>
+            <div class="go-corner">
+              <div class="go-arrow">
+                →
+              </div>
+            </div>
+          </a>
         </div>
+      </div>
+      @endforeach
     </div>
+  </div>
 </section>
+
 
 
 @include('blocks/footer')

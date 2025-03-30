@@ -19,6 +19,7 @@
     <thead>
         <tr>
             <th>Name of Exam</th>
+            <th>Course Type</th>
             <th>Pdf File</th>
             <th>Delete</th>
         </tr>
@@ -27,6 +28,7 @@
         @foreach($data as $item)
         <tr>
             <td>{{ $item['exam'] }}</td>
+            <td>{{ $item['course_type'] }}</td>
             <td>{{ $item['file_name'] }}</td>
             <td>
                 <a href="#deleteResultModal" class="delete" id="deleteImage" data-toggle="modal" value="{{ $item->id }}"><i class="ti-trash menu-icon"></i></a>
@@ -48,18 +50,29 @@
                 </button>
             </div>
             <div class="modal-body">
-                <!-- Add form for adding image -->
-                <form id="addImageForm" enctype="multipart/form-data">
+                <form enctype="multipart/form-data">
                     @csrf
                     <div class="form-group">
                         <label for="exam">Name of Exam</label>
                         <input type="text" class="form-control" id="exam" name="exam" required>
                     </div>
                     <div class="form-group">
+                        <label for="type">Select Course Type</label>
+                        <select class="form-control" id="type" name="type" required>
+                            <option value="">Select</option>
+                            <option value="jee">JEE</option>
+                            <option value="neet">NEET</option>
+                            <option value="board - 10">Board- 10th</option>
+                            <option value="board - 11">Board- 11th</option>
+                            <option value="board - 12">Board- 12th</option>
+                            <option value="AAKALAN - {{ date('Y') }}">AAKALAN - {{ date('Y') }}</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
                         <label for="pdf">Upload Result <span>(only pdf)</span></label>
                         <input type="file" class="form-control" id="pdf" name="pdf" accept=".pdf" required>
                     </div>
-                    
+
                     <button type="submit" class="btn btn-primary">Upload</button>
                 </form>
             </div>
@@ -69,7 +82,7 @@
 
 
 
-<!-- Delete Image Modal -->
+<!-- Delete Result Modal -->
 <div class="modal fade" id="deleteResultModal" tabindex="-1" role="dialog" aria-labelledby="deleteImageModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">

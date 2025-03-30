@@ -13,6 +13,7 @@ class Results extends Model
 
     protected $fillable = [
         'id',
+        'course_type',
         'exam',
         'file_name',
     ];

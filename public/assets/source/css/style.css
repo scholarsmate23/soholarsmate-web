@@ -708,7 +708,7 @@ link:focus,
 
 @media (max-width: 991px) {
     .hero-section {
-        padding: 150px 0 0;
+        padding: 155px 0 0;
     }
 }
 
@@ -1282,7 +1282,7 @@ table tr td {
 .icon .fa,
 .icon .fas {
     color: rgb(9, 72, 10);
-    font-size: 35px;
+    font-size: 35px !important;
 }
 
 .icon .fa:hover,
@@ -1358,11 +1358,12 @@ table tr td {
 }
 
 .table-head {
-    background-color: #0f3969;
+    background: linear-gradient(45deg, #0f3969, #1a4d8f);
     color: #fff;
     text-align: left;
-    padding: 10px;
-    border: 1px solid #0f3969;
+    padding: 15px;
+    border: 3px solid #0f3969;
+    border-radius: 5px;
     font-family: "Lora", serif;
 }
 
@@ -2767,7 +2768,7 @@ input[name="field_options[]"] {
     font-size: 1.2rem;
     font-weight: bold;
     margin: 0;
-    color: #0afed5;
+    color: #fff;
 }
 
 .role {
@@ -3335,4 +3336,186 @@ input[name="field_options[]"] {
     .navbar-toggler {
         margin-left: 10px;
     }
+}
+.result-card {
+    background: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.result-card p {
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #080808;
+    text-transform: uppercase;
+  }
+  
+  .result-card p.small {
+    font-size: 14px;
+  }
+  
+  .go-corner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    overflow: hidden;
+    top: 0;
+    right: 0;
+    background-color: #0f3969;
+    border-radius: 0 4px 0 32px;
+  }
+  
+  .go-arrow {
+    margin-top: -4px;
+    margin-right: -4px;
+    color: white;
+    font-family: courier, sans;
+  }
+  
+  .card1 {
+    display: block;
+    position: relative;
+    background-color: #f2f8f9;
+    border-radius: 4px;
+    padding: 32px 24px;
+    text-decoration: none;
+    z-index: 0;
+    overflow: hidden;
+  }
+  
+  .card1:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: -16px;
+    right: -16px;
+    background: #0f3969;
+    height: 32px;
+    width: 32px;
+    border-radius: 32px;
+    transform: scale(1);
+    transform-origin: 80% 70%;
+    transition: transform 0.25s ease-out;
+  }
+  
+  .card1:hover:before {
+    transform: scale(21);
+  }
+  
+  .card1:hover p {
+    transition: all 0.3s ease-out;
+    color: rgba(255, 255, 255, 0.8);
+  }
+  
+  .card1:hover h3 {
+    transition: all 0.3s ease-out;
+    color: #fff;
+  }
+  
+  .float1{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:40px;
+	right:40px;
+	text-align:center;
+    z-index: 1000;
+}
+
+.my-float{
+    font-size: 2.5rem !important;
+    margin-top: 8px !important;
+}
+
+.float12{
+	position:fixed;
+	width:55px;
+	height:55px;
+	bottom:110px;
+	right:40px;
+	background-color:#e00a0a;
+	color:#0f3969;
+	border-radius:50px;
+	text-align:center;
+    z-index: 1000;
+}
+
+.float1:hover {
+    transform: scale(1.2); 
+}
+
+.float12:hover {
+    color:#062549;
+    ;
+    transform: scale(1.2); 
+}
+
+@media screen and (max-width: 768px) {
+    .table {
+        font-size: 14px;
+    }
+
+    .fa-eye {
+        font-size: large !important;
+    }
+}
+
+/*** Services Start ***/
+
+.services .services-item {
+    box-shadow: 0 0 60px rgba(0, 0, 0, .2);
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    padding: 10px 0;
+    position: relative;
+}
+
+
+.services-content::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 0;
+    top: 0;
+    left: 0;
+    border-radius: 10px 10px 0 0;
+    background: rgba(3, 43, 243, 0.8);
+    transition: .5s;
+}
+
+.services-content::after {
+    top: 0;
+    bottom: auto;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.services-item:hover .services-content::after {
+    height: 100%;
+    opacity: 1;
+    transition: .5s;
+}
+
+.services-item:hover .services-content-icon {
+    position: relative;
+    z-index: 2;
+}
+
+.services-item .services-content-icon i,
+.services-item .services-content-icon p {
+    transition: .5s;
+}
+
+.services-item:hover .services-content-icon i {
+    color: var(--bs-secondary) !important;
+}
+
+.services-item:hover .services-content-icon p {
+    color: var(--bs-white);
 }

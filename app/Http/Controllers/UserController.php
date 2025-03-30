@@ -29,7 +29,7 @@ class UserController extends Controller
         $data = SliderImg::orderBy('created_at', 'desc')->get();
         $news = News::orderBy('created_at', 'desc')->get();
         $forms = Form::where('status', 'active')->orderBy('created_at', 'desc')->get();
-        $feedback = TadFeedback::select('name', 'photo', 'feedback', 'boards', 'class')->orderBy('created_at', 'desc')->take(12)->get();
+        $feedback = TadFeedback::select('name', 'photo', 'feedback', 'boards', 'class')->orderBy('created_at', 'desc')->take(15)->get();
         return view('welcome', compact('data', 'news', 'forms', 'feedback'));
     }
 
@@ -65,8 +65,14 @@ class UserController extends Controller
 
     public function viewResult()
     {
-        $results = Results::get();
+        $results = Results::select('course_type')->distinct()->get();
         return view('pages/result', compact('results'));
+    }
+
+    public function viewResultByCourse($course)
+    {
+        $results = Results::where('course_type', $course)->get();
+        return view('pages/all-results', compact('results', 'course'));
     }
 
     public function viewCareer()
