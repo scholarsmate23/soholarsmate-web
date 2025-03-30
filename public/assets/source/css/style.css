@@ -703,12 +703,12 @@ link:focus,
 }
 
 .hero-section {
-    padding: 145px 0 50px;
+    padding: 80px 0 0;
 }
 
 @media (max-width: 991px) {
     .hero-section {
-        padding: 155px 0 0;
+        padding: 90px 0 0;
     }
 }
 
