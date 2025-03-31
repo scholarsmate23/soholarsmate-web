@@ -703,12 +703,12 @@ link:focus,
 }
 
 .hero-section {
-    padding: 80px 0 0;
+    padding-top: calc(120px + 1rem); /* Adjust based on your navbar height */
 }
 
 @media (max-width: 991px) {
     .hero-section {
-        padding: 90px 0 0;
+        padding-top: calc(140px + 1rem); /* Adjust for smaller screens */
     }
 }
 

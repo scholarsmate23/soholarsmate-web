@@ -7,20 +7,20 @@
     });
 
     // Sticky Menu
-    $(window).scroll(function() {
-        var height = $(".top-header").innerHeight();
-        if ($("header").offset().top > 10) {
-            $(".top-header").addClass("hide");
-            $(".navigation").addClass("nav-bg");
-            $(".navigation").css("margin-top", "-" + height + "px");
-        } else {
-            $(".top-header").removeClass("hide");
-            $(".navigation").removeClass("nav-bg");
-            $(".navigation").css("margin-top", "-" + 0 + "px");
-        }
-    });
+    // $(window).scroll(function() {
+    //     var height = $(".top-header").innerHeight();
+    //     if ($("header").offset().top > 10) {
+    //         $(".top-header").addClass("hide");
+    //         $(".navigation").addClass("nav-bg");
+    //         $(".navigation").css("margin-top", "-" + height + "px");
+    //     } else {
+    //         $(".top-header").removeClass("hide");
+    //         $(".navigation").removeClass("nav-bg");
+    //         $(".navigation").css("margin-top", "-" + 0 + "px");
+    //     }
+    // });
     // navbarDropdown
-    if ($(window).width() < 992) {
+    if ($(window).width() < 1000) {
         $(".navigation .dropdown-toggle").on("click", function() {
             $(this).siblings(".dropdown-menu").animate({
                     height: "toggle",
